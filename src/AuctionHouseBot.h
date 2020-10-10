@@ -51,6 +51,12 @@ class WorldSession;
 #define AHB_ORANGE_I    12
 #define AHB_YELLOW_I    13
 
+struct SimpleItemConfigEntry
+{
+    uint32 itemID;
+    uint32 numStacks;
+};
+
 class AHBConfig
 {
 private:
@@ -1247,8 +1253,13 @@ public:
     ~AuctionHouseBot();
     void Update();
     void Initialize();
+    void InitializeSellerSimpleMode();
+    void InitializeSellerAdvancedMode();
     void InitializeConfiguration();
     void LoadValues(AHBConfig*);
+    void LoadSimpleItemConfig();
+    void LoadItemCountsSimpleMode(AHBConfig *config);
+    void LoadItemCountsAdvancedMode(AHBConfig *config);
     void DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry);
     void IncrementItemCounts(AuctionEntry* ah);
     void Commands(uint32, uint32, uint32, char*);

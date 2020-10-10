@@ -26,6 +26,7 @@
 #include <vector>
 
 using namespace std;
+vector<SimpleItemConfigEntry> simpleItemConfig;
 vector<uint32> npcItems;
 vector<uint32> lootItems;
 vector<uint32> greyTradeGoodsBin;
@@ -796,16 +797,8 @@ void AuctionHouseBot::Initialize()
 
 void AuctionHouseBot::InitializeSellerSimpleMode()
 {
-    // TODO: QueryResult result = QueryResult result = WorldDatabase.PQuery("SELECT itemID, numStacks FROM mod_auctionhousebot_items");
-    if (simpleItemsBin.size() == 0)
-    {
-        sLog->outError( "AuctionHouseBot: No items");
-        AHBSeller = 0;
-    }
-
-    sLog->outString("AuctionHouseBot:");
+    sLog->outString("AuctionHouseBot:Seller");
     sLog->outString("Running in simple mode");
-    sLog->outString("loaded %u items", uint32(simpleItemsBin.size()));
 }
 
 void AuctionHouseBot::InitializeSellerAdvancedMode()
@@ -1808,6 +1801,88 @@ void AuctionHouseBot::LoadValues(AHBConfig *config)
             sLog->outError( "maxStackOrange          = %u", config->GetMaxStack(AHB_ORANGE));
             sLog->outError( "maxStackYellow          = %u", config->GetMaxStack(AHB_YELLOW));
         }
+
+        if (SimpleSellerMode)
+        {
+            LoadSimpleItemConfig();
+            LoadItemCountsSimpleMode(config);
+        }
+        else 
+        {
+            LoadItemCountsAdvancedMode(config);
+        }
+    }
+    if (AHBBuyer)
+    {
+        //load buyer bid prices
+		config->SetBuyerPrice(AHB_GREY, WorldDatabase.PQuery("SELECT buyerpricegrey FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
+		config->SetBuyerPrice(AHB_WHITE, WorldDatabase.PQuery("SELECT buyerpricewhite FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
+		config->SetBuyerPrice(AHB_GREEN, WorldDatabase.PQuery("SELECT buyerpricegreen FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
+		config->SetBuyerPrice(AHB_BLUE, WorldDatabase.PQuery("SELECT buyerpriceblue FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
+		config->SetBuyerPrice(AHB_PURPLE, WorldDatabase.PQuery("SELECT buyerpricepurple FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
+		config->SetBuyerPrice(AHB_ORANGE, WorldDatabase.PQuery("SELECT buyerpriceorange FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
+		config->SetBuyerPrice(AHB_YELLOW, WorldDatabase.PQuery("SELECT buyerpriceyellow FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
+        //load bidding interval
+		config->SetBiddingInterval(WorldDatabase.PQuery("SELECT buyerbiddinginterval FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
+        //load bids per interval
+		config->SetBidsPerInterval(WorldDatabase.PQuery("SELECT buyerbidsperinterval FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
+        if (debug_Out)
+        {
+            sLog->outError( "buyerPriceGrey          = %u", config->GetBuyerPrice(AHB_GREY));
+            sLog->outError( "buyerPriceWhite         = %u", config->GetBuyerPrice(AHB_WHITE));
+            sLog->outError( "buyerPriceGreen         = %u", config->GetBuyerPrice(AHB_GREEN));
+            sLog->outError( "buyerPriceBlue          = %u", config->GetBuyerPrice(AHB_BLUE));
+            sLog->outError( "buyerPricePurple        = %u", config->GetBuyerPrice(AHB_PURPLE));
+            sLog->outError( "buyerPriceOrange        = %u", config->GetBuyerPrice(AHB_ORANGE));
+            sLog->outError( "buyerPriceYellow        = %u", config->GetBuyerPrice(AHB_YELLOW));
+            sLog->outError( "buyerBiddingInterval    = %u", config->GetBiddingInterval());
+            sLog->outError( "buyerBidsPerInterval    = %u", config->GetBidsPerInterval());
+        }
+    }
+	if (debug_Out) sLog->outError( "End Settings for %s Auctionhouses:", WorldDatabase.PQuery("SELECT name FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetCString());
+}
+
+void AuctionHouseBot::LoadSimpleItemConfig()
+{
+    if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig starting");
+    QueryResult results = QueryResult(NULL);
+    char simpleItemQuery[] = "SELECT itemID, numStacks FROM mod_auctionhousebot_simpleitemconfig";
+    results = WorldDatabase.Query(simpleItemQuery);
+    if (results)
+    {
+        do
+        {
+            Field* fields = results->Fetch();
+            SimpleItemConfigEntry simpleItemConfigEntry = SimpleItemConfigEntry();
+            simpleItemConfigEntry.itemID = fields[0].GetUInt32();
+            simpleItemConfigEntry.numStacks = fields[1].GetUInt32();
+            simpleItemConfig.push_back(simpleItemConfigEntry);
+            if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig loaded entry. itemID: %u, numStacks: %u", 
+                simpleItemConfigEntry.itemID,
+                simpleItemConfigEntry.numStacks);
+        } while (results->NextRow());
+    }
+    else
+    {
+        if (debug_Out) sLog->outError( "AuctionHouseBot: \"%s\" failed", simpleItemQuery);
+    }
+
+    if (simpleItemConfig.size() == 0)
+    {
+        sLog->outError( "AuctionHouseBot: No items");
+        AHBSeller = 0;
+    }
+
+    sLog->outString("AuctionHouseBot:LoadSimpleItemConfig");
+    sLog->outString("loaded %u items", uint32(simpleItemConfig.size()));
+}
+
+void AuctionHouseBot::LoadItemCountsSimpleMode(AHBConfig *config)
+{
+}
+
+void AuctionHouseBot::LoadItemCountsAdvancedMode(AHBConfig *config)
+{
         //AuctionHouseEntry const* ahEntry =  sAuctionMgr->GetAuctionHouseEntry(config->GetAHFID());
         AuctionHouseObject* auctionHouse =  sAuctionMgr->GetAuctionsMap(config->GetAHFID());
 
@@ -1886,32 +1961,3 @@ void AuctionHouseBot::LoadValues(AHBConfig *config)
             sLog->outError( "Yellow Trade Goods\t%u\tYellow Items\t%u", config->GetItemCounts(AHB_YELLOW_TG), config->GetItemCounts(AHB_YELLOW_I));
         }
     }
-    if (AHBBuyer)
-    {
-        //load buyer bid prices
-		config->SetBuyerPrice(AHB_GREY, WorldDatabase.PQuery("SELECT buyerpricegrey FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
-		config->SetBuyerPrice(AHB_WHITE, WorldDatabase.PQuery("SELECT buyerpricewhite FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
-		config->SetBuyerPrice(AHB_GREEN, WorldDatabase.PQuery("SELECT buyerpricegreen FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
-		config->SetBuyerPrice(AHB_BLUE, WorldDatabase.PQuery("SELECT buyerpriceblue FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
-		config->SetBuyerPrice(AHB_PURPLE, WorldDatabase.PQuery("SELECT buyerpricepurple FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
-		config->SetBuyerPrice(AHB_ORANGE, WorldDatabase.PQuery("SELECT buyerpriceorange FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
-		config->SetBuyerPrice(AHB_YELLOW, WorldDatabase.PQuery("SELECT buyerpriceyellow FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
-        //load bidding interval
-		config->SetBiddingInterval(WorldDatabase.PQuery("SELECT buyerbiddinginterval FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
-        //load bids per interval
-		config->SetBidsPerInterval(WorldDatabase.PQuery("SELECT buyerbidsperinterval FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetUInt32());
-        if (debug_Out)
-        {
-            sLog->outError( "buyerPriceGrey          = %u", config->GetBuyerPrice(AHB_GREY));
-            sLog->outError( "buyerPriceWhite         = %u", config->GetBuyerPrice(AHB_WHITE));
-            sLog->outError( "buyerPriceGreen         = %u", config->GetBuyerPrice(AHB_GREEN));
-            sLog->outError( "buyerPriceBlue          = %u", config->GetBuyerPrice(AHB_BLUE));
-            sLog->outError( "buyerPricePurple        = %u", config->GetBuyerPrice(AHB_PURPLE));
-            sLog->outError( "buyerPriceOrange        = %u", config->GetBuyerPrice(AHB_ORANGE));
-            sLog->outError( "buyerPriceYellow        = %u", config->GetBuyerPrice(AHB_YELLOW));
-            sLog->outError( "buyerBiddingInterval    = %u", config->GetBiddingInterval());
-            sLog->outError( "buyerBidsPerInterval    = %u", config->GetBidsPerInterval());
-        }
-    }
-	if (debug_Out) sLog->outError( "End Settings for %s Auctionhouses:", WorldDatabase.PQuery("SELECT name FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetCString());
-}
