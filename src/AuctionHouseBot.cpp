@@ -229,15 +229,53 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
     uint32 yellowItems = config->GetItemCounts(AHB_YELLOW_I);
     if (debug_Out) sLog->outError( "AHSeller: %u items", items);
 
+    // If simple seller mode, decide what items to insert this cycle
+    vector<uint32> simpleMode_ItemsToInsert;
+    if (SimpleSellerMode) {
+        for(uint32 i = 1; simpleMode_ItemsToInsert.size() < items && i < simpleItemConfig.size(); i++) {
+            SimpleItemConfigEntry simpleItemConfigEntry = simpleItemConfig[i];
+            uint32 itemID = simpleItemConfigEntry.itemID;
+            uint32 maxStackCount = simpleItemConfigEntry.numStacks;
+            uint32 currentStackCount = config->GetSimpleItemCount(itemID);
+            if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Item ID: %u | Current Count: %u | MaxStacks: %u",
+                itemID, currentStackCount, maxStackCount);
+
+            for (uint32 j = currentStackCount;
+                j < maxStackCount && simpleMode_ItemsToInsert.size() < items;
+                j++)
+            {
+                simpleMode_ItemsToInsert.push_back(itemID);
+                if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Will insert item ID: %u", itemID);
+            }
+        }
+        if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Will insert %u total items", simpleMode_ItemsToInsert.size());
+    }
+
     // only insert a few at a time, so as not to peg the processor
-    for (uint32 cnt = 1; cnt <= items; cnt++)
+    for (uint32 cnt = 1; cnt <= items || (SimpleSellerMode && (cnt - 1) < simpleMode_ItemsToInsert.size()); cnt++)
     {
     if (debug_Out) sLog->outError( "AHSeller: %u count", cnt);
         uint32 itemID = 0;
         uint32 itemColor = 99;
         uint32 loopbreaker = 0;
+        // Duncan: This loop is not batching like it may seem at first glance. It's rolling until it gets a nonzero item id.
+        // This becomes relevant when some bins are empty, or too many items from a given bin are up for sale
         while (itemID == 0 && loopbreaker <= 50)
         {
+            if (SimpleSellerMode) 
+            {
+                loopbreaker = 51;
+                uint32 zero_indexed_cnt = cnt - 1;
+                if(zero_indexed_cnt < simpleMode_ItemsToInsert.size()) {
+                    itemID = simpleMode_ItemsToInsert[zero_indexed_cnt];
+                    if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Inserting item with ID: %u", itemID);
+                } else {
+                    itemID = 0;
+                    if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Could not find entry in itemsToInsert at index %u", zero_indexed_cnt);
+                }
+            }
+            else 
+            {
             ++loopbreaker;
             uint32 choice = urand(0, 13);
             itemColor = choice;
@@ -346,6 +384,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
                     if (debug_Out) sLog->outError( "AHSeller: itemID Switch - Default Reached");
                     break;
                 }
+            }
             }
 
             if (itemID == 0)
