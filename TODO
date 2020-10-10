@@ -1,0 +1,9 @@
+✅Write sql script for schema
+Initialize + Keep item counts up to date    
+    ✅LoadValues: Init item counts from auction entry map
+    ✅Update map on increment + decrement
+    ✅Update seller to use item counts
+
+If we need more parameters: Create object to store item params, add new column to table
+Add command to add new item to auction house
+Switch off irrelevant code when simple mode is on
