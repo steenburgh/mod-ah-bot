@@ -227,7 +227,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
     uint32 purpleItems = config->GetItemCounts(AHB_PURPLE_I);
     uint32 orangeItems = config->GetItemCounts(AHB_ORANGE_I);
     uint32 yellowItems = config->GetItemCounts(AHB_YELLOW_I);
-    if (debug_Out) sLog->outError( "AHSeller: %u items", items);
+    if (debug_Out) sLog->outError( "AHSeller: Will try to find %u items to add", items);
 
     // If simple seller mode, decide what items to insert this cycle
     vector<uint32> simpleMode_ItemsToInsert;
@@ -254,7 +254,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
     // only insert a few at a time, so as not to peg the processor
     for (uint32 cnt = 1; cnt <= items || (SimpleSellerMode && (cnt - 1) < simpleMode_ItemsToInsert.size()); cnt++)
     {
-    if (debug_Out) sLog->outError( "AHSeller: %u count", cnt);
+        if (debug_Out) sLog->outError( "AHSeller: %u count", cnt);
         uint32 itemID = 0;
         uint32 itemColor = 99;
         uint32 loopbreaker = 0;
@@ -276,115 +276,115 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
             }
             else 
             {
-            ++loopbreaker;
-            uint32 choice = urand(0, 13);
-            itemColor = choice;
-            switch (choice)
-            {
-            case 0:
+                ++loopbreaker;
+                uint32 choice = urand(0, 13);
+                itemColor = choice;
+                switch (choice)
                 {
-                    if ((greyItemsBin.size() > 0) && (greyItems < greyIcount))
-                        itemID = greyItemsBin[urand(0, greyItemsBin.size() - 1)];
-                    else continue;
-                    break;
+                case 0:
+                    {
+                        if ((greyItemsBin.size() > 0) && (greyItems < greyIcount))
+                            itemID = greyItemsBin[urand(0, greyItemsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 1:
+                    {
+                        if ((whiteItemsBin.size() > 0) && (whiteItems < whiteIcount))
+                            itemID = whiteItemsBin[urand(0, whiteItemsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 2:
+                    {
+                        if ((greenItemsBin.size() > 0) && (greenItems < greenIcount))
+                            itemID = greenItemsBin[urand(0, greenItemsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 3:
+                    {
+                        if ((blueItemsBin.size() > 0) && (blueItems < blueIcount))
+                            itemID = blueItemsBin[urand(0, blueItemsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 4:
+                    {
+                        if ((purpleItemsBin.size() > 0) && (purpleItems < purpleIcount))
+                            itemID = purpleItemsBin[urand(0, purpleItemsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 5:
+                    {
+                        if ((orangeItemsBin.size() > 0) && (orangeItems < orangeIcount))
+                            itemID = orangeItemsBin[urand(0, orangeItemsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 6:
+                    {
+                        if ((yellowItemsBin.size() > 0) && (yellowItems < yellowIcount))
+                            itemID = yellowItemsBin[urand(0, yellowItemsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 7:
+                    {
+                        if ((greyTradeGoodsBin.size() > 0) && (greyTGoods < greyTGcount))
+                            itemID = greyTradeGoodsBin[urand(0, greyTradeGoodsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 8:
+                    {
+                        if ((whiteTradeGoodsBin.size() > 0) && (whiteTGoods < whiteTGcount))
+                            itemID = whiteTradeGoodsBin[urand(0, whiteTradeGoodsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 9:
+                    {
+                        if ((greenTradeGoodsBin.size() > 0) && (greenTGoods < greenTGcount))
+                            itemID = greenTradeGoodsBin[urand(0, greenTradeGoodsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 10:
+                    {
+                        if ((blueTradeGoodsBin.size() > 0) && (blueTGoods < blueTGcount))
+                            itemID = blueTradeGoodsBin[urand(0, blueTradeGoodsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 11:
+                    {
+                        if ((purpleTradeGoodsBin.size() > 0) && (purpleTGoods < purpleTGcount))
+                            itemID = purpleTradeGoodsBin[urand(0, purpleTradeGoodsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 12:
+                    {
+                        if ((orangeTradeGoodsBin.size() > 0) && (orangeTGoods < orangeTGcount))
+                            itemID = orangeTradeGoodsBin[urand(0, orangeTradeGoodsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                case 13:
+                    {
+                        if ((yellowTradeGoodsBin.size() > 0) && (yellowTGoods < yellowTGcount))
+                            itemID = yellowTradeGoodsBin[urand(0, yellowTradeGoodsBin.size() - 1)];
+                        else continue;
+                        break;
+                    }
+                default:
+                    {
+                        if (debug_Out) sLog->outError( "AHSeller: itemID Switch - Default Reached");
+                        break;
+                    }
                 }
-            case 1:
-                {
-                    if ((whiteItemsBin.size() > 0) && (whiteItems < whiteIcount))
-                        itemID = whiteItemsBin[urand(0, whiteItemsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 2:
-                {
-                    if ((greenItemsBin.size() > 0) && (greenItems < greenIcount))
-                        itemID = greenItemsBin[urand(0, greenItemsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 3:
-                {
-                    if ((blueItemsBin.size() > 0) && (blueItems < blueIcount))
-                        itemID = blueItemsBin[urand(0, blueItemsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 4:
-                {
-                    if ((purpleItemsBin.size() > 0) && (purpleItems < purpleIcount))
-                        itemID = purpleItemsBin[urand(0, purpleItemsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 5:
-                {
-                    if ((orangeItemsBin.size() > 0) && (orangeItems < orangeIcount))
-                        itemID = orangeItemsBin[urand(0, orangeItemsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 6:
-                {
-                    if ((yellowItemsBin.size() > 0) && (yellowItems < yellowIcount))
-                        itemID = yellowItemsBin[urand(0, yellowItemsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 7:
-                {
-                    if ((greyTradeGoodsBin.size() > 0) && (greyTGoods < greyTGcount))
-                        itemID = greyTradeGoodsBin[urand(0, greyTradeGoodsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 8:
-                {
-                    if ((whiteTradeGoodsBin.size() > 0) && (whiteTGoods < whiteTGcount))
-                        itemID = whiteTradeGoodsBin[urand(0, whiteTradeGoodsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 9:
-                {
-                    if ((greenTradeGoodsBin.size() > 0) && (greenTGoods < greenTGcount))
-                        itemID = greenTradeGoodsBin[urand(0, greenTradeGoodsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 10:
-                {
-                    if ((blueTradeGoodsBin.size() > 0) && (blueTGoods < blueTGcount))
-                        itemID = blueTradeGoodsBin[urand(0, blueTradeGoodsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 11:
-                {
-                    if ((purpleTradeGoodsBin.size() > 0) && (purpleTGoods < purpleTGcount))
-                        itemID = purpleTradeGoodsBin[urand(0, purpleTradeGoodsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 12:
-                {
-                    if ((orangeTradeGoodsBin.size() > 0) && (orangeTGoods < orangeTGcount))
-                        itemID = orangeTradeGoodsBin[urand(0, orangeTradeGoodsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            case 13:
-                {
-                    if ((yellowTradeGoodsBin.size() > 0) && (yellowTGoods < yellowTGcount))
-                        itemID = yellowTradeGoodsBin[urand(0, yellowTradeGoodsBin.size() - 1)];
-                    else continue;
-                    break;
-                }
-            default:
-                {
-                    if (debug_Out) sLog->outError( "AHSeller: itemID Switch - Default Reached");
-                    break;
-                }
-            }
             }
 
             if (itemID == 0)
@@ -437,7 +437,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
             else
             {
                 // quality is something it shouldn't be, let's get out of here
-                if (debug_Out) sLog->outError( "AHBuyer: Quality %u not Supported", prototype->Quality);
+                if (debug_Out) sLog->outError("AHSeller: Quality %u not Supported", prototype->Quality);
                 item->RemoveFromUpdateQueueOf(AHBplayer);
                 continue;
             }
@@ -483,6 +483,8 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
             auctionHouse->AddAuction(auctionEntry);
             auctionEntry->SaveToDB(trans);
             CharacterDatabase.CommitTransaction(trans);
+            if (debug_Out) sLog->outError( "AHSeller:: Inserted item. Auction ID: %u | ItemCount: %u | ItemID: %u", 
+                auctionEntry->Id, auctionEntry->itemCount, auctionEntry->item_template);
 
             switch(itemColor)
             {
@@ -534,6 +536,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
         }
     }
 }
+
 void AuctionHouseBot::addNewAuctionBuyerBotBid(Player *AHBplayer, AHBConfig *config, WorldSession *session)
 {
     if (!AHBBuyer)
@@ -888,9 +891,6 @@ void AuctionHouseBot::InitializeSellerAdvancedMode()
         ItemTemplateContainer const* its = sObjectMgr->GetItemTemplateStore();
         for (ItemTemplateContainer::const_iterator itr = its->begin(); itr != its->end(); ++itr)
         {
-
-
-
             switch (itr->second.Bonding)
             {
             case NO_BIND:
@@ -1357,7 +1357,7 @@ void AuctionHouseBot::InitializeSellerAdvancedMode()
             AHBSeller = 0;
         }
 
-        sLog->outString("AuctionHouseBot:");
+        sLog->outString("AuctionHouseBot:Seller");
         sLog->outString("%u disabled items", uint32(DisableItemStore.size()));
         sLog->outString("loaded %u grey trade goods", uint32(greyTradeGoodsBin.size()));
         sLog->outString("loaded %u white trade goods", uint32(whiteTradeGoodsBin.size()));
@@ -1490,9 +1490,9 @@ void AuctionHouseBot::IncrementItemCounts(AuctionEntry* ah)
     }
     else
     {
-    config->IncItemCounts(prototype->Class, prototype->Quality);
-}
-
+        config->IncItemCounts(prototype->Class, prototype->Quality);
+    }
+    
 }
 
 void AuctionHouseBot::DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry)
@@ -1530,9 +1530,9 @@ void AuctionHouseBot::DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry)
     }
     else
     {
-    config->DecItemCounts(prototype->Class, prototype->Quality);
-}
-
+        config->DecItemCounts(prototype->Class, prototype->Quality);
+    }
+    
 }
 
 void AuctionHouseBot::Commands(uint32 command, uint32 ahMapID, uint32 col, char* args)
@@ -1972,81 +1972,81 @@ void AuctionHouseBot::LoadItemCountsSimpleMode(AHBConfig *config)
 
 void AuctionHouseBot::LoadItemCountsAdvancedMode(AHBConfig *config)
 {
-        //AuctionHouseEntry const* ahEntry =  sAuctionMgr->GetAuctionHouseEntry(config->GetAHFID());
-        AuctionHouseObject* auctionHouse =  sAuctionMgr->GetAuctionsMap(config->GetAHFID());
+    //AuctionHouseEntry const* ahEntry =  sAuctionMgr->GetAuctionHouseEntry(config->GetAHFID());
+    AuctionHouseObject* auctionHouse =  sAuctionMgr->GetAuctionsMap(config->GetAHFID());
 
-        config->ResetItemCounts();
-        uint32 auctions = auctionHouse->Getcount();
+    config->ResetItemCounts();
+    uint32 auctions = auctionHouse->Getcount();
 
-        if (auctions)
+    if (auctions)
+    {
+        for (AuctionHouseObject::AuctionEntryMap::const_iterator itr = auctionHouse->GetAuctionsBegin(); itr != auctionHouse->GetAuctionsEnd(); ++itr)
         {
-            for (AuctionHouseObject::AuctionEntryMap::const_iterator itr = auctionHouse->GetAuctionsBegin(); itr != auctionHouse->GetAuctionsEnd(); ++itr)
+            AuctionEntry *Aentry = itr->second;
+            Item *item = sAuctionMgr->GetAItem(Aentry->item_guidlow);
+            if (item)
             {
-                AuctionEntry *Aentry = itr->second;
-				Item *item = sAuctionMgr->GetAItem(Aentry->item_guidlow);
-                if (item)
+                ItemTemplate const *prototype = item->GetTemplate();
+                if (prototype)
                 {
-                    ItemTemplate const *prototype = item->GetTemplate();
-                    if (prototype)
+                    switch (prototype->Quality)
                     {
-                        switch (prototype->Quality)
-                        {
-                        case 0:
-                            if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
-                                config->IncItemCounts(AHB_GREY_TG);
-                            else
-                                config->IncItemCounts(AHB_GREY_I);
-                            break;
-                        case 1:
-                            if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
-                                config->IncItemCounts(AHB_WHITE_TG);
-                            else
-                                config->IncItemCounts(AHB_WHITE_I);
-                            break;
-                        case 2:
-                            if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
-                                config->IncItemCounts(AHB_GREEN_TG);
-                            else
-                                config->IncItemCounts(AHB_GREEN_I);
-                            break;
-                        case 3:
-                            if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
-                                config->IncItemCounts(AHB_BLUE_TG);
-                            else
-                                config->IncItemCounts(AHB_BLUE_I);
-                            break;
-                        case 4:
-                            if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
-                                config->IncItemCounts(AHB_PURPLE_TG);
-                            else
-                                config->IncItemCounts(AHB_PURPLE_I);
-                            break;
-                        case 5:
-                            if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
-                                config->IncItemCounts(AHB_ORANGE_TG);
-                            else
-                                config->IncItemCounts(AHB_ORANGE_I);
-                            break;
-                        case 6:
-                            if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
-                                config->IncItemCounts(AHB_YELLOW_TG);
-                            else
-                                config->IncItemCounts(AHB_YELLOW_I);
-                            break;
-                        }
+                    case 0:
+                        if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
+                            config->IncItemCounts(AHB_GREY_TG);
+                        else
+                            config->IncItemCounts(AHB_GREY_I);
+                        break;
+                    case 1:
+                        if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
+                            config->IncItemCounts(AHB_WHITE_TG);
+                        else
+                            config->IncItemCounts(AHB_WHITE_I);
+                        break;
+                    case 2:
+                        if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
+                            config->IncItemCounts(AHB_GREEN_TG);
+                        else
+                            config->IncItemCounts(AHB_GREEN_I);
+                        break;
+                    case 3:
+                        if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
+                            config->IncItemCounts(AHB_BLUE_TG);
+                        else
+                            config->IncItemCounts(AHB_BLUE_I);
+                        break;
+                    case 4:
+                        if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
+                            config->IncItemCounts(AHB_PURPLE_TG);
+                        else
+                            config->IncItemCounts(AHB_PURPLE_I);
+                        break;
+                    case 5:
+                        if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
+                            config->IncItemCounts(AHB_ORANGE_TG);
+                        else
+                            config->IncItemCounts(AHB_ORANGE_I);
+                        break;
+                    case 6:
+                        if (prototype->Class == ITEM_CLASS_TRADE_GOODS)
+                            config->IncItemCounts(AHB_YELLOW_TG);
+                        else
+                            config->IncItemCounts(AHB_YELLOW_I);
+                        break;
                     }
                 }
             }
         }
-        if (debug_Out)
-        {
-			sLog->outError( "Current Settings for %s Auctionhouses:", WorldDatabase.PQuery("SELECT name FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetCString());
-            sLog->outError( "Grey Trade Goods\t%u\tGrey Items\t%u", config->GetItemCounts(AHB_GREY_TG), config->GetItemCounts(AHB_GREY_I));
-            sLog->outError( "White Trade Goods\t%u\tWhite Items\t%u", config->GetItemCounts(AHB_WHITE_TG), config->GetItemCounts(AHB_WHITE_I));
-            sLog->outError( "Green Trade Goods\t%u\tGreen Items\t%u", config->GetItemCounts(AHB_GREEN_TG), config->GetItemCounts(AHB_GREEN_I));
-            sLog->outError( "Blue Trade Goods\t%u\tBlue Items\t%u", config->GetItemCounts(AHB_BLUE_TG), config->GetItemCounts(AHB_BLUE_I));
-            sLog->outError( "Purple Trade Goods\t%u\tPurple Items\t%u", config->GetItemCounts(AHB_PURPLE_TG), config->GetItemCounts(AHB_PURPLE_I));
-            sLog->outError( "Orange Trade Goods\t%u\tOrange Items\t%u", config->GetItemCounts(AHB_ORANGE_TG), config->GetItemCounts(AHB_ORANGE_I));
-            sLog->outError( "Yellow Trade Goods\t%u\tYellow Items\t%u", config->GetItemCounts(AHB_YELLOW_TG), config->GetItemCounts(AHB_YELLOW_I));
-        }
     }
+    if (debug_Out)
+    {
+        sLog->outError( "Current Settings for %s Auctionhouses:", WorldDatabase.PQuery("SELECT name FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetCString());
+        sLog->outError( "Grey Trade Goods\t%u\tGrey Items\t%u", config->GetItemCounts(AHB_GREY_TG), config->GetItemCounts(AHB_GREY_I));
+        sLog->outError( "White Trade Goods\t%u\tWhite Items\t%u", config->GetItemCounts(AHB_WHITE_TG), config->GetItemCounts(AHB_WHITE_I));
+        sLog->outError( "Green Trade Goods\t%u\tGreen Items\t%u", config->GetItemCounts(AHB_GREEN_TG), config->GetItemCounts(AHB_GREEN_I));
+        sLog->outError( "Blue Trade Goods\t%u\tBlue Items\t%u", config->GetItemCounts(AHB_BLUE_TG), config->GetItemCounts(AHB_BLUE_I));
+        sLog->outError( "Purple Trade Goods\t%u\tPurple Items\t%u", config->GetItemCounts(AHB_PURPLE_TG), config->GetItemCounts(AHB_PURPLE_I));
+        sLog->outError( "Orange Trade Goods\t%u\tOrange Items\t%u", config->GetItemCounts(AHB_ORANGE_TG), config->GetItemCounts(AHB_ORANGE_I));
+        sLog->outError( "Yellow Trade Goods\t%u\tYellow Items\t%u", config->GetItemCounts(AHB_YELLOW_TG), config->GetItemCounts(AHB_YELLOW_I));
+    }
+}
