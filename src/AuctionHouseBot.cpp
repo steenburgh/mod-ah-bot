@@ -1419,7 +1419,7 @@ void AuctionHouseBot::IncrementItemCounts(AuctionEntry* ah)
     Item *pItem =  sAuctionMgr->GetAItem(ah->item_guidlow);
     if (!pItem)
     {
-		if (debug_Out) sLog->outError( "AHBot: Item %u doesn't exist, perhaps bought already?", ah->item_guidlow);
+		if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts Item %u doesn't exist, perhaps bought already?", ah->item_guidlow);
         return;
     }
 
@@ -1431,22 +1431,22 @@ void AuctionHouseBot::IncrementItemCounts(AuctionEntry* ah)
     FactionTemplateEntry const* u_entry = sFactionTemplateStore.LookupEntry(ah->GetHouseFaction());
     if (!u_entry)
     {
-        if (debug_Out) sLog->outError( "AHBot: %u returned as House Faction. Neutral", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseFaction());
         config = &NeutralConfig;
     }
     else if (u_entry->ourMask & FACTION_MASK_ALLIANCE)
     {
-        if (debug_Out) sLog->outError( "AHBot: %u returned as House Faction. Alliance", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Alliance", ah->GetHouseFaction());
         config = &AllianceConfig;
     }
     else if (u_entry->ourMask & FACTION_MASK_HORDE)
     {
-        if (debug_Out) sLog->outError( "AHBot: %u returned as House Faction. Horde", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Horde", ah->GetHouseFaction());
         config = &HordeConfig;
     }
     else
     {
-        if (debug_Out) sLog->outError( "AHBot: %u returned as House Faction. Neutral", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseFaction());
         config = &NeutralConfig;
     }
 
@@ -1463,22 +1463,22 @@ void AuctionHouseBot::DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry)
     FactionTemplateEntry const* u_entry = sFactionTemplateStore.LookupEntry(ah->GetHouseFaction());
     if (!u_entry)
     {
-        if (debug_Out) sLog->outError( "AHBot: %u returned as House Faction. Neutral", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseFaction());
         config = &NeutralConfig;
     }
     else if (u_entry->ourMask & FACTION_MASK_ALLIANCE)
     {
-        if (debug_Out) sLog->outError( "AHBot: %u returned as House Faction. Alliance", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Alliance", ah->GetHouseFaction());
         config = &AllianceConfig;
     }
     else if (u_entry->ourMask & FACTION_MASK_HORDE)
     {
-        if (debug_Out) sLog->outError( "AHBot: %u returned as House Faction. Horde", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Horde", ah->GetHouseFaction());
         config = &HordeConfig;
     }
     else
     {
-        if (debug_Out) sLog->outError( "AHBot: %u returned as House Faction. Neutral", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseFaction());
         config = &NeutralConfig;
     }
 
