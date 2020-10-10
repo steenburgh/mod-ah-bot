@@ -402,7 +402,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
                 continue;
             }
 
-            uint32 etime = urand(1,3);
+            uint32 etime = 3;
             switch(etime)
             {
             case 1:
