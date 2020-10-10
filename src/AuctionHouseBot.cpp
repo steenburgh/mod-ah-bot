@@ -783,6 +783,32 @@ void AuctionHouseBot::Initialize()
 
     if (AHBSeller)
     {
+        if (SimpleSellerMode) 
+        {
+            InitializeSellerSimpleMode();
+        } else {
+            InitializeSellerAdvancedMode();
+        }
+    }
+    sLog->outString("AuctionHouseBot and AuctionHouseBuyer have been loaded.");
+}
+
+void AuctionHouseBot::InitializeSellerSimpleMode()
+{
+    // TODO: QueryResult result = QueryResult result = WorldDatabase.PQuery("SELECT itemID, numStacks FROM mod_auctionhousebot_items");
+    if (simpleItemsBin.size() == 0)
+    {
+        sLog->outError( "AuctionHouseBot: No items");
+        AHBSeller = 0;
+    }
+
+    sLog->outString("AuctionHouseBot:");
+    sLog->outString("Running in simple mode");
+    sLog->outString("loaded %u items", uint32(simpleItemsBin.size()));
+}
+
+void AuctionHouseBot::InitializeSellerAdvancedMode()
+{   
         QueryResult results = QueryResult(NULL);
         char npcQuery[] = "SELECT distinct item FROM npc_vendor";
         results = WorldDatabase.Query(npcQuery);
@@ -1315,8 +1341,6 @@ void AuctionHouseBot::Initialize()
         sLog->outString("loaded %u orange items", uint32(orangeItemsBin.size()));
         sLog->outString("loaded %u yellow items", uint32(yellowItemsBin.size()));
     }
-    sLog->outString("AuctionHouseBot and AuctionHouseBuyer have been loaded.");
-}
 
 void AuctionHouseBot::InitializeConfiguration()
 {
