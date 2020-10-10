@@ -1445,7 +1445,15 @@ void AuctionHouseBot::IncrementItemCounts(AuctionEntry* ah)
         config = &NeutralConfig;
     }
 
+    if(SimpleSellerMode)
+    {
+        config->IncSimpleItemCount(prototype->ItemId);
+    }
+    else
+    {
     config->IncItemCounts(prototype->Class, prototype->Quality);
+}
+
 }
 
 void AuctionHouseBot::DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry)
@@ -1477,7 +1485,15 @@ void AuctionHouseBot::DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry)
         config = &NeutralConfig;
     }
 
+    if (SimpleSellerMode)
+    {
+        config->DecSimpleItemCount(prototype->ItemId);
+    }
+    else
+    {
     config->DecItemCounts(prototype->Class, prototype->Quality);
+}
+
 }
 
 void AuctionHouseBot::Commands(uint32 command, uint32 ahMapID, uint32 col, char* args)
@@ -1879,6 +1895,40 @@ void AuctionHouseBot::LoadSimpleItemConfig()
 
 void AuctionHouseBot::LoadItemCountsSimpleMode(AHBConfig *config)
 {
+    AuctionHouseObject* auctionHouse =  sAuctionMgr->GetAuctionsMap(config->GetAHFID());
+    
+    config->ResetSimpleItemCounts();
+    uint32 auctions = auctionHouse->Getcount();
+
+    if (auctions)
+    {
+        // TODO: Maybe move outside of here or convert simpleItemConfig to hashmap to make this unnecessary
+        std::unordered_set<uint32> itemIDsInSimpleItemConfig;
+        for (uint32 i = 0; i < simpleItemConfig.size(); i++)
+        {
+            itemIDsInSimpleItemConfig.insert(simpleItemConfig[i].itemID);
+        }
+
+        for (AuctionHouseObject::AuctionEntryMap::const_iterator itr = auctionHouse->GetAuctionsBegin(); itr != auctionHouse->GetAuctionsEnd(); ++itr)
+        {
+            AuctionEntry *Aentry = itr->second;
+            Item *item = sAuctionMgr->GetAItem(Aentry->item_guidlow);
+            if (item)
+            {
+                ItemTemplate const *prototype = item->GetTemplate();
+                if (prototype)
+                {
+                    uint32 itemID = prototype->ItemId;                    
+                    if (itemIDsInSimpleItemConfig.find(itemID) != itemIDsInSimpleItemConfig.end()) {
+                        if (debug_Out) sLog->outError( "AuctionHouseBot:LoadItemCountsSimpleMode Found matching item on auction house with id: %u", itemID);
+                        config->IncSimpleItemCount(itemID);
+                    }
+                }
+            }
+        }
+
+        if (debug_Out) sLog->outError( "AuctionHouseBot:LoadItemCountsSimpleMode Found matches for %u unique items on auction house", config->DebugGetSimpleItemNumEntries());
+    }
 }
 
 void AuctionHouseBot::LoadItemCountsAdvancedMode(AHBConfig *config)

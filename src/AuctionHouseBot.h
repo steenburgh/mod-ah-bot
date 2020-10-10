@@ -139,6 +139,8 @@ private:
     uint32 orangeip;
     uint32 yellowip;
 
+    std::unordered_map<uint32, uint32> simpleItemID_stackCount;
+
     uint32 greyTGoods;
     uint32 whiteTGoods;
     uint32 greenTGoods;
@@ -1088,6 +1090,42 @@ public:
         purpleItems +
         orangeItems +
         yellowItems);
+    }
+
+    void DecSimpleItemCount(uint32 itemID)
+    {
+        uint32 count = GetSimpleItemCount(itemID);
+        count -= 1;
+        simpleItemID_stackCount[itemID] = count;
+    }
+
+    void IncSimpleItemCount(uint32 itemID)
+    {
+        uint32 count = GetSimpleItemCount(itemID);
+        count += 1;
+        simpleItemID_stackCount[itemID] = count;
+    }
+
+    void ResetSimpleItemCounts() 
+    {
+        simpleItemID_stackCount.clear();
+    }
+
+    uint32 GetSimpleItemCount(uint32 itemID)
+    {
+        std::unordered_map<uint32, uint32>::const_iterator itemCountIterator = simpleItemID_stackCount.find(itemID);
+        uint32 itemCount = 0;
+        if(itemCountIterator == simpleItemID_stackCount.end()) {
+            itemCount = 0;
+        } else {
+            itemCount = itemCountIterator->second;
+        }
+        return itemCount;
+    }
+
+    uint32 DebugGetSimpleItemNumEntries()
+    {
+        return simpleItemID_stackCount.size();
     }
 
     uint32 GetItemCounts(uint32 color)
