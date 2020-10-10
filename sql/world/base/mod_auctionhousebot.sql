@@ -370,5 +370,5 @@ VALUES
 DROP TABLE IF EXISTS `mod_auctionhousebot_simpleitemconfig`;
 CREATE TABLE `mod_auctionhousebot_simpleitemconfig` (
   `itemID` int(11) DEFAULT '0' COMMENT 'The id of the item to insert. Must be a valid item id in the world.item_template table.',
-  `numStacks` int(11) DEFAULT '0' COMMENT 'The number of stacks of this item that should be on the auction house.',
-)
+  `numStacks` int(11) DEFAULT '0' COMMENT 'The number of stacks of this item that should be on the auction house.'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
