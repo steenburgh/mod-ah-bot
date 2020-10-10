@@ -252,7 +252,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
     }
 
     // only insert a few at a time, so as not to peg the processor
-    for (uint32 cnt = 1; cnt <= items || (SimpleSellerMode && (cnt - 1) < simpleMode_ItemsToInsert.size()); cnt++)
+    for (uint32 cnt = 1; cnt <= items && (SimpleSellerMode ? (cnt - 1) < simpleMode_ItemsToInsert.size() : true); cnt++)
     {
         if (debug_Out) sLog->outError( "AHSeller: %u count", cnt);
         uint32 itemID = 0;
