@@ -48,6 +48,7 @@ AuctionHouseBot::AuctionHouseBot()
     debug_Out = false;
     debug_Out_Filters = false;
     AHBSeller = false;
+    SimpleSellerMode = false;
     AHBBuyer = false;
 
     //Begin Filters
@@ -1348,6 +1349,7 @@ void AuctionHouseBot::InitializeConfiguration()
     debug_Out_Filters = sConfigMgr->GetBoolDefault("AuctionHouseBot.DEBUG_FILTERS", false);
 
     AHBSeller = sConfigMgr->GetBoolDefault("AuctionHouseBot.EnableSeller", false);
+    SimpleSellerMode = sConfigMgr->GetBoolDefault("AuctionHouseBot.SimpleSellerMode", false);
     AHBBuyer = sConfigMgr->GetBoolDefault("AuctionHouseBot.EnableBuyer", false);
     SellMethod = sConfigMgr->GetBoolDefault("AuctionHouseBot.UseBuyPriceForSeller", false);
     BuyMethod = sConfigMgr->GetBoolDefault("AuctionHouseBot.UseBuyPriceForBuyer", false);

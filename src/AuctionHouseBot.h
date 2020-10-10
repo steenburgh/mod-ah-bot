@@ -1155,6 +1155,7 @@ private:
     bool debug_Out_Filters;
 
     bool AHBSeller;
+    bool SimpleSellerMode;
     bool AHBBuyer;
     bool BuyMethod;
     bool SellMethod;

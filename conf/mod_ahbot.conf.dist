@@ -15,6 +15,12 @@
 #        Enable/Disable the part of AHBot that puts items up for auction
 #    Default 0 (disabled)
 #
+#    AuctionHouseBot.SimpleSellerMode
+#        Enable/Disable Simple mode. 
+#        Simple mode will sell only a pre-programmed list of items 
+#        TODO: Explain further or rename
+#    Default 0 (disabled)
+#
 #    AuctionHouseBot.EnableBuyer
 #        Enable/Disable the part of AHBot that buys items from players
 #    Default 0 (disabled)
@@ -44,6 +50,7 @@
 AuctionHouseBot.DEBUG = 0
 AuctionHouseBot.DEBUG_FILTERS = 0
 AuctionHouseBot.EnableSeller = 0
+AuctionHouseBot.SimpleSellerMode = 1
 AuctionHouseBot.EnableBuyer = 0
 AuctionHouseBot.UseBuyPriceForSeller = 0
 AuctionHouseBot.UseBuyPriceForBuyer = 0
