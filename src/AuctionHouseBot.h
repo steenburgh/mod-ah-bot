@@ -1294,8 +1294,8 @@ public:
     void InitializeSellerSimpleMode();
     void InitializeSellerAdvancedMode();
     void InitializeConfiguration();
-    void LoadValues(AHBConfig*);
     void LoadSimpleItemConfig();
+    void LoadValues(AHBConfig*);
     void LoadItemCountsSimpleMode(AHBConfig *config);
     void LoadItemCountsAdvancedMode(AHBConfig *config);
     void DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry);

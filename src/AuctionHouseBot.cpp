@@ -794,6 +794,10 @@ void AuctionHouseBot::Initialize()
     DisableItemStore.clear();
     QueryResult result = WorldDatabase.PQuery("SELECT item FROM mod_auctionhousebot_disabled_items");
 
+    if (SimpleSellerMode) {
+        LoadSimpleItemConfig();
+    }
+
     if (result)
     {
         do
@@ -1739,6 +1743,40 @@ void AuctionHouseBot::Commands(uint32 command, uint32 ahMapID, uint32 col, char*
     }
 }
 
+void AuctionHouseBot::LoadSimpleItemConfig()
+{
+    if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig starting");
+    QueryResult results = QueryResult(NULL);
+    char simpleItemQuery[] = "SELECT itemID, numStacks FROM mod_auctionhousebot_simpleitemconfig";
+    results = WorldDatabase.Query(simpleItemQuery);
+    if (results)
+    {
+        do
+        {
+            Field* fields = results->Fetch();
+            SimpleItemConfigEntry simpleItemConfigEntry = SimpleItemConfigEntry();
+            simpleItemConfigEntry.itemID = fields[0].GetUInt32();
+            simpleItemConfigEntry.numStacks = fields[1].GetUInt32();
+            simpleItemConfig.push_back(simpleItemConfigEntry);
+            if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig loaded entry. itemID: %u, numStacks: %u", 
+                simpleItemConfigEntry.itemID,
+                simpleItemConfigEntry.numStacks);
+        } while (results->NextRow());
+    }
+    else
+    {
+        if (debug_Out) sLog->outError( "AuctionHouseBot: \"%s\" failed or returned no results", simpleItemQuery);
+    }
+
+    if (simpleItemConfig.size() == 0)
+    {
+        sLog->outError( "AuctionHouseBot: No items");
+        AHBSeller = 0;
+    }
+
+    sLog->outString("AuctionHouseBot::Simple Mode: Loaded %u items", uint32(simpleItemConfig.size()));
+}
+
 void AuctionHouseBot::LoadValues(AHBConfig *config)
 {
     if (debug_Out)
@@ -1859,7 +1897,6 @@ void AuctionHouseBot::LoadValues(AHBConfig *config)
 
         if (SimpleSellerMode)
         {
-            LoadSimpleItemConfig();
             LoadItemCountsSimpleMode(config);
         }
         else 
@@ -1895,41 +1932,6 @@ void AuctionHouseBot::LoadValues(AHBConfig *config)
         }
     }
 	if (debug_Out) sLog->outError( "End Settings for %s Auctionhouses:", WorldDatabase.PQuery("SELECT name FROM mod_auctionhousebot WHERE auctionhouse = %u", config->GetAHID())->Fetch()->GetCString());
-}
-
-void AuctionHouseBot::LoadSimpleItemConfig()
-{
-    if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig starting");
-    QueryResult results = QueryResult(NULL);
-    char simpleItemQuery[] = "SELECT itemID, numStacks FROM mod_auctionhousebot_simpleitemconfig";
-    results = WorldDatabase.Query(simpleItemQuery);
-    if (results)
-    {
-        do
-        {
-            Field* fields = results->Fetch();
-            SimpleItemConfigEntry simpleItemConfigEntry = SimpleItemConfigEntry();
-            simpleItemConfigEntry.itemID = fields[0].GetUInt32();
-            simpleItemConfigEntry.numStacks = fields[1].GetUInt32();
-            simpleItemConfig.push_back(simpleItemConfigEntry);
-            if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig loaded entry. itemID: %u, numStacks: %u", 
-                simpleItemConfigEntry.itemID,
-                simpleItemConfigEntry.numStacks);
-        } while (results->NextRow());
-    }
-    else
-    {
-        if (debug_Out) sLog->outError( "AuctionHouseBot: \"%s\" failed", simpleItemQuery);
-    }
-
-    if (simpleItemConfig.size() == 0)
-    {
-        sLog->outError( "AuctionHouseBot: No items");
-        AHBSeller = 0;
-    }
-
-    sLog->outString("AuctionHouseBot:LoadSimpleItemConfig");
-    sLog->outString("loaded %u items", uint32(simpleItemConfig.size()));
 }
 
 void AuctionHouseBot::LoadItemCountsSimpleMode(AHBConfig *config)
