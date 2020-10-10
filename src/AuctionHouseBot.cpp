@@ -1746,6 +1746,10 @@ void AuctionHouseBot::Commands(uint32 command, uint32 ahMapID, uint32 col, char*
 void AuctionHouseBot::LoadSimpleItemConfig()
 {
     if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig starting");
+    if (simpleItemConfig.size() != 0) {
+        if (debug_Out) sLog->outError("AuctionHouseBot: Simple item config loaded multiple times. Previous size: %u", simpleItemConfig.size());
+        simpleItemConfig.clear();
+    }
     QueryResult results = QueryResult(NULL);
     char simpleItemQuery[] = "SELECT itemID, numStacks FROM mod_auctionhousebot_simpleitemconfig";
     results = WorldDatabase.Query(simpleItemQuery);
