@@ -367,7 +367,7 @@ VALUES
 (50289), (50301), (50307), (52189), (52202), (52272), (52275), (52276), (52345), (52562), (52563), (52565), (52729), (53510), (54218), (54455),
 (54467), (50248), (50431), (52011), (52062), (54291), (54470);
 
-DROP TABLE IF EXISTS `mod_auctionhousebot_simpleitemconfig`
+DROP TABLE IF EXISTS `mod_auctionhousebot_simpleitemconfig`;
 CREATE TABLE `mod_auctionhousebot_simpleitemconfig` (
   `itemID` int(11) DEFAULT '0' COMMENT 'The id of the item to insert. Must be a valid item id in the world.item_template table.',
   `numStacks` int(11) DEFAULT '0' COMMENT 'The number of stacks of this item that should be on the auction house.',
