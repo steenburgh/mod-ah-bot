@@ -232,7 +232,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
     // If simple seller mode, decide what items to insert this cycle
     vector<uint32> simpleMode_ItemsToInsert;
     if (SimpleSellerMode) {
-        for(uint32 i = 1; simpleMode_ItemsToInsert.size() < items && i < simpleItemConfig.size(); i++) {
+        for(uint32 i = 0; simpleMode_ItemsToInsert.size() < items && i < simpleItemConfig.size(); i++) {
             SimpleItemConfigEntry simpleItemConfigEntry = simpleItemConfig[i];
             uint32 itemID = simpleItemConfigEntry.itemID;
             uint32 maxStackCount = simpleItemConfigEntry.numStacks;
