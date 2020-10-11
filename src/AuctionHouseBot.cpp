@@ -170,7 +170,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
     else
         items = (maxItems - auctions);
 
-    if (debug_Out) sLog->outString("AHSeller: Adding %u Auctions", items);
+    if (debug_Out) sLog->outString("AHSeller: Can add %u Auctions this cycle", items);
 
     uint32 AuctioneerGUID = 0;
 
