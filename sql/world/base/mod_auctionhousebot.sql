@@ -371,6 +371,7 @@ DROP TABLE IF EXISTS `mod_auctionhousebot_simpleitemconfig`;
 CREATE TABLE `mod_auctionhousebot_simpleitemconfig` (
   `itemID` int(11) DEFAULT '0' COMMENT 'The id of the item to insert. Must be a valid item id in the world.item_template table.',
   `numStacks` int(11) DEFAULT '0' COMMENT 'The number of stacks of this item that should be on the auction house.',
-  `sellPrice` int(11) DEFAULT '0' COMMENT 'The price, *in copper*, *per item* to sell the item for. If this is set to null or 0, auction house bot will decide automatically.',
+  `stackSize` int(11) DEFAULT '0' COMMENT 'Optional. The number of items to include in each stack. If this is set to null or 0, stack size will be chosen automatically based on rarity and max item stack size',
+  `sellPrice` int(11) DEFAULT '0' COMMENT 'Optional. The price, *in copper*, *per item* to sell the item for. If this is set to null or 0, sell prices will be chosen automatically based on vendor prices.',
   PRIMARY KEY (`itemID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

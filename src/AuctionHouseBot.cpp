@@ -236,10 +236,11 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
             SimpleItemConfigEntry simpleItemConfigEntry = simpleItemConfig[i];
             uint32 itemID = simpleItemConfigEntry.itemID;
             uint32 sellPricePerItem = simpleItemConfigEntry.sellPrice;
+            uint32 stackSize = simpleItemConfigEntry.stackSize;
             uint32 maxStackCount = simpleItemConfigEntry.numStacks;
             uint32 currentStackCount = config->GetSimpleItemCount(itemID);
-            if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Item ID: %u | CurrentCount: %u | SellPricePerItem: %u | MaxStacks: %u",
-                itemID, currentStackCount, sellPricePerItem, maxStackCount);
+            if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Item ID: %u | CurrentCount: %u | SellPricePerItem: %u | StackSize: %u | MaxStacks: %u",
+                itemID, currentStackCount, sellPricePerItem, stackSize, maxStackCount);
 
             for (uint32 j = currentStackCount;
                 j < maxStackCount && simpleMode_ItemsToInsert.size() < items;
@@ -247,10 +248,11 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
             {
                 SimpleItemAuctionTemplate auctionTemplate = SimpleItemAuctionTemplate();
                 auctionTemplate.itemID = itemID;
+                auctionTemplate.stackSize = stackSize;
                 auctionTemplate.sellPrice = sellPricePerItem;
                 simpleMode_ItemsToInsert.push_back(auctionTemplate);
-                if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Will insert item ID: %u at price per item: %u", 
-                    itemID, sellPricePerItem);
+                if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Will insert item: [ID: %u] [Price/Item: %u] [Stack size: %u]", 
+                    itemID, sellPricePerItem, stackSize);
             }
         }
         if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Will insert %u total items", simpleMode_ItemsToInsert.size());
@@ -262,6 +264,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
         if (debug_Out) sLog->outError( "AHSeller: %u count", cnt);
         uint32 itemID = 0;
         uint32 simplePrice = 0;
+        uint32 stackSizeOverride = 0;
         uint32 itemColor = 99;
         uint32 loopbreaker = 0;
         // Duncan: This loop is not batching like it may seem at first glance. It's rolling until it gets a nonzero item id.
@@ -276,10 +279,10 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
                     SimpleItemAuctionTemplate auctionTemplate = simpleMode_ItemsToInsert[zero_indexed_cnt];
                     itemID = auctionTemplate.itemID;
                     simplePrice = auctionTemplate.sellPrice;
+                    stackSizeOverride = auctionTemplate.stackSize;
                     if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Inserting item with ID: %u", itemID);
                 } else {
                     itemID = 0;
-                    simplePrice = 0;
                     if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Could not find entry in itemsToInsert at index %u", zero_indexed_cnt);
                 }
             }
@@ -432,12 +435,28 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
 
             if (prototype->Quality <= AHB_MAX_QUALITY)
             {
-                if (config->GetMaxStack(prototype->Quality) > 1 && item->GetMaxStackCount() > 1)
-                    stackCount = minValue(item->GetMaxStackCount(), config->GetMaxStack(prototype->Quality));
-                else if (config->GetMaxStack(prototype->Quality) == 0 && item->GetMaxStackCount() > 1)
-                    stackCount = item->GetMaxStackCount();
+                if (stackSizeOverride != 0)
+                {
+                    if (item->GetMaxStackCount() > 1)
+                    {
+                        stackCount = minValue(item->GetMaxStackCount(), stackSizeOverride);
+                    }
+                    else
+                    {
+                        stackCount = 1;
+                    }
+                }
                 else
-                    stackCount = 1;
+                {
+                    if (config->GetMaxStack(prototype->Quality) > 1 && item->GetMaxStackCount() > 1)
+                        stackCount = minValue(item->GetMaxStackCount(), config->GetMaxStack(prototype->Quality));
+                    else if (config->GetMaxStack(prototype->Quality) == 0 && item->GetMaxStackCount() > 1)
+                        stackCount = item->GetMaxStackCount();
+                    else
+                        stackCount = 1;
+                }
+                
+                
 
                 if (simplePrice != 0)
                 {
@@ -1769,7 +1788,7 @@ void AuctionHouseBot::LoadSimpleItemConfig()
         simpleItemConfig.clear();
     }
     QueryResult results = QueryResult(NULL);
-    char simpleItemQuery[] = "SELECT itemID, numStacks, sellPrice FROM mod_auctionhousebot_simpleitemconfig";
+    char simpleItemQuery[] = "SELECT itemID, numStacks, stackSize, sellPrice FROM mod_auctionhousebot_simpleitemconfig";
     results = WorldDatabase.Query(simpleItemQuery);
     if (results)
     {
@@ -1779,11 +1798,13 @@ void AuctionHouseBot::LoadSimpleItemConfig()
             SimpleItemConfigEntry simpleItemConfigEntry = SimpleItemConfigEntry();
             simpleItemConfigEntry.itemID = fields[0].GetUInt32();
             simpleItemConfigEntry.numStacks = fields[1].GetUInt32();
-            simpleItemConfigEntry.sellPrice = fields[2].GetUInt32();
+            simpleItemConfigEntry.stackSize = fields[2].GetUInt32();
+            simpleItemConfigEntry.sellPrice = fields[3].GetUInt32();
             simpleItemConfig.push_back(simpleItemConfigEntry);
-            if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig loaded entry. itemID: %u, numStacks: %u, sellPrice: %u", 
+            if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig loaded entry. itemID: %u, numStacks: %u, stackSize: %u, sellPrice: %u", 
                 simpleItemConfigEntry.itemID,
                 simpleItemConfigEntry.numStacks,
+                simpleItemConfigEntry.stackSize,
                 simpleItemConfigEntry.sellPrice);
         } while (results->NextRow());
     }

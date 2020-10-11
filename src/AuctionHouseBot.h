@@ -55,12 +55,14 @@ struct SimpleItemConfigEntry
 {
     uint32 itemID;
     uint32 numStacks;
+    uint32 stackSize;
     uint32 sellPrice;
 };
 
 struct SimpleItemAuctionTemplate
 {
     uint32 itemID;
+    uint32 stackSize;
     uint32 sellPrice;
 };
 
