@@ -442,7 +442,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
                 if (simplePrice != 0)
                 {
                     buyoutPrice = simplePrice;
-                    bidPrice = buyoutPrice/90;
+                    bidPrice = (buyoutPrice * 100) / 90;
                 }
                 else
                 {
