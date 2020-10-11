@@ -238,8 +238,8 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
             uint32 sellPricePerItem = simpleItemConfigEntry.sellPrice;
             uint32 maxStackCount = simpleItemConfigEntry.numStacks;
             uint32 currentStackCount = config->GetSimpleItemCount(itemID);
-            if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Item ID: %u | Current Count: %u | MaxStacks: %u",
-                itemID, currentStackCount, maxStackCount);
+            if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Item ID: %u | CurrentCount: %u | SellPricePerItem: %u | MaxStacks: %u",
+                itemID, currentStackCount, sellPricePerItem, maxStackCount);
 
             for (uint32 j = currentStackCount;
                 j < maxStackCount && simpleMode_ItemsToInsert.size() < items;
@@ -1781,9 +1781,10 @@ void AuctionHouseBot::LoadSimpleItemConfig()
             simpleItemConfigEntry.numStacks = fields[1].GetUInt32();
             simpleItemConfigEntry.sellPrice = fields[2].GetUInt32();
             simpleItemConfig.push_back(simpleItemConfigEntry);
-            if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig loaded entry. itemID: %u, numStacks: %u", 
+            if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig loaded entry. itemID: %u, numStacks: %u, sellPrice: %u", 
                 simpleItemConfigEntry.itemID,
-                simpleItemConfigEntry.numStacks);
+                simpleItemConfigEntry.numStacks,
+                simpleItemConfigEntry.sellPrice);
         } while (results->NextRow());
     }
     else
