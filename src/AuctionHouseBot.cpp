@@ -230,11 +230,12 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
     if (debug_Out) sLog->outError( "AHSeller: Will try to find %u items to add", items);
 
     // If simple seller mode, decide what items to insert this cycle
-    vector<uint32> simpleMode_ItemsToInsert;
+    vector<SimpleItemAuctionTemplate> simpleMode_ItemsToInsert;
     if (SimpleSellerMode) {
         for(uint32 i = 0; simpleMode_ItemsToInsert.size() < items && i < simpleItemConfig.size(); i++) {
             SimpleItemConfigEntry simpleItemConfigEntry = simpleItemConfig[i];
             uint32 itemID = simpleItemConfigEntry.itemID;
+            uint32 sellPricePerItem = simpleItemConfigEntry.sellPrice;
             uint32 maxStackCount = simpleItemConfigEntry.numStacks;
             uint32 currentStackCount = config->GetSimpleItemCount(itemID);
             if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Item ID: %u | Current Count: %u | MaxStacks: %u",
@@ -244,8 +245,12 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
                 j < maxStackCount && simpleMode_ItemsToInsert.size() < items;
                 j++)
             {
-                simpleMode_ItemsToInsert.push_back(itemID);
-                if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Will insert item ID: %u", itemID);
+                SimpleItemAuctionTemplate auctionTemplate = SimpleItemAuctionTemplate();
+                auctionTemplate.itemID = itemID;
+                auctionTemplate.sellPrice = sellPricePerItem;
+                simpleMode_ItemsToInsert.push_back(auctionTemplate);
+                if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Will insert item ID: %u at price per item: %u", 
+                    itemID, sellPricePerItem);
             }
         }
         if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Will insert %u total items", simpleMode_ItemsToInsert.size());
@@ -256,6 +261,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
     {
         if (debug_Out) sLog->outError( "AHSeller: %u count", cnt);
         uint32 itemID = 0;
+        uint32 simplePrice = 0;
         uint32 itemColor = 99;
         uint32 loopbreaker = 0;
         // Duncan: This loop is not batching like it may seem at first glance. It's rolling until it gets a nonzero item id.
@@ -267,10 +273,13 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
                 loopbreaker = 51;
                 uint32 zero_indexed_cnt = cnt - 1;
                 if(zero_indexed_cnt < simpleMode_ItemsToInsert.size()) {
-                    itemID = simpleMode_ItemsToInsert[zero_indexed_cnt];
+                    SimpleItemAuctionTemplate auctionTemplate = simpleMode_ItemsToInsert[zero_indexed_cnt];
+                    itemID = auctionTemplate.itemID;
+                    simplePrice = auctionTemplate.sellPrice;
                     if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Inserting item with ID: %u", itemID);
                 } else {
                     itemID = 0;
+                    simplePrice = 0;
                     if (debug_Out) sLog->outError( "AHSeller::SimpleMode: Could not find entry in itemsToInsert at index %u", zero_indexed_cnt);
                 }
             }
@@ -429,10 +438,19 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
                     stackCount = item->GetMaxStackCount();
                 else
                     stackCount = 1;
-                buyoutPrice *= urand(config->GetMinPrice(prototype->Quality), config->GetMaxPrice(prototype->Quality));
-                buyoutPrice /= 100;
-                bidPrice = buyoutPrice * urand(config->GetMinBidPrice(prototype->Quality), config->GetMaxBidPrice(prototype->Quality));
-                bidPrice /= 100;
+
+                if (simplePrice != 0)
+                {
+                    buyoutPrice = simplePrice;
+                    bidPrice = buyoutPrice/90;
+                }
+                else
+                {
+                    buyoutPrice *= urand(config->GetMinPrice(prototype->Quality), config->GetMaxPrice(prototype->Quality));
+                    buyoutPrice /= 100;
+                    bidPrice = buyoutPrice * urand(config->GetMinBidPrice(prototype->Quality), config->GetMaxBidPrice(prototype->Quality));
+                    bidPrice /= 100;
+                }
             }
             else
             {
@@ -1751,7 +1769,7 @@ void AuctionHouseBot::LoadSimpleItemConfig()
         simpleItemConfig.clear();
     }
     QueryResult results = QueryResult(NULL);
-    char simpleItemQuery[] = "SELECT itemID, numStacks FROM mod_auctionhousebot_simpleitemconfig";
+    char simpleItemQuery[] = "SELECT itemID, numStacks, sellPrice FROM mod_auctionhousebot_simpleitemconfig";
     results = WorldDatabase.Query(simpleItemQuery);
     if (results)
     {
@@ -1761,6 +1779,7 @@ void AuctionHouseBot::LoadSimpleItemConfig()
             SimpleItemConfigEntry simpleItemConfigEntry = SimpleItemConfigEntry();
             simpleItemConfigEntry.itemID = fields[0].GetUInt32();
             simpleItemConfigEntry.numStacks = fields[1].GetUInt32();
+            simpleItemConfigEntry.sellPrice = fields[2].GetUInt32();
             simpleItemConfig.push_back(simpleItemConfigEntry);
             if (debug_Out) sLog->outError( "AuctionHouseBot:LoadSimpleItemConfig loaded entry. itemID: %u, numStacks: %u", 
                 simpleItemConfigEntry.itemID,
