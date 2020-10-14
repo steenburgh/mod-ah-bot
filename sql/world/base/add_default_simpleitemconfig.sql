@@ -60,6 +60,10 @@ VALUES
 ,(32249, 1, 0)
 
 /* Skinning (60+) | No leather scraps */
+,(4234, 3, 0) -- Heavy Leather
+,(4304, 3, 0) -- Thick Leather
+,(8170, 3, 0) -- Rugged Leather
+
 ,(29548, 1, 0) -- (60)
 ,(29547, 1, 0)
 ,(29539, 1, 0)
