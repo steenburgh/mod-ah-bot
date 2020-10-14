@@ -220,7 +220,7 @@ VALUES
 ,(34220, 3, 0) -- Chaotic Skyfire Diamond
 ,(24056, 3, 0) -- Glowing Nightseye
 ,(25893, 3, 0) -- Mystical Skyfire Diamond
-,(35945, 3, 0) -- Brilliant Glass
+-- ,(35945, 3, 0) -- Brilliant Glass -- Crafted by jewelcrafters + used by jewelcrafters - no sense selling on AH
 ,(24033, 3, 0) -- Solid Star of Elune
 ,(24065, 3, 0) -- Dazzling Talasite
 ,(32410, 3, 0) -- Thundering Skyfire Diamond
@@ -331,7 +331,7 @@ VALUES
 ,(23110, 3, 0) -- Shifting Shadow Draenite
 ,(23096, 3, 0) -- Runed Blood Garnet
 ,(23119, 3, 0) -- Sparkling Azure Moonstone
-,(45054, 3, 0) -- Prismatic Black Diamond
+-- ,(45054, 3, 0) -- Prismatic Black Diamond -- Jewelcrafting intermediary crafting item. No sense selling
 ,(23105, 3, 0) -- Enduring Deep Peridot
 ,(23114, 3, 0) -- Gleaming Golden Draenite
 ,(23099, 3, 0) -- Luminous Flame Spessarite
@@ -700,117 +700,16 @@ VALUES
 ,(37097, 1, 0) -- Scroll of Spirit VII
 ,(43465, 1, 0) -- Scroll of Strength VII
 
-,(43146, 1, 0) -- Weapon Vellum III
-,(43145, 1, 0) -- Armor Vellum III
-,(37602, 1, 0) -- Armor Vellum II
-,(39350, 1, 0) -- Weapon Vellum II
-,(38682, 1, 0) -- Armor Vellum
-,(39349, 1, 0) -- Weapon Vellum
-
-,(44317, 1, 0) -- Greater Darkmoon Card
-
-/* Enchanting: Used by other professions */
+/* Enchanting: Things that have prices */
 ,(12655, 1, 0) -- Enchanted Thorium Bar
 ,(12810, 1, 0) -- Enchanted Leather
 
-/* Enchanting: Enchants (70-50) */
-,(22459, 1, 1) -- (1) Void Sphere
-,(38921, 1, 1) -- Scroll of Enchant Weapon - Major Spellpower
-,(38946, 1, 1) -- Scroll of Enchant Weapon - Major Healing
-,(22460, 1, 1) -- Prismatic Sphere
-,(38920, 1, 1) -- Scroll of Enchant Weapon - Potency
-,(38919, 1, 1) -- Scroll of Enchant 2H Weapon - Savagery
-,(38947, 1, 1) -- Scroll of Enchant Weapon - Greater Agility
-,(38884, 1, 1) -- Scroll of Enchant Weapon - Mighty Intellect
-,(38888, 1, 1) -- Scroll of Enchant Gloves - Fire Power
-,(38895, 1, 1) -- Scroll of Enchant Cloak - Dodge
-,(38891, 1, 1) -- Scroll of Enchant Cloak - Greater Fire Resistance
-,(50816, 1, 1) -- Scroll of Enchant Gloves - Angler
-,(38886, 1, 1) -- Scroll of Enchant Gloves - Shadow Power
-,(38894, 1, 1) -- Scroll of Enchant Cloak - Subtlety
-,(38936, 1, 1) -- Scroll of Enchant Gloves - Major Healing
-,(38890, 1, 1) -- Scroll of Enchant Gloves - Superior Agility
-,(38885, 1, 1) -- Scroll of Enchant Gloves - Threat
-,(38893, 1, 1) -- Scroll of Enchant Cloak - Stealth
-,(38942, 1, 1) -- Scroll of Enchant Cloak - Greater Shadow Resistance
-,(38889, 1, 1) -- Scroll of Enchant Gloves - Healing Power
-,(38892, 1, 1) -- Scroll of Enchant Cloak - Greater Nature Resistance
-,(38941, 1, 1) -- Scroll of Enchant Cloak - Greater Arcane Resistance
-,(38902, 1, 1) -- Scroll of Enchant Bracer - Fortitude
-,(38887, 1, 1) -- Scroll of Enchant Gloves - Frost Power
-,(38913, 1, 1) -- Scroll of Enchant Chest - Exceptional Stats
-,(38930, 1, 1) -- Scroll of Enchant Chest - Major Resilience
-,(38917, 1, 1) -- Scroll of Enchant Weapon - Major Striking
-,(38918, 1, 1) -- Scroll of Enchant Weapon - Major Intellect
-,(38906, 1, 1) -- Scroll of Enchant Shield - Shield Block
 ,(22522, 1, 1) -- Superior Wizard Oil
-,(37603, 1, 1) -- Scroll of Enchant Boots - Dexterity
-,(38933, 1, 1) -- Scroll of Enchant Gloves - Major Strength
-,(38901, 1, 1) -- Scroll of Enchant Bracer - Restore Mana Prime
-,(38883, 1, 1) -- Scroll of Enchant Weapon - Mighty Spirit
-,(38915, 1, 1) -- Scroll of Enchant Cloak - Major Resistance
-,(38949, 1, 1) -- Scroll of Enchant Shield - Resilience
-,(38945, 1, 1) -- Scroll of Enchant Shield - Major Stamina
-,(38939, 1, 1) -- Scroll of Enchant Cloak - Spell Penetration
-,(38900, 1, 1) -- Scroll of Enchant Bracer - Superior Healing
-,(38905, 1, 1) -- Scroll of Enchant Shield - Intellect
-,(38928, 1, 1) -- Scroll of Enchant Chest - Major Spirit
-,(38882, 1, 1) -- Scroll of Enchant Bracer - Healing Power
-,(38899, 1, 1) -- Scroll of Enchant Bracer - Major Defense
-,(38909, 1, 1) -- Scroll of Enchant Boots - Fortitude
-,(38898, 1, 1) -- Scroll of Enchant Bracer - Stats
-,(38911, 1, 1) -- Scroll of Enchant Chest - Exceptional Health
-,(38871, 1, 1) -- Scroll of Enchant Weapon - Lifestealing
-,(38874, 1, 1) -- Scroll of Enchant 2H Weapon - Major Spirit
-,(38904, 1, 1) -- Scroll of Enchant Shield - Tough Shield
-,(38940, 1, 1) -- Scroll of Enchant Cloak - Greater Agility
-
-,(38865, 1, 1) -- (51) Scroll of Enchant Chest - Greater Stats
-,(38934, 1, 1) -- Scroll of Enchant Gloves - Assault
-,(38914, 1, 1) -- Scroll of Enchant Cloak - Major Armor
 ,(22521, 1, 1) -- Superior Mana Oil
-,(38873, 1, 1) -- Scroll of Enchant Weapon - Crusader
-,(38937, 1, 1) -- Scroll of Enchant Bracer - Major Intellect
-,(38908, 1, 1) -- Scroll of Enchant Boots - Vitality
-,(38931, 1, 1) -- Scroll of Enchant Gloves - Blasting
-,(38897, 1, 1) -- Scroll of Enchant Bracer - Brawn
-,(38875, 1, 1) -- Scroll of Enchant 2H Weapon - Major Intellect
-,(38870, 1, 1) -- Scroll of Enchant Weapon - Superior Striking
-,(38878, 1, 1) -- Scroll of Enchant Weapon - Healing Power
-,(38877, 1, 1) -- Scroll of Enchant Weapon - Spellpower
-,(38855, 1, 1) -- Scroll of Enchant Bracer - Superior Stamina
-,(38929, 1, 1) -- Scroll of Enchant Chest - Restore Mana Prime
-,(38938, 1, 1) -- Scroll of Enchant Bracer - Assault
-,(38869, 1, 1) -- Scroll of Enchant 2H Weapon - Superior Impact
-,(38872, 1, 1) -- Scroll of Enchant Weapon - Unholy Weapon
-,(38863, 1, 1) -- Scroll of Enchant Boots - Greater Agility
-,(38854, 1, 1) -- Scroll of Enchant Bracer - Superior Strength
-,(38857, 1, 1) -- Scroll of Enchant Gloves - Greater Strength
-,(38879, 1, 1) -- Scroll of Enchant Weapon - Strength
-,(38896, 1, 1) -- Scroll of Enchant 2H Weapon - Agility
-,(38880, 1, 1) -- Scroll of Enchant Weapon - Agility
-,(38881, 1, 1) -- Scroll of Enchant Bracer - Mana Regeneration
-,(38867, 1, 1) -- Scroll of Enchant Chest - Major Mana
-,(38868, 1, 1) -- Scroll of Enchant Weapon - Icy Chill
-,(38859, 1, 1) -- Scroll of Enchant Cloak - Superior Defense
-,(38860, 1, 1) -- Scroll of Enchant Shield - Vitality
 ,(20749, 1, 1) -- Brilliant Wizard Oil
-,(38866, 1, 1) -- Scroll of Enchant Chest - Major Health
-,(38864, 1, 1) -- Scroll of Enchant Boots - Spirit
 ,(20748, 1, 1) -- Brilliant Mana Oil
-,(38856, 1, 1) -- Scroll of Enchant Gloves - Greater Agility
-,(38853, 1, 1) -- Scroll of Enchant Bracer - Superior Spirit
-,(38838, 1, 1) -- Scroll of Enchant Weapon - Fiery Weapon
-,(38858, 1, 1) -- Scroll of Enchant Cloak - Greater Resistance
-,(38861, 1, 1) -- Scroll of Enchant Shield - Greater Stamina
-,(38862, 1, 1) -- Scroll of Enchant Boots - Greater Stamina
-,(38852, 1, 1) -- Scroll of Enchant Bracer - Greater Intellect
-,(38851, 1, 1) -- Scroll of Enchant Gloves - Minor Haste
 ,(20750, 1, 1) -- Wizard Oil
-,(38850, 1, 1) -- Scroll of Enchant Gloves - Riding Skill
 ,(20747, 1, 1) -- Lesser Mana Oil
-
-/* TODO (Priority order) */
 
 /* Tailoring (No gear) */
 ,(24275, 1, 1) -- Silver Spellthread
@@ -952,8 +851,7 @@ VALUES
 INSERT INTO mod_auctionhousebot_simpleitemconfig (itemID, numStacks, stackSize, sellPrice)
 VALUES
 
-/* Enchanting (40+) */
--- These items have no sell price, so one must be specified
+/* Enchanting: Mats with no sell price */
 (11176, 3, 0, 50) -- 40
 ,(11174, 3, 0, 150)
 ,(11175, 3, 0, 400)
@@ -974,12 +872,112 @@ VALUES
 -- ,(34054, 1) -- Northrend
 -- ,(34056, 3)
 
-/* Engineering */
--- These mounts should be super expensive. That's why they have a custom price.
+/* Enchanting: Scrolls (none have a sell price) (70-50) */
+,(22459, 1, 1, 50000) -- (1) Void Sphere
+,(38921, 1, 1, 150000) -- Scroll of Enchant Weapon - Major Spellpower
+,(38946, 1, 1, 150000) -- Scroll of Enchant Weapon - Major Healing
+,(22460, 1, 1, 10000) -- Prismatic Sphere
+,(38920, 1, 1, 150000) -- Scroll of Enchant Weapon - Potency
+,(38919, 1, 1, 150000) -- Scroll of Enchant 2H Weapon - Savagery
+,(38947, 1, 1, 150000) -- Scroll of Enchant Weapon - Greater Agility
+,(38884, 1, 1, 100000) -- Scroll of Enchant Weapon - Mighty Intellect
+,(38888, 1, 1, 100000) -- Scroll of Enchant Gloves - Fire Power
+,(38895, 1, 1, 100000) -- Scroll of Enchant Cloak - Dodge
+,(38891, 1, 1, 100000) -- Scroll of Enchant Cloak - Greater Fire Resistance
+,(50816, 1, 1, 100000) -- Scroll of Enchant Gloves - Angler
+,(38886, 1, 1, 100000) -- Scroll of Enchant Gloves - Shadow Power
+,(38894, 1, 1, 100000) -- Scroll of Enchant Cloak - Subtlety
+,(38936, 1, 1, 100000) -- Scroll of Enchant Gloves - Major Healing
+,(38890, 1, 1, 100000) -- Scroll of Enchant Gloves - Superior Agility
+,(38885, 1, 1, 100000) -- Scroll of Enchant Gloves - Threat
+,(38893, 1, 1, 100000) -- Scroll of Enchant Cloak - Stealth
+,(38942, 1, 1, 100000) -- Scroll of Enchant Cloak - Greater Shadow Resistance
+,(38889, 1, 1, 100000) -- Scroll of Enchant Gloves - Healing Power
+,(38892, 1, 1, 100000) -- Scroll of Enchant Cloak - Greater Nature Resistance
+,(38941, 1, 1, 100000) -- Scroll of Enchant Cloak - Greater Arcane Resistance
+,(38902, 1, 1, 100000) -- Scroll of Enchant Bracer - Fortitude
+,(38887, 1, 1, 100000) -- Scroll of Enchant Gloves - Frost Power
+,(38913, 1, 1, 100000) -- Scroll of Enchant Chest - Exceptional Stats
+,(38930, 1, 1, 100000) -- Scroll of Enchant Chest - Major Resilience
+,(38917, 1, 1, 150000) -- Scroll of Enchant Weapon - Major Striking
+,(38918, 1, 1, 150000) -- Scroll of Enchant Weapon - Major Intellect
+,(38906, 1, 1, 100000) -- Scroll of Enchant Shield - Shield Block
+,(37603, 1, 1, 100000) -- Scroll of Enchant Boots - Dexterity
+,(38933, 1, 1, 100000) -- Scroll of Enchant Gloves - Major Strength
+,(38901, 1, 1, 100000) -- Scroll of Enchant Bracer - Restore Mana Prime
+,(38883, 1, 1, 150000) -- Scroll of Enchant Weapon - Mighty Spirit
+,(38915, 1, 1, 100000) -- Scroll of Enchant Cloak - Major Resistance
+,(38949, 1, 1, 100000) -- Scroll of Enchant Shield - Resilience
+,(38945, 1, 1, 100000) -- Scroll of Enchant Shield - Major Stamina
+,(38939, 1, 1, 100000) -- Scroll of Enchant Cloak - Spell Penetration
+,(38900, 1, 1, 100000) -- Scroll of Enchant Bracer - Superior Healing
+,(38905, 1, 1, 100000) -- Scroll of Enchant Shield - Intellect
+,(38928, 1, 1, 100000) -- Scroll of Enchant Chest - Major Spirit
+,(38882, 1, 1, 100000) -- Scroll of Enchant Bracer - Healing Power
+,(38899, 1, 1, 100000) -- Scroll of Enchant Bracer - Major Defense
+,(38909, 1, 1, 100000) -- Scroll of Enchant Boots - Fortitude
+,(38898, 1, 1, 100000) -- Scroll of Enchant Bracer - Stats
+,(38911, 1, 1, 100000) -- Scroll of Enchant Chest - Exceptional Health
+,(38871, 1, 1, 150000) -- Scroll of Enchant Weapon - Lifestealing
+,(38874, 1, 1, 150000) -- Scroll of Enchant 2H Weapon - Major Spirit
+,(38904, 1, 1, 100000) -- Scroll of Enchant Shield - Tough Shield
+,(38940, 1, 1, 100000) -- Scroll of Enchant Cloak - Greater Agility
+
+,(38865, 1, 1, 100000) -- (51) Scroll of Enchant Chest - Greater Stats
+,(38934, 1, 1, 100000) -- Scroll of Enchant Gloves - Assault
+,(38914, 1, 1, 100000) -- Scroll of Enchant Cloak - Major Armor
+,(38873, 1, 1, 150000) -- Scroll of Enchant Weapon - Crusader
+,(38937, 1, 1, 100000) -- Scroll of Enchant Bracer - Major Intellect
+,(38908, 1, 1, 100000) -- Scroll of Enchant Boots - Vitality
+,(38931, 1, 1, 100000) -- Scroll of Enchant Gloves - Blasting
+,(38897, 1, 1, 100000) -- Scroll of Enchant Bracer - Brawn
+,(38875, 1, 1, 150000) -- Scroll of Enchant 2H Weapon - Major Intellect
+,(38870, 1, 1, 150000) -- Scroll of Enchant Weapon - Superior Striking
+,(38878, 1, 1, 150000) -- Scroll of Enchant Weapon - Healing Power
+,(38877, 1, 1, 150000) -- Scroll of Enchant Weapon - Spellpower
+,(38855, 1, 1, 100000) -- Scroll of Enchant Bracer - Superior Stamina
+,(38929, 1, 1, 100000) -- Scroll of Enchant Chest - Restore Mana Prime
+,(38938, 1, 1, 100000) -- Scroll of Enchant Bracer - Assault
+,(38869, 1, 1, 150000) -- Scroll of Enchant 2H Weapon - Superior Impact
+,(38872, 1, 1, 150000) -- Scroll of Enchant Weapon - Unholy Weapon
+,(38863, 1, 1, 100000) -- Scroll of Enchant Boots - Greater Agility
+,(38854, 1, 1, 100000) -- Scroll of Enchant Bracer - Superior Strength
+,(38857, 1, 1, 100000) -- Scroll of Enchant Gloves - Greater Strength
+,(38879, 1, 1, 150000) -- Scroll of Enchant Weapon - Strength
+,(38896, 1, 1, 150000) -- Scroll of Enchant 2H Weapon - Agility
+,(38880, 1, 1, 150000) -- Scroll of Enchant Weapon - Agility
+,(38881, 1, 1, 100000) -- Scroll of Enchant Bracer - Mana Regeneration
+,(38867, 1, 1, 100000) -- Scroll of Enchant Chest - Major Mana
+,(38868, 1, 1, 150000) -- Scroll of Enchant Weapon - Icy Chill
+,(38859, 1, 1, 100000) -- Scroll of Enchant Cloak - Superior Defense
+,(38860, 1, 1, 100000) -- Scroll of Enchant Shield - Vitality
+,(38866, 1, 1, 100000) -- Scroll of Enchant Chest - Major Health
+,(38864, 1, 1, 100000) -- Scroll of Enchant Boots - Spirit
+,(38856, 1, 1, 100000) -- Scroll of Enchant Gloves - Greater Agility
+,(38853, 1, 1, 100000) -- Scroll of Enchant Bracer - Superior Spirit
+,(38838, 1, 1, 150000) -- Scroll of Enchant Weapon - Fiery Weapon
+,(38858, 1, 1, 100000) -- Scroll of Enchant Cloak - Greater Resistance
+,(38861, 1, 1, 100000) -- Scroll of Enchant Shield - Greater Stamina
+,(38862, 1, 1, 100000) -- Scroll of Enchant Boots - Greater Stamina
+,(38852, 1, 1, 100000) -- Scroll of Enchant Bracer - Greater Intellect
+,(38851, 1, 1, 100000) -- Scroll of Enchant Gloves - Minor Haste
+,(38850, 1, 1, 100000) -- Scroll of Enchant Gloves - Riding Skill
+
+/* Inscription: Items with no sell price */
+,(43146, 1, 0, 5000) -- Weapon Vellum III
+,(43145, 1, 0, 1000) -- Armor Vellum III
+,(37602, 1, 0, 100) -- Armor Vellum II
+,(39350, 1, 0, 5000) -- Weapon Vellum II
+,(38682, 1, 0, 1000) -- Armor Vellum
+,(39349, 1, 0, 100) -- Weapon Vellum
+
+-- ,(44317, 1, 0) -- Greater Darkmoon Card -- Not obtainable without crafting
+
+/* Engineering: Mounts that should be super expensive + need a custom price */
 ,(41508, 1, 0, 50000000) -- Mechano-hog
 ,(44413, 1, 0, 50000000) -- Mekgineer's Chopper
 
--- These items have no sell price
+/* Engineering: Items with no sell price */
 ,(21569, 1, 1, 1000) -- Firework Launcher
 ,(21570, 1, 1, 2000) -- Cluster Launcher
 
