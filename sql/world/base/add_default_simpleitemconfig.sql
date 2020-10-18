@@ -849,6 +849,39 @@ VALUES
 ,(21557, 1, 0) -- Small Red Rocket
 ,(23768, 1, 0) -- White Smoke Flare
 
+/* Cooking (50-70) */
+,(33825, 1, 0) -- Skullfish Soup
+,(21023, 1, 0) -- Dirge's Kickin' Chimaerok Chops
+,(27651, 1, 0) -- Buzzard Bites
+,(27655, 1, 0) -- Ravager Dog
+,(27656, 1, 0) -- Sporeling Snack
+,(27657, 1, 0) -- Blackened Basilisk
+,(27658, 1, 0) -- Roasted Clefthoof
+,(27659, 1, 0) -- Warp Burger
+,(27660, 1, 0) -- Talbuk Steak
+,(27661, 1, 0) -- Blackened Trout
+,(27662, 1, 0) -- Feltail Delight
+,(27663, 1, 0) -- Blackened Sporefish
+,(27664, 1, 0) -- Grilled Mudfish
+,(27665, 1, 0) -- Poached Bluefish
+,(27666, 1, 0) -- Golden Fish Sticks
+,(27667, 1, 0) -- Spicy Crawdad
+,(30155, 1, 0) -- Clam Bar
+,(31672, 1, 0) -- Mok'Nathal Shortribs
+,(31673, 1, 0) -- Crunchy Serpent
+,(33866, 1, 0) -- Stormchops
+,(33867, 1, 0) -- Broiled Bloodfin
+,(33874, 1, 0) -- Kibler's Bits
+,(44838, 1, 0) -- Slow-Roasted Turkey
+,(13933, 1, 0) -- Lobster Stew
+,(13934, 1, 0) -- Mightfish Steak
+,(13935, 1, 0) -- Baked Salmon
+,(18254, 1, 0) -- Runn Tum Tuber Surprise
+,(20452, 1, 0) -- Smoked Desert Dumplings
+,(35563, 1, 0) -- Charred Bear Kabobs
+,(35565, 1, 0) -- Juicy Bear Burger
+,(46691, 1, 0) -- Bread of the Dead
+
 ;
 
 /****** All items that have no vendor price + thus need an explicitly specified sell price ******/
