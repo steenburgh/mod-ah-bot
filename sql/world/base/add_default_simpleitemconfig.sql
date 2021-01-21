@@ -934,10 +934,10 @@ VALUES
 ,(22450, 1, 0, 200000) -- Endgame (70)
 -- WOTLK ENCHANTING MATS --
 ,(34054, 1, 0,  20000) -- Infinite Dust
-,(34056, 1, 0,  30000) -- Lesser Cosmic Essence
-,(34055, 1, 0,  60000) -- Greater Cosmic Essence
-,(34053, 1, 0,  60000) -- Small Dream Shard
-,(34052, 1, 0, 160000) -- Dream Shard
+,(34056, 1, 0,  40000) -- Lesser Cosmic Essence
+,(34055, 1, 0,  120000) -- Greater Cosmic Essence
+,(34053, 1, 0,  70000) -- Small Dream Shard
+,(34052, 1, 0, 210000) -- Dream Shard
 ,(34057, 1, 0, 400000) -- Abyss Crystal
 
 /* Enchanting: Scrolls (none have a sell price) (70-50) */
