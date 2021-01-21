@@ -108,6 +108,13 @@ VALUES
 ,(22572, 2, 0)
 ,(25707, 1, 0) -- (70)
 
+-- Leatherworking Mats Northrend
+
+,(33568, 3, 0) -- Borean Leather
+,(38558, 1, 0) -- Nerubian Chitin
+,(38561, 1, 0) -- Jormungar Scale
+,(38557, 1, 0) -- Icy Dragonscale
+
 -- ,(39686, 1, 0) -- Northrend
 -- ,(39682, 1, 0)
 -- ,(38558, 1, 0)
@@ -907,6 +914,21 @@ VALUES
 ,(35563, 1, 0) -- Charred Bear Kabobs
 ,(35565, 1, 0) -- Juicy Bear Burger
 ,(46691, 1, 0) -- Bread of the Dead
+
+/* Eternal elemtents and crystallized elements (Northrend)*/
+
+,(35622, 3, 0) -- Eternal Water
+,(35623, 3, 0) -- Eternal Air
+,(35624, 3, 0) -- Eternal Earth
+,(35625, 3, 0) -- Eternal Life
+,(35627, 3, 0) -- Eternal Shadow
+,(36860, 3, 0) -- Eternal Fire
+,(37700, 3, 0) -- Crystallized Air
+,(37701, 3, 0) -- Crystallized Earth
+,(37702, 3, 0) -- Crystallized Fire
+,(37703, 3, 0) -- Crystallized Shadow
+,(37704, 3, 0) -- Crystallized Life
+,(37705, 3, 0) -- Cryystallized Water
 
 ;
 
