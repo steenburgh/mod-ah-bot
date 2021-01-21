@@ -2,8 +2,12 @@ TRUNCATE TABLE mod_auctionhousebot_simpleitemconfig;
 INSERT INTO mod_auctionhousebot_simpleitemconfig (itemID, numStacks, stackSize)
 VALUES
 
+/* Commonly sold drops */
+(30183, 3, 0) -- Nether Vortex
+,(33470, 3, 0) -- Frostweave Cloth
+
 /* Herbalism Trade Goods (60+) */
-(22787, 3, 0) -- (65)
+,(22787, 3, 0) -- (65)
 ,(22788, 1, 0)
 ,(22790, 1, 0)
 ,(22791, 3, 0)
@@ -52,12 +56,34 @@ VALUES
 ,(23439, 1, 0)
 ,(23440, 1, 0)
 ,(23441, 1, 0)
-,(32227, 1, 0) -- 70 Purple gems. ENDAGME Raid drops. 
+,(32227, 1, 0) -- 70 Purple gems. ENDGAME Raid drops. 
 ,(32228, 1, 0)
 ,(32229, 1, 0)
 ,(32230, 1, 0)
 ,(32231, 1, 0)
 ,(32249, 1, 0)
+-- WOTLK GEMS RAW --
+-- Greens
+,(36917, 1, 0) -- Bloodstone
+,(36920, 1, 0) -- Sun Crystal
+,(36923, 1, 0) -- Chalcedony
+,(36926, 1, 0) -- Shadow Crystal
+,(36929, 1, 0) -- Huge Citrine
+,(36932, 1, 0) -- Dark Jade
+-- Blues
+,(36918, 1, 0) -- Scarlet Ruby
+,(36921, 1, 0) -- Autumn's Glow
+,(36924, 1, 0) -- Sky Sapphire
+,(36927, 1, 0) -- Twilight Opal
+,(36930, 1, 0) -- Monarch Topaz
+,(36933, 1, 0) -- Forest Emerald
+-- Purples
+,(36919, 1, 0) -- Cardinal Ruby
+,(36922, 1, 0) -- King's Amber
+,(36925, 1, 0) -- Majestic Zircon
+,(36928, 1, 0) -- Dreadstone
+,(36931, 1, 0) -- Ametrine
+,(36934, 1, 0) -- Eye of Zul
 
 /* Skinning (60+) | No leather scraps */
 ,(4234, 3, 0) -- Heavy Leather
@@ -906,8 +932,13 @@ VALUES
 ,(22448, 3, 0, 60000)
 ,(22449, 1, 0, 80000)
 ,(22450, 1, 0, 200000) -- Endgame (70)
--- ,(34054, 1) -- Northrend
--- ,(34056, 3)
+-- WOTLK ENCHANTING MATS --
+,(34054, 1, 0,  20000) -- Infinite Dust
+,(34056, 1, 0,  30000) -- Lesser Cosmic Essence
+,(34055, 1, 0,  60000) -- Greater Cosmic Essence
+,(34053, 1, 0,  60000) -- Small Dream Shard
+,(34052, 1, 0, 160000) -- Dream Shard
+,(34057, 1, 0, 400000) -- Abyss Crystal
 
 /* Enchanting: Scrolls (none have a sell price) (70-50) */
 ,(22459, 1, 1, 50000) -- (1) Void Sphere
