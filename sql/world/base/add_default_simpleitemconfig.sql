@@ -6,78 +6,157 @@ VALUES
 (30183, 3, 0) -- Nether Vortex
 ,(33470, 3, 0) -- Frostweave Cloth
 
-/* Herbalism Trade Goods (60+) */
-,(22787, 3, 0) -- (65)
-,(22788, 1, 0)
-,(22790, 1, 0)
-,(22791, 3, 0)
-,(22792, 3, 0)
-,(22793, 3, 0)
-,(22794, 1, 0) -- (70)
-
-/* Herbalism Everything else (60+) */
-,(19726, 1, 0) -- (60)
-,(13468, 1, 0)
-,(22575, 1, 0)
-,(22576, 1, 0)
+/* Herbalism: Gathered (0-80) */
+,(36908, 1, 0) -- Frost Lotus
+,(36906, 3, 0) -- Icethorn
+,(36905, 3, 0) -- Lichbloom
+,(36903, 3, 0) -- Adder's Tongue
+,(39970, 3, 0) -- Fire Leaf
+,(37704, 3, 0) -- Crystallized Life | Note: Not an herb but gathered primarily by herbalism
+,(39969, 3, 0) -- Fire Seed
+,(37921, 3, 0) -- Deadnettle
+,(36901, 3, 0) -- Goldclover
+,(36904, 3, 0) -- Tiger Lily
+,(36907, 3, 0) -- Talandra's Rose
+,(22794, 1, 0) -- Fel Lotus
+,(32506, 1, 0) -- Netherwing Egg
+,(22793, 1, 0) -- Mana Thistle
+,(32468, 1, 0) -- Netherdust Pollen
+,(22792, 1, 0) -- Nightmare Vine
+,(22791, 1, 0) -- Netherbloom
+,(22790, 1, 0) -- Ancient Lichen
+,(22788, 1, 0) -- Flame Cap
+,(22787, 1, 0) -- Ragveil
+,(22575, 1, 0) -- Mote of Life
+,(22795, 1, 0) -- Fel Blossom
+,(22576, 1, 0) -- Mote of Mana
+,(27859, 1, 0) -- Zangar Caps
+,(19726, 1, 0) -- Bloodvine
+,(13468, 1, 0) -- Black Lotus
+,(22785, 1, 0) -- Felweed
+,(22789, 1, 0) -- Terocone
+,(22786, 1, 0) -- Dreaming Glory
+,(13467, 1, 0) -- Icecap
+,(13466, 1, 0) -- Plaguebloom
+,(13465, 1, 0) -- Mountain Silversage
+,(13463, 1, 0) -- Dreamfoil
+,(13464, 1, 0) -- Golden Sansam
+,(8846, 1, 0) -- Gromsblood
+,(8839, 1, 0) -- Blindweed
+,(8845, 1, 0) -- Ghost Mushroom
+,(8838, 1, 0) -- Sungrass
+,(8836, 1, 0) -- Arthas' Tears
+,(8831, 1, 0) -- Purple Lotus
+,(4625, 1, 0) -- Firebloom
+,(8153, 1, 0) -- Wildvine
+,(3819, 1, 0) -- Wintersbite
+,(3358, 1, 0) -- Khadgar's Whisker
+,(3821, 1, 0) -- Goldthorn
+,(3818, 1, 0) -- Fadeleaf
+,(3357, 1, 0) -- Liferoot
+,(3356, 1, 0) -- Kingsblood
+,(3355, 1, 0) -- Wild Steelbloom
+,(3369, 1, 0) -- Grave Moss
+,(3820, 1, 0) -- Stranglekelp
+,(2453, 1, 0) -- Bruiseweed
+,(2452, 1, 0) -- Swiftthistle
+,(2450, 1, 0) -- Briarthorn
+,(2449, 1, 0) -- Earthroot
+,(785, 1, 0) -- Mageroyal
+,(765, 1, 0) -- Silverleaf
+,(2447, 1, 0) -- Peacebloom
+,(22710, 1, 0) -- Bloodthistle
 
 /* Enchanting (50+) */
 -- Enchanting is in a separate query as all items need sell prices
 
-/* Mining: Trade Goods (Ores, Stone, Elements) (50+) */
-,(11370, 1, 0) -- (50)
-,(7076, 1, 0) -- Kinda annoying to get
-,(23424, 3, 0)
-,(23425, 3, 0)
-,(22573, 2, 0)
-,(22574, 1, 0)
-,(23426, 1, 0)
-,(23427, 1, 0) -- (70)
+/* Mining: Gathered (0-80) */
+,(36918, 3, 0) -- Scarlet Ruby
+,(36933, 3, 0) -- Forest Emerald
+,(36927, 3, 0) -- Twilight Opal
+,(36921, 3, 0) -- Autumn's Glow
+,(36930, 3, 0) -- Monarch Topaz
+,(36924, 3, 0) -- Sky Sapphire
+,(36910, 3, 0) -- Titanium Ore
+,(36929, 3, 0) -- Huge Citrine
+,(36923, 3, 0) -- Chalcedony
+,(36932, 3, 0) -- Dark Jade
+,(36926, 3, 0) -- Shadow Crystal
+,(36920, 3, 0) -- Sun Crystal
+,(36917, 3, 0) -- Bloodstone
+,(36912, 3, 0) -- Saronite Ore
+,(36909, 3, 0) -- Cobalt Ore -- End of WoTLK items
+,(32230, 1, 0) -- Shadowsong Amethyst -- Start of TBC Items
+,(32229, 1, 0) -- Lionseye
+,(32249, 1, 0) -- Seaspray Emerald
+,(32228, 1, 0) -- Empyrean Sapphire
+,(32231, 1, 0) -- Pyrestone
+,(32227, 1, 0) -- Crimson Spinel
+,(23439, 1, 0) -- Noble Topaz
+,(23437, 1, 0) -- Talasite
+,(23441, 1, 0) -- Nightseye
+,(23436, 1, 0) -- Living Ruby
+,(23440, 1, 0) -- Dawnstone
+,(23438, 1, 0) -- Star of Elune
+,(23426, 1, 0) -- Khorium Ore
+,(23427, 1, 0) -- Eternium Ore
+,(32464, 1, 0) -- Nethercite Ore
+,(23077, 1, 0) -- Blood Garnet
+,(23112, 1, 0) -- Golden Draenite
+,(23107, 1, 0) -- Shadow Draenite
+,(21929, 1, 0) -- Flame Spessarite
+,(23079, 1, 0) -- Deep Peridot
+,(23117, 1, 0) -- Azure Moonstone
+,(23425, 1, 0) -- Adamantite Ore
+,(22574, 1, 0) -- Mote of Fire
+,(22573, 1, 0) -- Mote of Earth
+,(12363, 1, 0) -- Arcane Crystal
+,(12364, 1, 0) -- Huge Emerald
+,(12800, 1, 0) -- Azerothian Diamond
+,(23424, 1, 0) -- Fel Iron Ore
 
-/* Mining: Non Trade Goods (Gems + a few other things) (50+) */
-,(7910, 3, 0) -- (50)
-,(11382, 3, 0)
-,(19774, 3, 0)
-,(12799, 3, 0)
-,(12361, 3, 0)
-,(12800, 3, 0)
-,(12363, 3, 0)
-,(12364, 3, 0) -- (60)
-,(23112, 2, 0)
-,(23117, 2, 0)
-,(23077, 2, 0)
-,(23079, 2, 0)
-,(21929, 2, 0)
-,(23107, 2, 0)
--- ,(32464, 2, 0) -- (70) -- Quest item only
-,(23436, 1, 0)  -- 70 blue gems
-,(23437, 1, 0)
-,(23438, 1, 0)
-,(23439, 1, 0)
-,(23440, 1, 0)
-,(23441, 1, 0)
-,(32227, 1, 0) -- 70 Purple gems. ENDGAME Raid drops. 
-,(32228, 1, 0)
-,(32229, 1, 0)
-,(32230, 1, 0)
-,(32231, 1, 0)
-,(32249, 1, 0)
--- WOTLK GEMS RAW --
--- Greens
-,(36917, 1, 0) -- Bloodstone
-,(36920, 1, 0) -- Sun Crystal
-,(36923, 1, 0) -- Chalcedony
-,(36926, 1, 0) -- Shadow Crystal
-,(36929, 1, 0) -- Huge Citrine
-,(36932, 1, 0) -- Dark Jade
--- Blues
-,(36918, 1, 0) -- Scarlet Ruby
-,(36921, 1, 0) -- Autumn's Glow
-,(36924, 1, 0) -- Sky Sapphire
-,(36927, 1, 0) -- Twilight Opal
-,(36930, 1, 0) -- Monarch Topaz
-,(36933, 1, 0) -- Forest Emerald
--- Purples
+,(12799, 1, 0) -- Large Opal
+,(12361, 1, 0) -- Blue Sapphire
+,(7076, 1, 0) -- Essence of Earth
+,(19774, 1, 0) -- Souldarite
+,(11382, 1, 0) -- Blood of the Mountain
+,(7910, 1, 0) -- Star Ruby
+,(11370, 1, 0) -- Dark Iron Ore
+,(7909, 1, 0) -- Aquamarine
+,(12365, 1, 0) -- Dense Stone
+,(3864, 1, 0) -- Citrine
+,(7911, 1, 0) -- Truesilver Ore
+,(9262, 1, 0) -- Black Vitriol
+,(3858, 1, 0) -- Mithril Ore
+,(10620, 1, 0) -- Thorium Ore
+,(1529, 1, 0) -- Jade
+,(7912, 1, 0) -- Solid Stone
+,(1705, 1, 0) -- Lesser Moonstone
+,(2772, 1, 0) -- Iron Ore
+,(2776, 1, 0) -- Gold Ore
+,(1206, 1, 0) -- Moss Agate
+,(2838, 1, 0) -- Heavy Stone
+,(3340, 1, 0) -- Incendicite Ore
+,(1210, 1, 0) -- Shadowgem
+,(2771, 1, 0) -- Tin Ore
+,(818, 1, 0) -- Tigerseye
+,(2836, 1, 0) -- Coarse Stone
+,(2775, 1, 0) -- Silver Ore
+,(2770, 1, 0) -- Copper Ore
+,(774, 1, 0) -- Malachite
+,(2835, 1, 0) -- Rough Stone
+,(5075, 1, 0) -- Blood Shard
+,(36728, 1, 0) -- Ice Shard Cluster
+,(22203, 1, 0) -- Large Obsidian Shard
+,(22634, 1, 0) -- Underlight Ore
+,(22202, 1, 0) -- Small Obsidian Shard
+,(5833, 1, 0) -- Indurium Ore
+,(2798, 1, 0) -- Rethban Ore
+,(11513, 1, 0) -- Tainted Vitriol
+,(4278, 1, 0) -- Lesser Bloodstone Ore
+,(11754, 1, 0) -- Black Diamond
+
+/* Prospect-only Gems (WoTLK Purple) */
 ,(36919, 1, 0) -- Cardinal Ruby
 ,(36922, 1, 0) -- King's Amber
 ,(36925, 1, 0) -- Majestic Zircon
@@ -85,317 +164,495 @@ VALUES
 ,(36931, 1, 0) -- Ametrine
 ,(36934, 1, 0) -- Eye of Zul
 
-/* Skinning (60+) | No leather scraps */
-,(4234, 3, 0) -- Heavy Leather
-,(4304, 3, 0) -- Thick Leather
-,(8170, 3, 0) -- Rugged Leather
-
-,(29548, 1, 0) -- (60)
-,(29547, 1, 0)
-,(29539, 1, 0)
-,(25708, 1, 0)
-,(25700, 1, 0)
-,(25699, 1, 0)
-,(21887, 3, 0) -- Primary trade good
-,(19768, 1, 0)
-,(19767, 1, 0)
-,(17012, 1, 0)
-,(15414, 1, 0)
-,(15410, 1, 0)
-,(22578, 2, 0)
-,(22577, 2, 0)
--- ,(22576, 2, 0) Excluded: Included in Herbalism section instead
-,(22572, 2, 0)
-,(25707, 1, 0) -- (70)
-
--- Leatherworking Mats Northrend
-
-,(33568, 3, 0) -- Borean Leather
-,(38558, 1, 0) -- Nerubian Chitin
+/* Skinning: Gathered (0-80) */
+,(44128, 3, 0) -- Arctic Fur
 ,(38561, 1, 0) -- Jormungar Scale
 ,(38557, 1, 0) -- Icy Dragonscale
+,(39690, 1, 0) -- Volatile Blasting Trigger
+,(39681, 1, 0) -- Handful of Cobalt Bolts
+,(39682, 1, 0) -- Overcharged Capacitor
+,(25707, 1, 0) -- Fel Hide
+,(33568, 3, 0) -- Borean Leather
+,(38558, 1, 0) -- Nerubian Chitin
+,(39686, 1, 0) -- Neo-Dynamic Gear Assembly
+,(32470, 1, 0) -- Nethermine Flayer Hide
+,(22572, 1, 0) -- Mote of Air
+,(22578, 1, 0) -- Mote of Water
+,(22577, 1, 0) -- Mote of Shadow
+,(15410, 1, 0) -- Scale of Onyxia
+,(29539, 1, 0) -- Cobra Scales
+,(19768, 1, 0) -- Primal Tiger Leather
+,(19767, 1, 0) -- Primal Bat Leather
+,(29548, 1, 0) -- Nether Dragonscales
+,(25700, 1, 0) -- Fel Scales
+,(29547, 1, 0) -- Wind Scales
+,(21887, 1, 0) -- Knothide Leather
+,(25699, 1, 0) -- Crystal Infused Leather
+,(15414, 1, 0) -- Red Dragonscale
+,(25708, 1, 0) -- Thick Clefthoof Leather
+,(17012, 1, 0) -- Core Leather
+,(20501, 1, 0) -- Heavy Silithid Carapace
+,(20500, 1, 0) -- Light Silithid Carapace
+,(15416, 1, 0) -- Black Dragonscale
+,(15408, 1, 0) -- Heavy Scorpid Scale
+,(20498, 1, 0) -- Silithid Chitin
+,(8170, 1, 0) -- Rugged Leather
+,(15417, 1, 0) -- Devilsaur Leather
+,(15412, 1, 0) -- Green Dragonscale
+,(15415, 1, 0) -- Blue Dragonscale
+,(8171, 1, 0) -- Rugged Hide
 
--- ,(39686, 1, 0) -- Northrend
--- ,(39682, 1, 0)
--- ,(38558, 1, 0)
+,(15419, 1, 0) -- Warbear Leather
+,(15423, 1, 0) -- Chimera Leather
+,(15422, 1, 0) -- Frostsaber Leather
+,(7974, 1, 0) -- Zesty Clam Meat
+,(8165, 1, 0) -- Worn Dragonscale
+,(8154, 1, 0) -- Scorpid Scale
+,(4304, 1, 0) -- Thick Leather
+,(8169, 1, 0) -- Thick Hide
+,(8368, 1, 0) -- Thick Wolfhide
+,(8167, 1, 0) -- Turtle Scale
+,(4235, 1, 0) -- Heavy Hide
+,(4234, 1, 0) -- Heavy Leather
+,(7428, 1, 0) -- Shadowcat Hide
+,(2319, 1, 0) -- Medium Leather
+,(4232, 1, 0) -- Medium Hide
+,(783, 1, 0) -- Light Hide
+,(2318, 1, 0) -- Light Leather
+,(2934, 1, 0) -- Ruined Leather Scraps
+,(12731, 1, 0) -- Pristine Hide of the Beast
+,(12607, 1, 0) -- Brilliant Chromatic Scale
+,(17057, 1, 0) -- Shiny Fish Scales
+,(35229, 1, 0) -- Nether Residue
+,(8973, 1, 0) -- Thick Yeti Hide
+,(7286, 1, 0) -- Black Whelp Scale
+,(23677, 1, 0) -- Moongraze Buck Hide
+,(6471, 1, 0) -- Perfect Deviate Scale
+,(12366, 1, 0) -- Thick Yeti Fur
+,(7392, 1, 0) -- Green Whelp Scale
+,(18947, 1, 0) -- Rage Scar Yeti Hide
+,(6470, 1, 0) -- Deviate Scale
+,(11512, 1, 0) -- Patch of Tainted Skin
+,(7287, 1, 0) -- Red Whelp Scale
+,(42542, 1, 0) -- Stoic Mammoth Hide
 
 /* Alchemy */
-,(25868, 3, 0) -- (1) Skyfire Diamond
+,(46377, 1, 0) -- Flask of Endless Rage
+,(46379, 1, 0) -- Flask of Stoneblood
+,(46378, 1, 0) -- Flask of Pure Mojo
+,(46376, 1, 0) -- Flask of the Frost Wyrm
+
+,(41334, 1, 0) -- Earthsiege Diamond
+,(41266, 1, 0) -- Skyflare Diamond
+
+,(41163, 1, 0) -- Titanium Bar
+,(40081, 1, 0) -- Potion of Nightmares
+,(40215, 1, 0) -- Mighty Frost Protection Potion
+,(44331, 1, 0) -- Elixir of Lightning Speed
+,(40070, 1, 0) -- Spellpower Elixir
+,(40097, 1, 0) -- Elixir of Protection
+,(44327, 1, 0) -- Elixir of Deadly Strikes
+,(40216, 1, 0) -- Mighty Nature Protection Potion
+,(40078, 1, 0) -- Elixir of Mighty Fortitude
+,(40109, 1, 0) -- Elixir of Mighty Mageblood
+,(40213, 1, 0) -- Mighty Arcane Protection Potion
+,(44330, 1, 0) -- Elixir of Armor Piercing
+,(40068, 1, 0) -- Wrath Elixir
+,(40073, 1, 0) -- Elixir of Mighty Strength
+,(44325, 1, 0) -- Elixir of Accuracy
+,(33448, 3, 0) -- Runic Mana Potion
+,(40214, 1, 0) -- Mighty Fire Protection Potion
+,(44939, 1, 0) -- Lesser Flask of Resistance
+,(40076, 1, 0) -- Guru's Elixir
+,(40212, 1, 0) -- Potion of Wild Magic
+,(40093, 1, 0) -- Indestructible Potion
+,(44329, 1, 0) -- Elixir of Expertise
+,(39666, 1, 0) -- Elixir of Mighty Agility
+,(33447, 3, 0) -- Runic Healing Potion
+,(40217, 1, 0) -- Mighty Shadow Protection Potion
+,(44332, 1, 0) -- Elixir of Mighty Thoughts
+,(40072, 1, 0) -- Elixir of Spirit
+,(40211, 1, 0) -- Potion of Speed
+,(40087, 1, 0) -- Powerful Rejuvenation Potion
+,(44328, 1, 0) -- Elixir of Mighty Defense
+,(40079, 1, 0) -- Lesser Flask of Toughness
+
+,(39671, 1, 0) -- Resurgent Healing Potion
+,(44958, 1, 0) -- Ethereal Oil
+,(22849, 1, 0) -- Ironshield Potion
+
+,(25868, 3, 0) -- Skyfire Diamond
 ,(25867, 3, 0) -- Earthstorm Diamond
-,(22841, 3, 0) -- Major Fire Protection Potion
-,(22866, 1, 3) -- Flask of Pure Death
-,(32852, 3, 1) -- Cauldron of Major Shadow Protection
-,(22845, 3, 0) -- Major Arcane Protection Potion
-,(22836, 3, 0) -- Major Dreamless Sleep Potion
-,(22851, 1, 3) -- Flask of Fortification
-,(32839, 3, 1) -- Cauldron of Major Arcane Protection
-,(22848, 1, 3) -- Elixir of Empowerment
-,(22839, 3, 0) -- Destruction Potion
-,(22861, 1, 3) -- Flask of Blinding Light
-,(32851, 3, 1) -- Cauldron of Major Nature Protection
-,(22844, 3, 0) -- Major Nature Protection Potion
-,(22835, 1, 3) -- Elixir of Major Shadow Power
-,(22847, 3, 0) -- Major Holy Protection Potion
-,(22838, 3, 0) -- Haste Potion
-,(22854, 1, 3) -- Flask of Relentless Assault
-,(32850, 3, 1) -- Cauldron of Major Frost Protection
-,(22842, 3, 0) -- Major Frost Protection Potion
-,(33208, 1, 3) -- Flask of Chromatic Wonder
-,(22846, 3, 0) -- Major Shadow Protection Potion
-,(22837, 3, 0) -- Heroic Potion
-,(22853, 1, 3) -- Flask of Mighty Restoration
-,(32849, 3, 1) -- Cauldron of Major Fire Protection
-,(22840, 1, 3) -- Elixir of Major Mageblood
-,(31676, 3, 0) -- Fel Regeneration Potion
-,(22834, 1, 3) -- Elixir of Major Defense
-,(22832, 3, 0) -- Super Mana Potion
-,(22871, 3, 0) -- Shrouding Potion
-,(31679, 1, 3) -- Fel Strength Elixir
-,(32068, 1, 3) -- Elixir of Ironskin
-,(22831, 1, 3) -- Elixir of Major Agility
-,(23571, 3, 0) -- Primal Might
-,(22456, 3, 0) -- Primal Shadow
-,(21884, 3, 0) -- Primal Fire
-,(22451, 3, 0) -- Primal Air
-,(21886, 3, 0) -- Primal Life
-,(22452, 3, 0) -- Primal Earth
-,(22457, 3, 0) -- Primal Mana
-,(21885, 3, 0) -- Primal Water
-,(22830, 1, 3) -- Elixir of the Searching Eye
-,(22829, 3, 0) -- Super Healing Potion
-,(22827, 1, 3) -- Elixir of Major Frost Power
-,(22833, 1, 3) -- Elixir of Major Firepower
-,(22828, 3, 0) -- Insane Strength Potion
-,(32067, 1, 3) -- Elixir of Draenic Wisdom
-,(32063, 1, 3) -- Earthen Elixir
-,(28104, 1, 3) -- Elixir of Mastery
-,(22826, 3, 0) -- Sneaking Potion
 
-,(28101, 3, 0) -- (51) Unstable Mana Potion
-,(22825, 1, 3) -- Elixir of Healing Power
-,(32062, 1, 3) -- Elixir of Major Fortitude
-,(22824, 1, 3) -- Elixir of Major Strength
-,(22823, 1, 3) -- Elixir of Camouflage
-,(13506, 3, 0) -- Potion of Petrification
-,(13512, 1, 3) -- Flask of Supreme Power
-,(20002, 3, 0) -- Greater Dreamless Sleep Potion
-,(18253, 3, 0) -- Major Rejuvenation Potion
-,(28103, 1, 3) -- Adept's Elixir
-,(13511, 1, 3) -- Flask of Distilled Wisdom
-,(28102, 1, 3) -- Onslaught Elixir
-,(13510, 1, 3) -- Flask of the Titans
-,(13513, 1, 3) -- Flask of Chromatic Resistance
-,(28100, 3, 0) -- Volatile Healing Potion
-,(13444, 3, 0) -- Major Mana Potion
-,(13458, 3, 0) -- Greater Nature Protection Potion
-,(13460, 3, 0) -- Greater Holy Protection Potion
-,(13456, 3, 0) -- Greater Frost Protection Potion
-,(13459, 3, 0) -- Greater Shadow Protection Potion
-,(13457, 3, 0) -- Greater Fire Protection Potion
-,(20004, 1, 3) -- Mighty Troll's Blood Elixir
-,(13461, 3, 0) -- Greater Arcane Protection Potion
-,(13462, 3, 0) -- Purification Potion
-,(13454, 1, 3) -- Greater Arcane Elixir
-,(20008, 3, 0) -- Living Action Potion
-,(13452, 1, 3) -- Elixir of the Mongoose
-,(13455, 3, 0) -- Greater Stoneshield Potion
-,(12803, 3, 0) -- Living Essence
--- ,(7076, 3, 0) -- Essence of Earth -- Already included in 'mining' section
-,(12808, 3, 0) -- Essence of Undeath
-,(12360, 3, 0) -- Arcanite Bar
-,(7078, 3, 0) -- Essence of Fire
-,(7082, 3, 0) -- Essence of Air
-,(7080, 3, 0) -- Essence of Water
-,(13446, 3, 0) -- Major Healing Potion
-,(3386, 3, 0) -- Potion of Curing
-,(13453, 1, 3) -- Elixir of Brute Force
-,(13447, 1, 3) -- Elixir of the Sages
-,(13445, 1, 3) -- Elixir of Superior Defense
-,(13443, 3, 0) -- Superior Mana Potion
-,(13442, 3, 0) -- Mighty Rage Potion
-,(6037, 3, 0) -- Truesilver Bar
-,(9224, 1, 3) -- Elixir of Demonslaying
-,(21546, 1, 3) -- Elixir of Greater Firepower
-,(3387, 3, 0) -- Limited Invulnerability Potion
-,(13423, 3, 0) -- Stonescale Oil
-,(9264, 1, 3) -- Elixir of Shadow Power
-,(20007, 1, 3) -- Mageblood Elixir
-,(8827, 1, 3) -- Elixir of Water Walking
+,(22841, 1, 0) -- Major Fire Protection Potion
+,(33208, 1, 0) -- Flask of Chromatic Wonder
+,(22854, 1, 0) -- Flask of Relentless Assault
+,(32839, 1, 0) -- Cauldron of Major Arcane Protection
+,(22845, 1, 0) -- Major Arcane Protection Potion
+,(22836, 1, 0) -- Major Dreamless Sleep Potion
+,(32851, 1, 0) -- Cauldron of Major Nature Protection
+,(22848, 1, 0) -- Elixir of Empowerment
+,(22839, 1, 0) -- Destruction Potion
+,(22853, 1, 0) -- Flask of Mighty Restoration
+,(22844, 1, 0) -- Major Nature Protection Potion
+,(22835, 1, 0) -- Elixir of Major Shadow Power
+,(22866, 1, 0) -- Flask of Pure Death
+,(32850, 1, 0) -- Cauldron of Major Frost Protection
+,(22847, 1, 0) -- Major Holy Protection Potion
+,(22838, 1, 0) -- Haste Potion
+,(22851, 1, 0) -- Flask of Fortification
+,(22842, 1, 0) -- Major Frost Protection Potion
+,(22861, 1, 0) -- Flask of Blinding Light
+,(32849, 1, 0) -- Cauldron of Major Fire Protection
+,(22846, 1, 0) -- Major Shadow Protection Potion
+,(22837, 1, 0) -- Heroic Potion
+,(22840, 1, 0) -- Elixir of Major Mageblood
+,(32852, 1, 0) -- Cauldron of Major Shadow Protection
+,(31676, 1, 0) -- Fel Regeneration Potion
+,(22834, 1, 0) -- Elixir of Major Defense
+,(22832, 1, 0) -- Super Mana Potion
+,(31679, 1, 0) -- Fel Strength Elixir
+,(22871, 1, 0) -- Shrouding Potion
+,(32068, 1, 0) -- Elixir of Ironskin
+,(22831, 1, 0) -- Elixir of Major Agility
+,(23571, 1, 0) -- Primal Might
+,(21884, 1, 0) -- Primal Fire
+,(21886, 1, 0) -- Primal Life
+,(22451, 1, 0) -- Primal Air
+,(22457, 1, 0) -- Primal Mana
+,(22452, 1, 0) -- Primal Earth
+,(22456, 1, 0) -- Primal Shadow
+,(21885, 1, 0) -- Primal Water
+,(22830, 1, 0) -- Elixir of the Searching Eye
 
-,(9233, 1, 3) -- (101) Elixir of Detect Demon
+,(22829, 1, 0) -- Super Healing Potion
+,(22827, 1, 0) -- Elixir of Major Frost Power
+,(22833, 1, 0) -- Elixir of Major Firepower
+,(32067, 1, 0) -- Elixir of Draenic Wisdom
+,(22828, 1, 0) -- Insane Strength Potion
+,(28104, 1, 0) -- Elixir of Mastery
+,(32063, 1, 0) -- Earthen Elixir
+,(22826, 1, 0) -- Sneaking Potion
+,(28101, 1, 0) -- Unstable Mana Potion
+,(32062, 1, 0) -- Elixir of Major Fortitude
+,(22825, 1, 0) -- Elixir of Healing Power
+,(22824, 1, 0) -- Elixir of Major Strength
+,(22823, 1, 0) -- Elixir of Camouflage
+,(13506, 1, 0) -- Potion of Petrification
+,(28102, 1, 0) -- Onslaught Elixir
+,(13512, 1, 0) -- Flask of Supreme Power
+,(20002, 1, 0) -- Greater Dreamless Sleep Potion
+,(18253, 1, 0) -- Major Rejuvenation Potion
+,(13511, 1, 0) -- Flask of Distilled Wisdom
+,(28100, 1, 0) -- Volatile Healing Potion
+,(13510, 1, 0) -- Flask of the Titans
+,(28103, 1, 0) -- Adept's Elixir
+,(13513, 1, 0) -- Flask of Chromatic Resistance
+,(13444, 1, 0) -- Major Mana Potion
+,(13458, 1, 0) -- Greater Nature Protection Potion
+,(13460, 1, 0) -- Greater Holy Protection Potion
+,(13456, 1, 0) -- Greater Frost Protection Potion
+,(13459, 1, 0) -- Greater Shadow Protection Potion
+,(13457, 1, 0) -- Greater Fire Protection Potion
+,(20004, 1, 0) -- Mighty Troll's Blood Elixir
+,(13461, 1, 0) -- Greater Arcane Protection Potion
+,(13462, 1, 0) -- Purification Potion
+,(13454, 1, 0) -- Greater Arcane Elixir
+,(20008, 1, 0) -- Living Action Potion
+,(13452, 1, 0) -- Elixir of the Mongoose
+,(13455, 1, 0) -- Greater Stoneshield Potion
+,(12803, 1, 0) -- Living Essence
+,(12808, 1, 0) -- Essence of Undeath
+,(12360, 1, 0) -- Arcanite Bar
+,(7078, 1, 0) -- Essence of Fire
+,(7082, 1, 0) -- Essence of Air
+,(7080, 1, 0) -- Essence of Water
+,(13446, 1, 0) -- Major Healing Potion
+,(3386, 1, 0) -- Potion of Curing
+,(13453, 1, 0) -- Elixir of Brute Force
+,(13447, 1, 0) -- Elixir of the Sages
+,(13445, 1, 0) -- Elixir of Superior Defense
+,(13443, 1, 0) -- Superior Mana Potion
+,(13442, 1, 0) -- Mighty Rage Potion
 
-/* Jewelcrafting */
--- Note: No purple gems included
+,(6037, 1, 0) -- Truesilver Bar
+,(9224, 1, 0) -- Elixir of Demonslaying
+,(13423, 1, 0) -- Stonescale Oil
+,(3387, 1, 0) -- Limited Invulnerability Potion
+,(21546, 1, 0) -- Elixir of Greater Firepower
+,(9264, 1, 0) -- Elixir of Shadow Power
+,(20007, 1, 0) -- Mageblood Elixir
+,(9233, 1, 0) -- Elixir of Detect Demon
+,(8827, 1, 0) -- Elixir of Water Walking
+,(9197, 1, 0) -- Elixir of Dream Vision
+,(9187, 1, 0) -- Elixir of Greater Agility
+,(9088, 1, 0) -- Gift of Arthas
+,(9206, 1, 0) -- Elixir of Giants
+,(9179, 1, 0) -- Elixir of Greater Intellect
+,(9155, 1, 0) -- Arcane Elixir
+,(9172, 1, 0) -- Invisibility Potion
+,(9154, 1, 0) -- Elixir of Detect Undead
+,(18294, 1, 0) -- Elixir of Greater Water Breathing
+,(3928, 1, 0) -- Superior Healing Potion
+,(12190, 1, 0) -- Dreamless Sleep Potion
+,(9144, 1, 0) -- Wildvine Potion
+,(4623, 1, 0) -- Lesser Stoneshield Potion
+,(9061, 1, 0) -- Goblin Rocket Fuel
+,(9036, 1, 0) -- Magic Resistance Potion
+,(9030, 1, 0) -- Restorative Potion
+,(6149, 1, 0) -- Greater Mana Potion
+,(8956, 1, 0) -- Oil of Immolation
+,(3829, 1, 0) -- Frost Oil
+,(10592, 1, 0) -- Catseye Elixir
+,(3828, 1, 0) -- Elixir of Detect Lesser Invisibility
+,(8951, 1, 0) -- Elixir of Greater Defense
+,(6050, 1, 0) -- Frost Protection Potion
+,(17708, 1, 0) -- Elixir of Frost Power
+,(6052, 1, 0) -- Nature Protection Potion
+,(8949, 1, 0) -- Elixir of Agility
+,(3826, 1, 0) -- Major Troll's Blood Elixir
+,(3825, 1, 0) -- Elixir of Fortitude
+,(5633, 1, 0) -- Great Rage Potion
+,(3824, 1, 0) -- Shadow Oil
+,(3823, 1, 0) -- Lesser Invisibility Potion
+,(6049, 1, 0) -- Fire Protection Potion
+,(3827, 1, 0) -- Mana Potion
+,(1710, 1, 0) -- Greater Healing Potion
+,(3577, 1, 0) -- Gold Bar
+,(3391, 1, 0) -- Elixir of Ogre's Strength
+,(5634, 1, 0) -- Free Action Potion
+,(6373, 1, 0) -- Elixir of Firepower
+,(3390, 1, 0) -- Elixir of Lesser Agility
+,(6048, 1, 0) -- Shadow Protection Potion
 
-,(24029, 3, 0) -- (1) Teardrop Living Ruby
-,(24059, 3, 0) -- Potent Noble Topaz
-,(24039, 3, 0) -- Stormy Star of Elune
-,(24035, 3, 0) -- Sparkling Star of Elune
-,(24054, 3, 0) -- Sovereign Nightseye
-,(25901, 3, 0) -- Insightful Earthstorm Diamond
-,(31861, 3, 0) -- Great Dawnstone
-,(35503, 3, 0) -- Ember Skyfire Diamond
-,(24032, 3, 0) -- Subtle Living Ruby
-,(24062, 3, 0) -- Enduring Talasite
-,(31868, 3, 0) -- Wicked Noble Topaz
-,(24051, 3, 0) -- Rigid Dawnstone
-,(25896, 3, 0) -- Powerful Earthstorm Diamond
-,(35315, 3, 0) -- Quick Dawnstone
-,(24027, 3, 0) -- Bold Living Ruby
-,(24057, 3, 0) -- Royal Nightseye
-,(25894, 3, 0) -- Swift Skyfire Diamond
-,(31865, 3, 0) -- Infused Nightseye
-,(24037, 3, 0) -- Lustrous Star of Elune
-,(24067, 3, 0) -- Jagged Talasite
-,(24053, 3, 0) -- Mystic Dawnstone
-,(25899, 3, 0) -- Brutal Earthstorm Diamond
-,(35501, 3, 0) -- Eternal Earthstorm Diamond
-,(24031, 3, 0) -- Bright Living Ruby
-,(24061, 3, 0) -- Glinting Noble Topaz
-,(31867, 3, 0) -- Veiled Noble Topaz
-,(24048, 3, 0) -- Smooth Dawnstone
-,(34220, 3, 0) -- Chaotic Skyfire Diamond
-,(24056, 3, 0) -- Glowing Nightseye
-,(25893, 3, 0) -- Mystical Skyfire Diamond
--- ,(35945, 3, 0) -- Brilliant Glass -- Crafted by jewelcrafters + used by jewelcrafters - no sense selling on AH
-,(24033, 3, 0) -- Solid Star of Elune
-,(24065, 3, 0) -- Dazzling Talasite
-,(32410, 3, 0) -- Thundering Skyfire Diamond
-,(24052, 3, 0) -- Thick Dawnstone
-,(25898, 3, 0) -- Tenacious Earthstorm Diamond
-,(35318, 3, 0) -- Forceful Talasite
-,(24030, 3, 0) -- Runed Living Ruby
-,(24060, 3, 0) -- Luminous Noble Topaz
-,(24047, 3, 0) -- Brilliant Dawnstone
-,(33782, 3, 0) -- Steady Talasite
-,(24055, 3, 0) -- Shifting Nightseye
-,(25890, 3, 0) -- Destructive Skyfire Diamond
-,(35707, 3, 0) -- Regal Nightseye
-,(24036, 3, 0) -- Flashing Living Ruby
-,(24066, 3, 0) -- Radiant Talasite
-,(32409, 3, 0) -- Relentless Earthstorm Diamond
-,(24050, 3, 0) -- Gleaming Dawnstone
-,(25897, 3, 0) -- Bracing Earthstorm Diamond
-,(35316, 3, 0) -- Reckless Noble Topaz
+,(3389, 1, 0) -- Elixir of Defense
+,(6371, 1, 0) -- Fire Oil
+,(7068, 1, 0) -- Elemental Fire
+,(3388, 1, 0) -- Strong Troll's Blood Elixir
+,(3385, 1, 0) -- Lesser Mana Potion
+,(929, 1, 0) -- Healing Potion
+,(3384, 1, 0) -- Minor Magic Resistance Potion
+,(3383, 1, 0) -- Elixir of Wisdom
+,(6051, 1, 0) -- Holy Protection Potion
+,(45621, 1, 0) -- Elixir of Minor Accuracy
+,(6372, 1, 0) -- Swim Speed Potion
+,(6662, 1, 0) -- Elixir of Giant Growth
+,(5996, 1, 0) -- Elixir of Water Breathing
+,(2460, 1, 0) -- Elixir of Tongues (NYI)
+,(2456, 1, 0) -- Minor Rejuvenation Potion
+,(2459, 1, 0) -- Swiftness Potion
+,(2455, 1, 0) -- Minor Mana Potion
+,(6370, 1, 0) -- Blackmouth Oil
+,(4596, 1, 0) -- Discolored Healing Potion
+,(5631, 1, 0) -- Rage Potion
+,(858, 1, 0) -- Lesser Healing Potion
+,(2458, 1, 0) -- Elixir of Minor Fortitude
+,(2457, 1, 0) -- Elixir of Minor Agility
+,(3382, 1, 0) -- Weak Troll's Blood Elixir
+,(2454, 1, 0) -- Elixir of Lion's Strength
+,(118, 1, 0) -- Minor Healing Potion
+,(5997, 1, 0) -- Elixir of Minor Defense
+,(19931, 1, 0) -- Gurubashi Mojo Madness
+/* Jewelcrafting: Gems (Blue) */
+,(40119, 1, 0) -- Solid Majestic Zircon
+,(40120, 1, 0) -- Sparkling Majestic Zircon
+,(40121, 1, 0) -- Lustrous Majestic Zircon
+,(40122, 1, 0) -- Stormy Majestic Zircon
 
-,(24028, 3, 0) -- (51) Delicate Living Ruby
-,(24058, 3, 0) -- Inscribed Noble Topaz
-,(25895, 3, 0) -- Enigmatic Skyfire Diamond
-,(31863, 3, 0) -- Balanced Nightseye
--- Northrend Gem ,(39911, 3, 0) -- Runed Bloodstone
--- Northrend Gem ,(39944, 3, 0) -- Infused Shadow Crystal
--- Northrend Gem ,(39960, 3, 0) -- Wicked Huge Citrine
--- Northrend Gem ,(39984, 3, 0) -- Dazzling Dark Jade
--- Northrend Gem ,(39915, 3, 0) -- Rigid Sun Crystal
--- Northrend Gem ,(39949, 3, 0) -- Champion's Huge Citrine
--- Northrend Gem ,(39967, 3, 0) -- Resolute Huge Citrine
--- Northrend Gem ,(39992, 3, 0) -- Shattered Dark Jade
--- Northrend Gem ,(39936, 3, 0) -- Glowing Shadow Crystal
--- Northrend Gem ,(39946, 3, 0) -- Luminous Huge Citrine
--- Northrend Gem ,(39979, 3, 0) -- Seer's Dark Jade
--- Northrend Gem ,(39908, 3, 0) -- Flashing Bloodstone
--- Northrend Gem ,(39933, 3, 0) -- Puissant Shadow Crystal
--- Northrend Gem ,(39963, 3, 0) -- Stark Huge Citrine
--- Northrend Gem ,(39988, 3, 0) -- Opaque Dark Jade
--- Northrend Gem ,(39917, 3, 0) -- Mystic Sun Crystal
--- Northrend Gem ,(39952, 3, 0) -- Deadly Huge Citrine
--- Northrend Gem ,(39975, 3, 0) -- Vivid Dark Jade
--- Northrend Gem ,(39927, 3, 0) -- Lustrous Chalcedony
--- Northrend Gem ,(39900, 3, 0) -- Bold Bloodstone
--- Northrend Gem ,(39945, 3, 0) -- Mysterious Shadow Crystal
--- Northrend Gem ,(39958, 3, 0) -- Durable Huge Citrine
--- Northrend Gem ,(39982, 3, 0) -- Turbid Dark Jade
--- Northrend Gem ,(39914, 3, 0) -- Smooth Sun Crystal
--- Northrend Gem ,(39948, 3, 0) -- Etched Huge Citrine
--- Northrend Gem ,(39966, 3, 0) -- Accurate Huge Citrine
--- Northrend Gem ,(39991, 3, 0) -- Tense Dark Jade
--- Northrend Gem ,(39942, 3, 0) -- Tenuous Shadow Crystal
--- Northrend Gem ,(39955, 3, 0) -- Deft Huge Citrine
--- Northrend Gem ,(39978, 3, 0) -- Forceful Dark Jade
--- Northrend Gem ,(42701, 3, 0) -- Enchanted Pearl
--- Northrend Gem ,(39907, 3, 0) -- Subtle Bloodstone
--- Northrend Gem ,(39939, 3, 0) -- Defender's Shadow Crystal
--- Northrend Gem ,(39962, 3, 0) -- Empowered Huge Citrine
--- Northrend Gem ,(39986, 3, 0) -- Lambent Dark Jade
--- Northrend Gem ,(39918, 3, 0) -- Quick Sun Crystal
--- Northrend Gem ,(39951, 3, 0) -- Fierce Huge Citrine
--- Northrend Gem ,(39974, 3, 0) -- Jagged Dark Jade
--- Northrend Gem ,(39920, 3, 0) -- Sparkling Chalcedony
--- Northrend Gem ,(39943, 3, 0) -- Royal Shadow Crystal
--- Northrend Gem ,(39957, 3, 0) -- Veiled Huge Citrine
--- Northrend Gem ,(39981, 3, 0) -- Shining Dark Jade
--- Northrend Gem ,(39912, 3, 0) -- Brilliant Sun Crystal
--- Northrend Gem ,(39947, 3, 0) -- Inscribed Huge Citrine
--- Northrend Gem ,(39965, 3, 0) -- Glimmering Huge Citrine
--- Northrend Gem ,(39990, 3, 0) -- Radiant Dark Jade
+,(40008, 3, 0) -- Solid Sky Sapphire
+,(40009, 3, 0) -- Sparkling Sky Sapphire
+,(40010, 3, 0) -- Lustrous Sky Sapphire
+,(40011, 3, 0) -- Stormy Sky Sapphire
 
--- Northrend Gem ,(39935, 3, 0) -- (101) Shifting Shadow Crystal
--- Northrend Gem ,(39954, 3, 0) -- Lucent Huge Citrine
--- Northrend Gem ,(39977, 3, 0) -- Steady Dark Jade
--- Northrend Gem ,(39910, 3, 0) -- Precise Bloodstone
--- Northrend Gem ,(39906, 3, 0) -- Bright Bloodstone
--- Northrend Gem ,(39938, 3, 0) -- Regal Shadow Crystal
--- Northrend Gem ,(39961, 3, 0) -- Pristine Huge Citrine
--- Northrend Gem ,(39985, 3, 0) -- Sundered Dark Jade
--- Northrend Gem ,(39916, 3, 0) -- Thick Sun Crystal
--- Northrend Gem ,(39950, 3, 0) -- Resplendent Huge Citrine
--- Northrend Gem ,(39968, 3, 0) -- Timeless Dark Jade
--- Northrend Gem ,(39919, 3, 0) -- Solid Chalcedony
--- Northrend Gem ,(39941, 3, 0) -- Purified Shadow Crystal
--- Northrend Gem ,(39956, 3, 0) -- Potent Huge Citrine
--- Northrend Gem ,(39980, 3, 0) -- Misty Dark Jade
--- Northrend Gem ,(39909, 3, 0) -- Fractured Bloodstone
--- Northrend Gem ,(39940, 3, 0) -- Guardian's Shadow Crystal
--- Northrend Gem ,(39964, 3, 0) -- Stalwart Huge Citrine
--- Northrend Gem ,(39989, 3, 0) -- Energized Dark Jade
--- Northrend Gem ,(39934, 3, 0) -- Sovereign Shadow Crystal
--- Northrend Gem ,(39953, 3, 0) -- Glinting Huge Citrine
--- Northrend Gem ,(39976, 3, 0) -- Enduring Dark Jade
--- Northrend Gem ,(39932, 3, 0) -- Stormy Chalcedony
--- Northrend Gem ,(39905, 3, 0) -- Delicate Bloodstone
--- Northrend Gem ,(39937, 3, 0) -- Balanced Shadow Crystal
--- Northrend Gem ,(39959, 3, 0) -- Reckless Huge Citrine
--- Northrend Gem ,(39983, 3, 0) -- Intricate Dark Jade
--- ,(21780, 3, 0) -- Blood Crown
--- ,(21793, 3, 0) -- Arcanite Sword Pendant
--- ,(21779, 3, 0) -- Band of Natural Fire
--- ,(21792, 3, 0) -- Necklace of the Diamond Tower
-,(32836, 3, 0) -- Purified Shadow Pearl
-,(31079, 3, 0) -- Mercurial Adamantite
-,(23101, 3, 0) -- Potent Flame Spessarite
-,(28290, 3, 0) -- Smooth Golden Draenite
-,(31866, 3, 0) -- Veiled Flame Spessarite
-,(23110, 3, 0) -- Shifting Shadow Draenite
-,(23096, 3, 0) -- Runed Blood Garnet
-,(23119, 3, 0) -- Sparkling Azure Moonstone
--- ,(45054, 3, 0) -- Prismatic Black Diamond -- Jewelcrafting intermediary crafting item. No sense selling
-,(23105, 3, 0) -- Enduring Deep Peridot
-,(23114, 3, 0) -- Gleaming Golden Draenite
-,(23099, 3, 0) -- Luminous Flame Spessarite
-,(23109, 3, 0) -- Royal Shadow Draenite
-,(32833, 3, 0) -- Purified Jaggal Pearl
-,(23095, 3, 0) -- Bold Blood Garnet
-,(23118, 3, 0) -- Solid Azure Moonstone
-,(31860, 3, 0) -- Great Golden Draenite
-,(23104, 3, 0) -- Jagged Deep Peridot
-,(23113, 3, 0) -- Brilliant Golden Draenite
+/* Jewelcrafting: Gems (Green) */
+,(40164, 1, 0) -- Timeless Eye of Zul
+,(40165, 1, 0) -- Jagged Eye of Zul
+,(40166, 1, 0) -- Vivid Eye of Zul
+,(40167, 1, 0) -- Enduring Eye of Zul
+,(40168, 1, 0) -- Steady Eye of Zul
+,(40169, 1, 0) -- Forceful Eye of Zul
+,(40170, 1, 0) -- Seer's Eye of Zul
+,(40171, 1, 0) -- Misty Eye of Zul
+,(40172, 1, 0) -- Shining Eye of Zul
+,(40173, 1, 0) -- Turbid Eye of Zul
+,(40174, 1, 0) -- Intricate Eye of Zul
+,(40175, 1, 0) -- Dazzling Eye of Zul
+,(40176, 1, 0) -- Sundered Eye of Zul
+,(40177, 1, 0) -- Lambent Eye of Zul
+,(40178, 1, 0) -- Opaque Eye of Zul
+,(40179, 1, 0) -- Energized Eye of Zul
+,(40180, 1, 0) -- Radiant Eye of Zul
+,(40181, 1, 0) -- Tense Eye of Zul
+,(40182, 1, 0) -- Shattered Eye of Zul
 
-,(23121, 3, 0) -- (151) Lustrous Azure Moonstone
-,(31864, 3, 0) -- Infused Shadow Draenite
-,(23098, 3, 0) -- Inscribed Flame Spessarite
-,(23108, 3, 0) -- Glowing Shadow Draenite
-,(23094, 3, 0) -- Teardrop Blood Garnet
-,(23116, 3, 0) -- Rigid Golden Draenite
-,(23103, 3, 0) -- Radiant Deep Peridot
-,(28595, 3, 0) -- Bright Blood Garnet
-,(31869, 3, 0) -- Wicked Flame Spessarite
-,(23111, 3, 0) -- Sovereign Shadow Draenite
-,(23097, 3, 0) -- Delicate Blood Garnet
-,(23120, 3, 0) -- Stormy Azure Moonstone
-,(31862, 3, 0) -- Balanced Shadow Draenite
-,(23106, 3, 0) -- Dazzling Deep Peridot
-,(23115, 3, 0) -- Thick Golden Draenite
-,(23100, 3, 0) -- Glinting Flame Spessarite
+,(40085, 3, 0) -- Timeless Forest Emerald
+,(40086, 3, 0) -- Jagged Forest Emerald
+,(40088, 3, 0) -- Vivid Forest Emerald
+,(40089, 3, 0) -- Enduring Forest Emerald
+,(40090, 3, 0) -- Steady Forest Emerald
+,(40091, 3, 0) -- Forceful Forest Emerald
+,(40092, 3, 0) -- Seer's Forest Emerald
+,(40094, 3, 0) -- Dazzling Forest Emerald
+,(40095, 3, 0) -- Misty Forest Emerald
+,(40096, 3, 0) -- Sundered Forest Emerald
+,(40098, 3, 0) -- Radiant Forest Emerald
+,(40099, 3, 0) -- Shining Forest Emerald
+,(40100, 3, 0) -- Lambent Forest Emerald
+,(40101, 3, 0) -- Tense Forest Emerald
+,(40102, 3, 0) -- Turbid Forest Emerald
+,(40103, 3, 0) -- Opaque Forest Emerald
+,(40104, 3, 0) -- Intricate Forest Emerald
+,(40105, 3, 0) -- Energized Forest Emerald
+,(40106, 3, 0) -- Shattered Forest Emerald
+
+/* Jewelcrafting: Gems (Meta) */
+,(41285, 1, 0) -- Chaotic Skyflare Diamond
+,(41307, 1, 0) -- Destructive Skyflare Diamond
+,(41333, 1, 0) -- Ember Skyflare Diamond
+,(41335, 1, 0) -- Enigmatic Skyflare Diamond
+,(41339, 1, 0) -- Swift Skyflare Diamond
+,(41375, 1, 0) -- Tireless Skyflare Diamond
+,(41376, 1, 0) -- Revitalizing Skyflare Diamond
+,(41377, 1, 0) -- Effulgent Skyflare Diamond
+,(41378, 1, 0) -- Forlorn Skyflare Diamond
+,(41379, 1, 0) -- Impassive Skyflare Diamond
+,(41400, 1, 0) -- Thundering Skyflare Diamond
+
+,(41380, 1, 0) -- Austere Earthsiege Diamond
+,(41381, 1, 0) -- Persistent Earthsiege Diamond
+,(41382, 1, 0) -- Trenchant Earthsiege Diamond
+,(41385, 1, 0) -- Invigorating Earthsiege Diamond
+,(41389, 1, 0) -- Beaming Earthsiege Diamond
+,(41395, 1, 0) -- Bracing Earthsiege Diamond
+,(41396, 1, 0) -- Eternal Earthsiege Diamond
+,(41397, 1, 0) -- Powerful Earthsiege Diamond
+,(41398, 1, 0) -- Relentless Earthsiege Diamond
+,(41401, 1, 0) -- Insightful Earthsiege Diamond
+
+/* Jewelcrafting: Gems (Orange) */
+,(40142, 1, 0) -- Inscribed Ametrine
+,(40143, 1, 0) -- Etched Ametrine
+,(40144, 1, 0) -- Champion's Ametrine
+,(40145, 1, 0) -- Resplendent Ametrine
+,(40146, 1, 0) -- Fierce Ametrine
+,(40147, 1, 0) -- Deadly Ametrine
+,(40148, 1, 0) -- Glinting Ametrine
+,(40149, 1, 0) -- Lucent Ametrine
+,(40150, 1, 0) -- Deft Ametrine
+,(40151, 1, 0) -- Luminous Ametrine
+,(40152, 1, 0) -- Potent Ametrine
+,(40153, 1, 0) -- Veiled Ametrine
+,(40154, 1, 0) -- Durable Ametrine
+,(40155, 1, 0) -- Reckless Ametrine
+,(40156, 1, 0) -- Wicked Ametrine
+,(40157, 1, 0) -- Pristine Ametrine
+,(40158, 1, 0) -- Empowered Ametrine
+,(40159, 1, 0) -- Stark Ametrine
+,(40160, 1, 0) -- Stalwart Ametrine
+,(40161, 1, 0) -- Glimmering Ametrine
+,(40162, 1, 0) -- Accurate Ametrine
+,(40163, 1, 0) -- Resolute Ametrine
+
+,(40037, 3, 0) -- Inscribed Monarch Topaz
+,(40038, 3, 0) -- Etched Monarch Topaz
+,(40039, 3, 0) -- Champion's Monarch Topaz
+,(40040, 3, 0) -- Resplendent Monarch Topaz
+,(40041, 3, 0) -- Fierce Monarch Topaz
+,(40043, 3, 0) -- Deadly Monarch Topaz
+,(40044, 3, 0) -- Glinting Monarch Topaz
+,(40045, 3, 0) -- Lucent Monarch Topaz
+,(40046, 3, 0) -- Deft Monarch Topaz
+,(40047, 3, 0) -- Luminous Monarch Topaz
+,(40048, 3, 0) -- Potent Monarch Topaz
+,(40049, 3, 0) -- Veiled Monarch Topaz
+,(40050, 3, 0) -- Durable Monarch Topaz
+,(40051, 3, 0) -- Reckless Monarch Topaz
+,(40052, 3, 0) -- Wicked Monarch Topaz
+,(40053, 3, 0) -- Pristine Monarch Topaz
+,(40054, 3, 0) -- Empowered Monarch Topaz
+,(40055, 3, 0) -- Stark Monarch Topaz
+,(40056, 3, 0) -- Stalwart Monarch Topaz
+,(40057, 3, 0) -- Glimmering Monarch Topaz
+,(40058, 3, 0) -- Accurate Monarch Topaz
+,(40059, 3, 0) -- Resolute Monarch Topaz
+
+/* Jewelcrafting: Gems (Prismatic) */
+,(49110, 3, 0) -- Nightmare Tear
+,(42702, 3, 0) -- Enchanted Tear
+
+/* Jewelcrafting: Gems (Purple) */
+,(40129, 1, 0) -- Sovereign Dreadstone
+,(40130, 1, 0) -- Shifting Dreadstone
+,(40131, 1, 0) -- Tenuous Dreadstone
+,(40132, 1, 0) -- Glowing Dreadstone
+,(40133, 1, 0) -- Purified Dreadstone
+,(40134, 1, 0) -- Royal Dreadstone
+,(40135, 1, 0) -- Mysterious Dreadstone
+,(40136, 1, 0) -- Balanced Dreadstone
+,(40137, 1, 0) -- Infused Dreadstone
+,(40138, 1, 0) -- Regal Dreadstone
+,(40139, 1, 0) -- Defender's Dreadstone
+,(40140, 1, 0) -- Puissant Dreadstone
+,(40141, 1, 0) -- Guardian's Dreadstone
+
+,(40022, 3, 0) -- Sovereign Twilight Opal
+,(40023, 3, 0) -- Shifting Twilight Opal
+,(40024, 3, 0) -- Tenuous Twilight Opal
+,(40025, 3, 0) -- Glowing Twilight Opal
+,(40026, 3, 0) -- Purified Twilight Opal
+,(40027, 3, 0) -- Royal Twilight Opal
+,(40028, 3, 0) -- Mysterious Twilight Opal
+,(40029, 3, 0) -- Balanced Twilight Opal
+,(40030, 3, 0) -- Infused Twilight Opal
+,(40031, 3, 0) -- Regal Twilight Opal
+,(40032, 3, 0) -- Defender's Twilight Opal
+,(40033, 3, 0) -- Puissant Twilight Opal
+,(40034, 3, 0) -- Guardian's Twilight Opal
+
+/* Jewelcrafting: Gems (Red) */
+,(40111, 3, 0) -- Bold Cardinal Ruby
+,(40112, 3, 0) -- Delicate Cardinal Ruby
+,(40113, 3, 0) -- Runed Cardinal Ruby
+,(40114, 3, 0) -- Bright Cardinal Ruby
+,(40115, 3, 0) -- Subtle Cardinal Ruby
+,(40116, 3, 0) -- Flashing Cardinal Ruby
+,(40117, 3, 0) -- Fractured Cardinal Ruby
+,(40118, 3, 0) -- Precise Cardinal Ruby
+
+,(39996, 3, 0) -- Bold Scarlet Ruby
+,(39997, 3, 0) -- Delicate Scarlet Ruby
+,(39998, 3, 0) -- Runed Scarlet Ruby
+,(39999, 3, 0) -- Bright Scarlet Ruby
+,(40000, 3, 0) -- Subtle Scarlet Ruby
+,(40001, 3, 0) -- Flashing Scarlet Ruby
+,(40002, 3, 0) -- Fractured Scarlet Ruby
+,(40003, 3, 0) -- Precise Scarlet Ruby
+
+/* Jewelcrafting: Gems (Yellow) */
+,(40123, 1, 0) -- Brilliant King's Amber
+,(40124, 1, 0) -- Smooth King's Amber
+,(40125, 1, 0) -- Rigid King's Amber
+,(40126, 1, 0) -- Thick King's Amber
+,(40127, 1, 0) -- Mystic King's Amber
+,(40128, 1, 0) -- Quick King's Amber
+
+,(40012, 3, 0) -- Brilliant Autumn's Glow
+,(40013, 3, 0) -- Smooth Autumn's Glow
+,(40014, 3, 0) -- Rigid Autumn's Glow
+,(40015, 3, 0) -- Thick Autumn's Glow
+,(40016, 3, 0) -- Mystic Autumn's Glow
+,(40017, 3, 0) -- Quick Autumn's Glow
+
+/* Inscription: Glyphs (Req level 80-70) */
+,(42404, 3, 0) -- Glyph of Mass Dispel
+,(42971, 3, 0) -- Glyph of Vigor
+,(44684, 3, 0) -- Glyph of Frostfire
+,(41529, 3, 0) -- Glyph of Fire Elemental Totem
+,(42748, 3, 0) -- Glyph of Invisibility
+,(42913, 3, 0) -- Glyph of Snake Trap
+,(40915, 3, 0) -- Glyph of Lifebloom
+,(41524, 3, 0) -- Glyph of Lava
+,(42745, 3, 0) -- Glyph of Ice Lance
 
 /* Inscription: Glyphs (Req level 70-30) */
 ,(41107, 1, 1) -- (1) Glyph of Avenging Wrath
@@ -730,12 +987,13 @@ VALUES
 ,(43395, 1, 1) -- Glyph of Battle
 ,(43418, 1, 1) -- Glyph of Heroic Strike
 
-/* Inscription: Scrolls + Vellums + Darkmoon cards */
-,(37093, 1, 0) -- Scroll of Stamina VII
-,(37091, 1, 0) -- Scroll of Intellect VII
-,(43463, 1, 0) -- Scroll of Agility VII
-,(37097, 1, 0) -- Scroll of Spirit VII
-,(43465, 1, 0) -- Scroll of Strength VII
+/* Inscription: Scrolls */
+,(49632, 1, 0) -- Runescroll of Fortitude
+,(43464, 1, 0) -- Scroll of Agility VIII
+,(37094, 1, 0) -- Scroll of Stamina VIII
+,(37092, 1, 0) -- Scroll of Intellect VIII
+,(43466, 1, 0) -- Scroll of Strength VIII
+,(37098, 1, 0) -- Scroll of Spirit VIII
 
 /* Enchanting: Things that have prices */
 ,(12655, 1, 0) -- Enchanted Thorium Bar
@@ -748,10 +1006,25 @@ VALUES
 ,(20750, 1, 1) -- Wizard Oil
 ,(20747, 1, 1) -- Lesser Mana Oil
 
-/* Tailoring (No gear) */
-,(24275, 1, 1) -- Silver Spellthread
-,(24273, 1, 1) -- Mystic Spellthread
 
+/* Tailoring (No gear) */
+,(41604, 1, 0) -- Sapphire Spellthread
+,(41602, 1, 0) -- Brilliant Spellthread
+,(41601, 1, 0) -- Shining Spellthread
+,(41603, 1, 0) -- Azure Spellthread
+,(24276, 1, 0) -- Golden Spellthread
+,(24274, 1, 0) -- Runic Spellthread
+,(24273, 1, 0) -- Mystic Spellthread
+,(24275, 1, 0) -- Silver Spellthread
+
+
+,(41600, 1, 0) -- Glacial Bag
+,(41599, 1, 0) -- Frostweave Bag
+,(41598, 1, 0) -- Mysterious Bag
+,(45773, 1, 0) -- Emerald Bag
+,(41597, 1, 0) -- Abyssal Bag
+,(38225, 1, 0) -- Mycah's Botanical Bag
+,(21872, 1, 0) -- Ebon Shadowbag
 ,(21876, 1, 0) -- Primal Mooncloth Bag
 ,(21843, 1, 0) -- Imbued Netherweave Bag
 ,(22252, 1, 0) -- Satchel of Cenarius
@@ -779,55 +1052,105 @@ VALUES
 ,(4238, 1, 0) -- Linen Bag
 
 /* Leatherworking (No gear) */
-,(34207, 1, 1) -- Glove Reinforcements
-,(34330, 1, 1) -- Heavy Knothide Armor Kit
-,(29485, 1, 1) -- Flame Armor Kit
-,(29488, 1, 1) -- Arcane Armor Kit
-,(29483, 1, 1) -- Shadow Armor Kit
-,(29487, 1, 1) -- Nature Armor Kit
-,(29486, 1, 1) -- Frost Armor Kit
-,(29533, 1, 1) -- Cobrahide Leg Armor
-,(29534, 1, 1) -- Clefthide Leg Armor
-,(25652, 1, 1) -- Magister's Armor Kit
-,(25651, 1, 1) -- Vindicator's Armor Kit
-,(18251, 1, 1) -- Core Armor Kit
-,(25679, 1, 1) -- Comfortable Insoles
-,(25650, 1, 1) -- Knothide Armor Kit
+,(44963, 1, 0) -- Earthen Leg Armor
+,(38373, 1, 0) -- Frosthide Leg Armor
+,(38374, 1, 0) -- Icescale Leg Armor
+,(38376, 1, 0) -- Heavy Borean Armor Kit
+,(38375, 1, 0) -- Borean Armor Kit
+,(38372, 1, 0) -- Nerubian Leg Armor
+,(38371, 1, 0) -- Jormungar Leg Armor
+,(29536, 1, 0) -- Nethercleft Leg Armor
+,(29535, 1, 0) -- Nethercobra Leg Armor
+,(34207, 1, 0) -- Glove Reinforcements
+,(34330, 1, 0) -- Heavy Knothide Armor Kit
+,(29485, 1, 0) -- Flame Armor Kit
+,(29488, 1, 0) -- Arcane Armor Kit
+,(29483, 1, 0) -- Shadow Armor Kit
+,(29487, 1, 0) -- Nature Armor Kit
+,(29486, 1, 0) -- Frost Armor Kit
+,(29533, 1, 0) -- Cobrahide Leg Armor
+,(29534, 1, 0) -- Clefthide Leg Armor
+,(25651, 1, 0) -- Vindicator's Armor Kit
+,(25652, 1, 0) -- Magister's Armor Kit
+,(18251, 1, 0) -- Core Armor Kit
+,(25650, 1, 0) -- Knothide Armor Kit
+,(15564, 1, 0) -- Rugged Armor Kit
+,(8173, 1, 0) -- Thick Armor Kit
+,(4265, 1, 0) -- Heavy Armor Kit
+,(2313, 1, 0) -- Medium Armor Kit
+,(2304, 1, 0) -- Light Armor Kit
 
+,(49634, 1, 0) -- Drums of the Wild
+,(49633, 1, 0) -- Drums of Forgotten Kings
+
+,(38399, 1, 0) -- Trapper's Traveling Pack
+,(44447, 1, 0) -- Dragonscale Ammo Pouch
+,(44446, 1, 0) -- Pack of Endless Pockets
+,(38347, 1, 0) -- Mammoth Mining Bag
+,(44448, 1, 0) -- Nerubian Reinforced Quiver
+,(34105, 1, 0) -- Quiver of a Thousand Feathers
 ,(34490, 1, 0) -- Bag of Many Hides
 ,(34106, 1, 0) -- Netherscale Ammo Pouch
-,(34105, 1, 0) -- Quiver of a Thousand Feathers
 ,(34100, 1, 0) -- Knothide Quiver
 ,(34099, 1, 0) -- Knothide Ammo Pouch
-,(34482, 1, 0) -- Leatherworker's Satchel
 ,(29540, 1, 0) -- Reinforced Mining Bag
+,(34482, 1, 0) -- Leatherworker's Satchel
 ,(8218, 1, 0) -- Thick Leather Ammo Pouch
 ,(8217, 1, 0) -- Quickdraw Quiver
-,(7372, 1, 0) -- Heavy Leather Ammo Pouch
 ,(7371, 1, 0) -- Heavy Quiver
+,(7372, 1, 0) -- Heavy Leather Ammo Pouch
 ,(5081, 1, 0) -- Kodo Hide Bag
-,(7278, 1, 0) -- Light Leather Quiver
 ,(7279, 1, 0) -- Small Leather Ammo Pouch
+,(7278, 1, 0) -- Light Leather Quiver
 
 /* Blacksmithing */
 ,(41745, 1, 0) -- Titanium Rod
 ,(25844, 1, 0) -- Adamantite Rod
 ,(25843, 1, 0) -- Fel Iron Rod
 
-,(23530, 1, 1) -- Felsteel Shield Spike
-,(23529, 1, 1) -- Adamantite Sharpening Stone
-,(28421, 1, 1) -- Adamantite Weightstone
-,(23576, 1, 1) -- Greater Ward of Shielding
-,(25521, 1, 1) -- Greater Rune of Warding
-,(23575, 1, 1) -- Lesser Ward of Shielding
-,(23559, 1, 1) -- Lesser Rune of Warding
-,(33185, 1, 1) -- Adamantite Weapon Chain
-,(18262, 1, 1) -- Elemental Sharpening Stone
-,(23528, 1, 1) -- Fel Sharpening Stone
-,(28420, 1, 1) -- Fel Weightstone
-,(7969, 1, 1) -- Mithril Spurs
+,(41611, 1, 0) -- Eternal Belt Buckle
+,(44936, 1, 0) -- Titanium Plating
+,(42500, 1, 0) -- Titanium Shield Spike
+,(41976, 1, 0) -- Titanium Weapon Chain
+,(23530, 1, 0) -- Felsteel Shield Spike
+,(28421, 1, 0) -- Adamantite Weightstone
+,(23529, 1, 0) -- Adamantite Sharpening Stone
+,(23576, 1, 0) -- Greater Ward of Shielding
+,(25521, 1, 0) -- Greater Rune of Warding
+,(23559, 1, 0) -- Lesser Rune of Warding
+,(23575, 1, 0) -- Lesser Ward of Shielding
+,(33185, 1, 0) -- Adamantite Weapon Chain
+,(18262, 1, 0) -- Elemental Sharpening Stone
+,(23528, 1, 0) -- Fel Sharpening Stone
+,(28420, 1, 0) -- Fel Weightstone
+,(12645, 1, 0) -- Thorium Shield Spike
+,(12643, 1, 0) -- Dense Weightstone
+,(12404, 1, 0) -- Dense Sharpening Stone
+,(7967, 1, 0) -- Mithril Shield Spike
+,(7969, 1, 0) -- Mithril Spurs
+,(6041, 1, 0) -- Steel Weapon Chain
+,(7965, 1, 0) -- Solid Weightstone
+,(7964, 1, 0) -- Solid Sharpening Stone
+,(6043, 1, 0) -- Iron Counterweight
+,(6042, 1, 0) -- Iron Shield Spike
+,(2871, 1, 0) -- Heavy Sharpening Stone
+,(3241, 1, 0) -- Heavy Weightstone
+,(3240, 1, 0) -- Coarse Weightstone
+,(2863, 1, 0) -- Coarse Sharpening Stone
+,(2862, 1, 0) -- Rough Sharpening Stone
+,(3239, 1, 0) -- Rough Weightstone
 
-/* Engineering: Useless junk? */
+/* Engineering */
+,(41167, 3, 0) -- Heartseeker Scope
+,(37567, 3, 0) -- Healing Injector Kit
+,(42546, 3, 0) -- Mana Injector Kit
+,(23766, 3, 0) -- Stabilized Eternium Scope
+,(23775, 3, 0) -- Titanium Toolbox
+,(41146, 3, 0) -- Sun Scope
+,(44739, 3, 0) -- Diamond-cut Refractor Scope
+,(23765, 3, 0) -- Khorium Scope
+,(40772, 3, 0) -- Gnomish Army Knife
+
 ,(20475, 1, 1) -- Adamantite Arrow Maker
 ,(34504, 1, 1) -- Adamantite Shell Machine
 ,(33093, 1, 0) -- Mana Potion Injector
@@ -882,7 +1205,55 @@ VALUES
 ,(21557, 1, 0) -- Small Red Rocket
 ,(23768, 1, 0) -- White Smoke Flare
 
-/* Cooking (50-70) */
+/* Cooking (50-80) */
+,(45932, 3, 0) -- Black Jelly
+,(39520, 3, 0) -- Kungaloosh
+,(42999, 3, 0) -- Blackened Dragonfin
+,(34762, 3, 0) -- Grilled Sculpin
+,(43492, 3, 0) -- Haunted Herring
+,(34769, 3, 0) -- Imperial Manta Steak
+,(34749, 3, 0) -- Shoveltusk Steak
+,(42995, 3, 0) -- Hearty Rhino
+,(34757, 3, 0) -- Very Burnt Worg
+,(34765, 3, 0) -- Pickled Fangtooth
+,(43268, 3, 0) -- Dalaran Clam Chowder
+,(34752, 3, 0) -- Rhino Dogs
+,(34747, 3, 0) -- Northern Stew
+,(42998, 3, 0) -- Cuttlesteak
+,(34760, 3, 0) -- Grilled Bonescale
+,(43491, 3, 0) -- Bad Clams
+,(42942, 3, 0) -- Baked Manta Ray
+,(34748, 3, 0) -- Mammoth Meal
+,(43004, 3, 0) -- Critter Bites
+,(34756, 3, 0) -- Spiced Worm Burger
+,(34764, 3, 0) -- Poached Nettlefish
+,(43001, 3, 0) -- Tracker Snacks
+,(34751, 3, 0) -- Roasted Worg
+,(42997, 3, 0) -- Blackened Worg Steak
+,(34759, 3, 0) -- Smoked Rockfin
+,(43488, 3, 0) -- Last Weeks Mammoth
+,(34767, 3, 0) -- Firecracker Salmon
+,(42994, 3, 0) -- Rhinolicious Wormsteak
+,(34755, 3, 0) -- Tender Shoveltusk Steak
+,(43000, 3, 0) -- Dragonfin Filet
+,(34763, 3, 0) -- Smoked Salmon
+,(44953, 3, 0) -- Worg Tartare
+,(34768, 3, 0) -- Spicy Blue Nettlefish
+,(34750, 3, 0) -- Worm Delight
+,(42996, 3, 0) -- Snapper Extreme
+,(34758, 3, 0) -- Mighty Rhino Dogs
+,(34766, 3, 0) -- Poached Northern Sculpin
+,(43490, 3, 0) -- Tasty Cupcake
+,(34754, 3, 0) -- Mega Mammoth Meal
+,(42993, 3, 0) -- Spicy Fried Herring
+,(43005, 3, 0) -- Spiced Mammoth Treats
+,(34761, 3, 0) -- Sauteed Goby
+,(33048, 3, 0) -- Stewed Trout
+,(33053, 3, 0) -- Hot Buttered Trout
+,(34411, 3, 0) -- Hot Apple Cider
+,(33052, 3, 0) -- Fisherman's Feast
+,(33872, 3, 0) -- Spicy Hot Talbuk
+
 ,(33825, 1, 0) -- Skullfish Soup
 ,(21023, 1, 0) -- Dirge's Kickin' Chimaerok Chops
 ,(27651, 1, 0) -- Buzzard Bites
@@ -915,20 +1286,13 @@ VALUES
 ,(35565, 1, 0) -- Juicy Bear Burger
 ,(46691, 1, 0) -- Bread of the Dead
 
-/* Eternal elemtents and crystallized elements (Northrend)*/
-
+/* Eternal elements (Northrend)*/
 ,(35622, 3, 0) -- Eternal Water
 ,(35623, 3, 0) -- Eternal Air
 ,(35624, 3, 0) -- Eternal Earth
 ,(35625, 3, 0) -- Eternal Life
 ,(35627, 3, 0) -- Eternal Shadow
 ,(36860, 3, 0) -- Eternal Fire
-,(37700, 3, 0) -- Crystallized Air
-,(37701, 3, 0) -- Crystallized Earth
-,(37702, 3, 0) -- Crystallized Fire
-,(37703, 3, 0) -- Crystallized Shadow
-,(37704, 3, 0) -- Crystallized Life
-,(37705, 3, 0) -- Cryystallized Water
 
 ;
 
@@ -954,16 +1318,104 @@ VALUES
 ,(22448, 3, 0, 60000)
 ,(22449, 1, 0, 80000)
 ,(22450, 1, 0, 200000) -- Endgame (70)
--- WOTLK ENCHANTING MATS --
-,(34054, 1, 0,  20000) -- Infinite Dust
-,(34056, 1, 0,  40000) -- Lesser Cosmic Essence
-,(34055, 1, 0,  120000) -- Greater Cosmic Essence
-,(34053, 1, 0,  70000) -- Small Dream Shard
+,(34054, 1, 0, 20000) -- Infinite Dust -- WoTLK
+,(34056, 1, 0, 40000) -- Lesser Cosmic Essence
+,(34055, 1, 0, 120000) -- Greater Cosmic Essence
+,(34053, 1, 0, 70000) -- Small Dream Shard
 ,(34052, 1, 0, 210000) -- Dream Shard
 ,(34057, 1, 0, 400000) -- Abyss Crystal
 
 /* Enchanting: Scrolls (none have a sell price) (70-50) */
-,(22459, 1, 1, 50000) -- (1) Void Sphere
+,(43987, 3, 0, 450000) -- Scroll of Enchant Weapon - Black Magic
+,(45056, 3, 0, 450000) -- Scroll of Enchant Staff - Greater Spellpower
+,(38972, 3, 0, 450000) -- Scroll of Enchant Weapon - Lifeward
+,(44467, 3, 0, 450000) -- Scroll of Enchant Weapon - Mighty Spellpower
+,(38991, 3, 0, 450000) -- Scroll of Enchant Weapon - Exceptional Spellpower
+,(38997, 3, 0, 300000) -- Scroll of Enchant Bracers - Greater Spellpower
+,(39004, 3, 0, 300000) -- Scroll of Enchant Cloak - Wisdom
+,(38990, 3, 0, 300000) -- Scroll of Enchant Gloves - Armsman
+,(38978, 3, 0, 300000) -- Scroll of Enchant Cloak - Titanweave
+,(38986, 3, 0, 300000) -- Scroll of Enchant Boots - Icewalker
+,(38993, 3, 0, 300000) -- Scroll of Enchant Cloak - Shadow Armor
+,(39003, 3, 0, 300000) -- Scroll of Enchant Cloak - Greater Speed
+,(38989, 3, 0, 300000) -- Scroll of Enchant Chest - Super Stats
+,(39006, 3, 0, 300000) -- Scroll of Enchant Boots - Tuskarr's Vitality
+,(44458, 3, 0, 300000) -- Scroll of Enchant Gloves - Crusher
+,(38967, 3, 0, 300000) -- Scroll of Enchant Gloves - Major Agility
+,(39005, 3, 0, 300000) -- Scroll of Enchant Chest - Super Health
+,(38979, 3, 0, 300000) -- Scroll of Enchant Gloves - Exceptional Spellpower
+,(38965, 3, 0, 450000) -- Scroll of Enchant Weapon - Icebreaker
+,(38995, 3, 0, 450000) -- Scroll of Enchant Weapon - Exceptional Agility
+,(38964, 3, 0, 300000) -- Scroll of Enchant Gloves - Greater Assault
+,(38984, 3, 0, 300000) -- Scroll of Enchant Bracer - Expertise
+,(38992, 3, 0, 450000) -- Scroll of Enchant 2H Weapon - Greater Savagery
+,(38988, 3, 0, 450000) -- Scroll of Enchant Weapon - Giant Slayer
+,(38975, 3, 0, 300000) -- Scroll of Enchant Chest - Exceptional Resilience
+,(38985, 3, 0, 300000) -- Scroll of Enchant Gloves - Greater Blasting
+,(38976, 3, 0, 300000) -- Scroll of Enchant Boots - Superior Agility
+,(44946, 3, 0, 450000) -- Scroll of Enchant Weapon - Titanguard
+,(45060, 3, 0, 450000) -- Scroll of Enchant Staff - Spellpower
+,(38981, 3, 0, 450000) -- Scroll of Enchant 2H Weapon - Scourgebane
+,(46098, 3, 0, 450000) -- Scroll of Enchant Weapon - Blood Draining
+,(38963, 3, 0, 450000) -- Scroll of Enchant Weapon - Exceptional Spirit
+,(46026, 3, 0, 450000) -- Scroll of Enchant Weapon - Blade Ward
+,(38982, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Arcane Resistance
+,(38969, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Fire Resistance
+,(38956, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Nature Resistance
+,(38950, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Frost Resistance
+,(38977, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Shadow Resistance
+,(38980, 3, 0, 300000) -- Scroll of Enchant Bracers - Major Spirit
+,(39002, 3, 0, 300000) -- Scroll of Enchant Chest - Greater Defense
+,(44947, 3, 0, 300000) -- Scroll of Enchant Bracer - Major Stamina
+,(38959, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Agility
+,(38987, 3, 0, 300000) -- Scroll of Enchant Bracers - Greater Stats
+,(44466, 3, 0, 450000) -- Scroll of Enchant Weapon - Superior Potency
+,(44463, 3, 0, 450000) -- Scroll of Enchant 2H Weapon - Massacre
+,(44493, 3, 0, 450000) -- Scroll of Enchant Weapon - Berserking
+,(38973, 3, 0, 300000) -- Scroll of Enchant Cloak - Spell Piercing
+,(38955, 3, 0, 300000) -- Scroll of Enchant Chest - Mighty Health
+,(44465, 3, 0, 300000) -- Scroll of Enchant Chest - Powerful Stats
+,(38953, 3, 0, 300000) -- Scroll of Enchant Gloves - Precision
+
+,(38924, 3, 0, 450000) -- Scroll of Enchant Weapon - Soulfrost
+,(38923, 3, 0, 450000) -- Scroll of Enchant Weapon - Sunfire
+,(38948, 3, 0, 450000) -- Scroll of Enchant Weapon - Executioner
+,(38925, 3, 0, 450000) -- Scroll of Enchant Weapon - Mongoose
+,(38962, 3, 0, 300000) -- Scroll of Enchant Chest - Greater Mana Restoration
+,(44456, 3, 0, 300000) -- Scroll of Enchant Cloak - Speed
+,(39000, 3, 0, 300000) -- Scroll of Enchant Cloak - Steelweave
+,(38968, 3, 0, 300000) -- Scroll of Enchant Bracers - Exceptional Intellect
+,(44455, 3, 0, 300000) -- Scroll of Enchant Shield - Greater Intellect
+,(38960, 3, 0, 300000) -- Scroll of Enchant Gloves - Gatherer
+,(44457, 3, 0, 300000) -- Scroll of Enchant Cloak - Major Agility
+,(38966, 3, 0, 300000) -- Scroll of Enchant Boots - Greater Fortitude
+,(38910, 3, 0, 300000) -- Scroll of Enchant Boots - Surefooted
+,(44497, 3, 0, 450000) -- Scroll of Enchant Weapon - Accuracy
+,(38998, 3, 0, 450000) -- Scroll of Enchant Weapon - Deathfrost
+,(38951, 3, 0, 300000) -- Scroll of Enchant Gloves - Expertise
+,(38974, 3, 0, 300000) -- Scroll of Enchant Boots - Greater Vitality
+,(38927, 3, 0, 450000) -- Scroll of Enchant Weapon - Battlemaster
+,(38926, 3, 0, 450000) -- Scroll of Enchant Weapon - Spellsurge
+,(38922, 3, 0, 450000) -- Scroll of Enchant 2H Weapon - Major Agility
+,(38932, 3, 0, 300000) -- Scroll of Enchant Gloves - Precise Strikes
+,(38907, 3, 0, 300000) -- Scroll of Enchant Shield - Resistance
+,(38944, 3, 0, 300000) -- Scroll of Enchant Boots - Boar's Speed
+,(38903, 3, 0, 300000) -- Scroll of Enchant Bracer - Spellpower
+,(38999, 3, 0, 300000) -- Scroll of Enchant Chest - Defense
+,(44469, 3, 0, 300000) -- Scroll of Enchant Boots - Greater Assault
+,(38943, 3, 0, 300000) -- Scroll of Enchant Boots - Cat's Swiftness
+,(38935, 3, 0, 300000) -- Scroll of Enchant Gloves - Major Spellpower
+,(44453, 3, 0, 450000) -- Scroll of Enchant Weapon - Greater Potency
+,(44470, 3, 0, 300000) -- Scroll of Enchant Bracer - Superior Spellpower
+,(38961, 3, 0, 300000) -- Scroll of Enchant Boots - Greater Spirit
+,(44815, 3, 0, 300000) -- Scroll of Enchant Bracers - Greater Assault
+,(38912, 3, 0, 300000) -- Scroll of Enchant Chest - Exceptional Mana
+,(38954, 3, 0, 300000) -- Scroll of Enchant Shield - Defense
+,(38971, 3, 0, 300000) -- Scroll of Enchant Bracers - Striking
+,(39001, 3, 0, 300000) -- Scroll of Enchant Cloak - Mighty Armor
+,(44449, 3, 0, 300000) -- Scroll of Enchant Boots - Assault
+
+,(22459, 1, 1, 50000) -- (Level 70) Void Sphere
 ,(38921, 1, 1, 150000) -- Scroll of Enchant Weapon - Major Spellpower
 ,(38946, 1, 1, 150000) -- Scroll of Enchant Weapon - Major Healing
 ,(22460, 1, 1, 10000) -- Prismatic Sphere
@@ -1013,7 +1465,7 @@ VALUES
 ,(38904, 1, 1, 100000) -- Scroll of Enchant Shield - Tough Shield
 ,(38940, 1, 1, 100000) -- Scroll of Enchant Cloak - Greater Agility
 
-,(38865, 1, 1, 100000) -- (51) Scroll of Enchant Chest - Greater Stats
+,(38865, 1, 1, 100000) -- Scroll of Enchant Chest - Greater Stats
 ,(38934, 1, 1, 100000) -- Scroll of Enchant Gloves - Assault
 ,(38914, 1, 1, 100000) -- Scroll of Enchant Cloak - Major Armor
 ,(38873, 1, 1, 150000) -- Scroll of Enchant Weapon - Crusader
@@ -1060,8 +1512,6 @@ VALUES
 ,(39350, 1, 0, 5000) -- Weapon Vellum II
 ,(38682, 1, 0, 1000) -- Armor Vellum
 ,(39349, 1, 0, 100) -- Weapon Vellum
-
--- ,(44317, 1, 0) -- Greater Darkmoon Card -- Not obtainable without crafting
 
 /* Engineering: Mounts that should be super expensive + need a custom price */
 ,(41508, 1, 0, 50000000) -- Mechano-hog
