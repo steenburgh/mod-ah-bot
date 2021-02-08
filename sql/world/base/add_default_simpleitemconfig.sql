@@ -610,14 +610,14 @@ VALUES
 ,(40034, 3, 0) -- Guardian's Twilight Opal
 
 /* Jewelcrafting: Gems (Red) */
-,(40111, 3, 0) -- Bold Cardinal Ruby
-,(40112, 3, 0) -- Delicate Cardinal Ruby
-,(40113, 3, 0) -- Runed Cardinal Ruby
-,(40114, 3, 0) -- Bright Cardinal Ruby
-,(40115, 3, 0) -- Subtle Cardinal Ruby
-,(40116, 3, 0) -- Flashing Cardinal Ruby
-,(40117, 3, 0) -- Fractured Cardinal Ruby
-,(40118, 3, 0) -- Precise Cardinal Ruby
+,(40111, 1, 0) -- Bold Cardinal Ruby
+,(40112, 1, 0) -- Delicate Cardinal Ruby
+,(40113, 1, 0) -- Runed Cardinal Ruby
+,(40114, 1, 0) -- Bright Cardinal Ruby
+,(40115, 1, 0) -- Subtle Cardinal Ruby
+,(40116, 1, 0) -- Flashing Cardinal Ruby
+,(40117, 1, 0) -- Fractured Cardinal Ruby
+,(40118, 1, 0) -- Precise Cardinal Ruby
 
 ,(39996, 3, 0) -- Bold Scarlet Ruby
 ,(39997, 3, 0) -- Delicate Scarlet Ruby
