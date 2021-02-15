@@ -430,6 +430,17 @@ VALUES
 ,(6373, 1, 0) -- Elixir of Firepower
 ,(3390, 1, 0) -- Elixir of Lesser Agility
 ,(6048, 1, 0) -- Shadow Protection Potion
+,(2840, 3, 0) -- Copper Bar
+,(2842, 1, 0) -- Silver Bar
+,(2841, 3, 0) -- Bronze Bar
+,(3859, 1, 0) -- Steel Bar
+,(3860, 3, 0) -- Mithril Bar
+,(12359, 3, 0) -- Thorium Bar
+,(23445, 1, 0) -- Fel Iron Bar
+,(23446, 1, 0) -- Adamantite Bar
+,(23448, 1, 0) -- Felsteel Bar
+,(36916, 3, 0) -- Cobalt Bar
+,(36913, 3, 0) -- Saronite Bar
 
 ,(3389, 1, 0) -- Elixir of Defense
 ,(6371, 1, 0) -- Fire Oil
