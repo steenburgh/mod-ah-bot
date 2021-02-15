@@ -5,6 +5,12 @@ VALUES
 /* Commonly sold drops */
 (30183, 3, 0) -- Nether Vortex
 ,(33470, 3, 0) -- Frostweave Cloth
+,(43102, 3, 1) -- Frozen Orb
+,(2589, 3, 0) -- Linen Cloth
+,(2592, 3, 0) -- Wool Cloth
+,(4338, 1, 0) -- Mageweave Cloth
+,(14047, 1, 0) -- Runecloth
+
 
 /* Herbalism: Gathered (0-80) */
 ,(36908, 1, 0) -- Frost Lotus
