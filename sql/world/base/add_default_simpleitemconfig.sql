@@ -1326,94 +1326,94 @@ VALUES
 ,(34057, 1, 0, 400000) -- Abyss Crystal
 
 /* Enchanting: Scrolls (none have a sell price) (70-50) */
-,(43987, 3, 0, 450000) -- Scroll of Enchant Weapon - Black Magic
-,(45056, 3, 0, 450000) -- Scroll of Enchant Staff - Greater Spellpower
-,(38972, 3, 0, 450000) -- Scroll of Enchant Weapon - Lifeward
-,(44467, 3, 0, 450000) -- Scroll of Enchant Weapon - Mighty Spellpower
-,(38991, 3, 0, 450000) -- Scroll of Enchant Weapon - Exceptional Spellpower
-,(38997, 3, 0, 300000) -- Scroll of Enchant Bracers - Greater Spellpower
-,(39004, 3, 0, 300000) -- Scroll of Enchant Cloak - Wisdom
-,(38990, 3, 0, 300000) -- Scroll of Enchant Gloves - Armsman
-,(38978, 3, 0, 300000) -- Scroll of Enchant Cloak - Titanweave
-,(38986, 3, 0, 300000) -- Scroll of Enchant Boots - Icewalker
-,(38993, 3, 0, 300000) -- Scroll of Enchant Cloak - Shadow Armor
-,(39003, 3, 0, 300000) -- Scroll of Enchant Cloak - Greater Speed
-,(38989, 3, 0, 300000) -- Scroll of Enchant Chest - Super Stats
-,(39006, 3, 0, 300000) -- Scroll of Enchant Boots - Tuskarr's Vitality
-,(44458, 3, 0, 300000) -- Scroll of Enchant Gloves - Crusher
-,(38967, 3, 0, 300000) -- Scroll of Enchant Gloves - Major Agility
-,(39005, 3, 0, 300000) -- Scroll of Enchant Chest - Super Health
-,(38979, 3, 0, 300000) -- Scroll of Enchant Gloves - Exceptional Spellpower
-,(38965, 3, 0, 450000) -- Scroll of Enchant Weapon - Icebreaker
-,(38995, 3, 0, 450000) -- Scroll of Enchant Weapon - Exceptional Agility
-,(38964, 3, 0, 300000) -- Scroll of Enchant Gloves - Greater Assault
-,(38984, 3, 0, 300000) -- Scroll of Enchant Bracer - Expertise
-,(38992, 3, 0, 450000) -- Scroll of Enchant 2H Weapon - Greater Savagery
-,(38988, 3, 0, 450000) -- Scroll of Enchant Weapon - Giant Slayer
-,(38975, 3, 0, 300000) -- Scroll of Enchant Chest - Exceptional Resilience
-,(38985, 3, 0, 300000) -- Scroll of Enchant Gloves - Greater Blasting
-,(38976, 3, 0, 300000) -- Scroll of Enchant Boots - Superior Agility
-,(44946, 3, 0, 450000) -- Scroll of Enchant Weapon - Titanguard
-,(45060, 3, 0, 450000) -- Scroll of Enchant Staff - Spellpower
-,(38981, 3, 0, 450000) -- Scroll of Enchant 2H Weapon - Scourgebane
-,(46098, 3, 0, 450000) -- Scroll of Enchant Weapon - Blood Draining
-,(38963, 3, 0, 450000) -- Scroll of Enchant Weapon - Exceptional Spirit
-,(46026, 3, 0, 450000) -- Scroll of Enchant Weapon - Blade Ward
-,(38982, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Arcane Resistance
-,(38969, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Fire Resistance
-,(38956, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Nature Resistance
-,(38950, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Frost Resistance
-,(38977, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Shadow Resistance
-,(38980, 3, 0, 300000) -- Scroll of Enchant Bracers - Major Spirit
-,(39002, 3, 0, 300000) -- Scroll of Enchant Chest - Greater Defense
-,(44947, 3, 0, 300000) -- Scroll of Enchant Bracer - Major Stamina
-,(38959, 3, 0, 300000) -- Scroll of Enchant Cloak - Superior Agility
-,(38987, 3, 0, 300000) -- Scroll of Enchant Bracers - Greater Stats
-,(44466, 3, 0, 450000) -- Scroll of Enchant Weapon - Superior Potency
-,(44463, 3, 0, 450000) -- Scroll of Enchant 2H Weapon - Massacre
-,(44493, 3, 0, 450000) -- Scroll of Enchant Weapon - Berserking
-,(38973, 3, 0, 300000) -- Scroll of Enchant Cloak - Spell Piercing
-,(38955, 3, 0, 300000) -- Scroll of Enchant Chest - Mighty Health
-,(44465, 3, 0, 300000) -- Scroll of Enchant Chest - Powerful Stats
-,(38953, 3, 0, 300000) -- Scroll of Enchant Gloves - Precision
+,(43987, 1, 1, 450000) -- Scroll of Enchant Weapon - Black Magic
+,(45056, 1, 1, 450000) -- Scroll of Enchant Staff - Greater Spellpower
+,(38972, 1, 1, 450000) -- Scroll of Enchant Weapon - Lifeward
+,(44467, 1, 1, 450000) -- Scroll of Enchant Weapon - Mighty Spellpower
+,(38991, 1, 1, 450000) -- Scroll of Enchant Weapon - Exceptional Spellpower
+,(38997, 1, 1, 300000) -- Scroll of Enchant Bracers - Greater Spellpower
+,(39004, 1, 1, 300000) -- Scroll of Enchant Cloak - Wisdom
+,(38990, 1, 1, 300000) -- Scroll of Enchant Gloves - Armsman
+,(38978, 1, 1, 300000) -- Scroll of Enchant Cloak - Titanweave
+,(38986, 1, 1, 300000) -- Scroll of Enchant Boots - Icewalker
+,(38993, 1, 1, 300000) -- Scroll of Enchant Cloak - Shadow Armor
+,(39003, 1, 1, 300000) -- Scroll of Enchant Cloak - Greater Speed
+,(38989, 1, 1, 300000) -- Scroll of Enchant Chest - Super Stats
+,(39006, 1, 1, 300000) -- Scroll of Enchant Boots - Tuskarr's Vitality
+,(44458, 1, 1, 300000) -- Scroll of Enchant Gloves - Crusher
+,(38967, 1, 1, 300000) -- Scroll of Enchant Gloves - Major Agility
+,(39005, 1, 1, 300000) -- Scroll of Enchant Chest - Super Health
+,(38979, 1, 1, 300000) -- Scroll of Enchant Gloves - Exceptional Spellpower
+,(38965, 1, 1, 450000) -- Scroll of Enchant Weapon - Icebreaker
+,(38995, 1, 1, 450000) -- Scroll of Enchant Weapon - Exceptional Agility
+,(38964, 1, 1, 300000) -- Scroll of Enchant Gloves - Greater Assault
+,(38984, 1, 1, 300000) -- Scroll of Enchant Bracer - Expertise
+,(38992, 1, 1, 450000) -- Scroll of Enchant 2H Weapon - Greater Savagery
+,(38988, 1, 1, 450000) -- Scroll of Enchant Weapon - Giant Slayer
+,(38975, 1, 1, 300000) -- Scroll of Enchant Chest - Exceptional Resilience
+,(38985, 1, 1, 300000) -- Scroll of Enchant Gloves - Greater Blasting
+,(38976, 1, 1, 300000) -- Scroll of Enchant Boots - Superior Agility
+,(44946, 1, 1, 450000) -- Scroll of Enchant Weapon - Titanguard
+,(45060, 1, 1, 450000) -- Scroll of Enchant Staff - Spellpower
+,(38981, 1, 1, 450000) -- Scroll of Enchant 2H Weapon - Scourgebane
+,(46098, 1, 1, 450000) -- Scroll of Enchant Weapon - Blood Draining
+,(38963, 1, 1, 450000) -- Scroll of Enchant Weapon - Exceptional Spirit
+,(46026, 1, 1, 450000) -- Scroll of Enchant Weapon - Blade Ward
+,(38982, 1, 1, 300000) -- Scroll of Enchant Cloak - Superior Arcane Resistance
+,(38969, 1, 1, 300000) -- Scroll of Enchant Cloak - Superior Fire Resistance
+,(38956, 1, 1, 300000) -- Scroll of Enchant Cloak - Superior Nature Resistance
+,(38950, 1, 1, 300000) -- Scroll of Enchant Cloak - Superior Frost Resistance
+,(38977, 1, 1, 300000) -- Scroll of Enchant Cloak - Superior Shadow Resistance
+,(38980, 1, 1, 300000) -- Scroll of Enchant Bracers - Major Spirit
+,(39002, 1, 1, 300000) -- Scroll of Enchant Chest - Greater Defense
+,(44947, 1, 1, 300000) -- Scroll of Enchant Bracer - Major Stamina
+,(38959, 1, 1, 300000) -- Scroll of Enchant Cloak - Superior Agility
+,(38987, 1, 1, 300000) -- Scroll of Enchant Bracers - Greater Stats
+,(44466, 1, 1, 450000) -- Scroll of Enchant Weapon - Superior Potency
+,(44463, 1, 1, 450000) -- Scroll of Enchant 2H Weapon - Massacre
+,(44493, 1, 1, 450000) -- Scroll of Enchant Weapon - Berserking
+,(38973, 1, 1, 300000) -- Scroll of Enchant Cloak - Spell Piercing
+,(38955, 1, 1, 300000) -- Scroll of Enchant Chest - Mighty Health
+,(44465, 1, 1, 300000) -- Scroll of Enchant Chest - Powerful Stats
+,(38953, 1, 1, 300000) -- Scroll of Enchant Gloves - Precision
 
-,(38924, 3, 0, 450000) -- Scroll of Enchant Weapon - Soulfrost
-,(38923, 3, 0, 450000) -- Scroll of Enchant Weapon - Sunfire
-,(38948, 3, 0, 450000) -- Scroll of Enchant Weapon - Executioner
-,(38925, 3, 0, 450000) -- Scroll of Enchant Weapon - Mongoose
-,(38962, 3, 0, 300000) -- Scroll of Enchant Chest - Greater Mana Restoration
-,(44456, 3, 0, 300000) -- Scroll of Enchant Cloak - Speed
-,(39000, 3, 0, 300000) -- Scroll of Enchant Cloak - Steelweave
-,(38968, 3, 0, 300000) -- Scroll of Enchant Bracers - Exceptional Intellect
-,(44455, 3, 0, 300000) -- Scroll of Enchant Shield - Greater Intellect
-,(38960, 3, 0, 300000) -- Scroll of Enchant Gloves - Gatherer
-,(44457, 3, 0, 300000) -- Scroll of Enchant Cloak - Major Agility
-,(38966, 3, 0, 300000) -- Scroll of Enchant Boots - Greater Fortitude
-,(38910, 3, 0, 300000) -- Scroll of Enchant Boots - Surefooted
-,(44497, 3, 0, 450000) -- Scroll of Enchant Weapon - Accuracy
-,(38998, 3, 0, 450000) -- Scroll of Enchant Weapon - Deathfrost
-,(38951, 3, 0, 300000) -- Scroll of Enchant Gloves - Expertise
-,(38974, 3, 0, 300000) -- Scroll of Enchant Boots - Greater Vitality
-,(38927, 3, 0, 450000) -- Scroll of Enchant Weapon - Battlemaster
-,(38926, 3, 0, 450000) -- Scroll of Enchant Weapon - Spellsurge
-,(38922, 3, 0, 450000) -- Scroll of Enchant 2H Weapon - Major Agility
-,(38932, 3, 0, 300000) -- Scroll of Enchant Gloves - Precise Strikes
-,(38907, 3, 0, 300000) -- Scroll of Enchant Shield - Resistance
-,(38944, 3, 0, 300000) -- Scroll of Enchant Boots - Boar's Speed
-,(38903, 3, 0, 300000) -- Scroll of Enchant Bracer - Spellpower
-,(38999, 3, 0, 300000) -- Scroll of Enchant Chest - Defense
-,(44469, 3, 0, 300000) -- Scroll of Enchant Boots - Greater Assault
-,(38943, 3, 0, 300000) -- Scroll of Enchant Boots - Cat's Swiftness
-,(38935, 3, 0, 300000) -- Scroll of Enchant Gloves - Major Spellpower
-,(44453, 3, 0, 450000) -- Scroll of Enchant Weapon - Greater Potency
-,(44470, 3, 0, 300000) -- Scroll of Enchant Bracer - Superior Spellpower
-,(38961, 3, 0, 300000) -- Scroll of Enchant Boots - Greater Spirit
-,(44815, 3, 0, 300000) -- Scroll of Enchant Bracers - Greater Assault
-,(38912, 3, 0, 300000) -- Scroll of Enchant Chest - Exceptional Mana
-,(38954, 3, 0, 300000) -- Scroll of Enchant Shield - Defense
-,(38971, 3, 0, 300000) -- Scroll of Enchant Bracers - Striking
-,(39001, 3, 0, 300000) -- Scroll of Enchant Cloak - Mighty Armor
-,(44449, 3, 0, 300000) -- Scroll of Enchant Boots - Assault
+,(38924, 1, 1, 450000) -- Scroll of Enchant Weapon - Soulfrost
+,(38923, 1, 1, 450000) -- Scroll of Enchant Weapon - Sunfire
+,(38948, 1, 1, 450000) -- Scroll of Enchant Weapon - Executioner
+,(38925, 1, 1, 450000) -- Scroll of Enchant Weapon - Mongoose
+,(38962, 1, 1, 300000) -- Scroll of Enchant Chest - Greater Mana Restoration
+,(44456, 1, 1, 300000) -- Scroll of Enchant Cloak - Speed
+,(39000, 1, 1, 300000) -- Scroll of Enchant Cloak - Steelweave
+,(38968, 1, 1, 300000) -- Scroll of Enchant Bracers - Exceptional Intellect
+,(44455, 1, 1, 300000) -- Scroll of Enchant Shield - Greater Intellect
+,(38960, 1, 1, 300000) -- Scroll of Enchant Gloves - Gatherer
+,(44457, 1, 1, 300000) -- Scroll of Enchant Cloak - Major Agility
+,(38966, 1, 1, 300000) -- Scroll of Enchant Boots - Greater Fortitude
+,(38910, 1, 1, 300000) -- Scroll of Enchant Boots - Surefooted
+,(44497, 1, 1, 450000) -- Scroll of Enchant Weapon - Accuracy
+,(38998, 1, 1, 450000) -- Scroll of Enchant Weapon - Deathfrost
+,(38951, 1, 1, 300000) -- Scroll of Enchant Gloves - Expertise
+,(38974, 1, 1, 300000) -- Scroll of Enchant Boots - Greater Vitality
+,(38927, 1, 1, 450000) -- Scroll of Enchant Weapon - Battlemaster
+,(38926, 1, 1, 450000) -- Scroll of Enchant Weapon - Spellsurge
+,(38922, 1, 1, 450000) -- Scroll of Enchant 2H Weapon - Major Agility
+,(38932, 1, 1, 300000) -- Scroll of Enchant Gloves - Precise Strikes
+,(38907, 1, 1, 300000) -- Scroll of Enchant Shield - Resistance
+,(38944, 1, 1, 300000) -- Scroll of Enchant Boots - Boar's Speed
+,(38903, 1, 1, 300000) -- Scroll of Enchant Bracer - Spellpower
+,(38999, 1, 1, 300000) -- Scroll of Enchant Chest - Defense
+,(44469, 1, 1, 300000) -- Scroll of Enchant Boots - Greater Assault
+,(38943, 1, 1, 300000) -- Scroll of Enchant Boots - Cat's Swiftness
+,(38935, 1, 1, 300000) -- Scroll of Enchant Gloves - Major Spellpower
+,(44453, 1, 1, 450000) -- Scroll of Enchant Weapon - Greater Potency
+,(44470, 1, 1, 300000) -- Scroll of Enchant Bracer - Superior Spellpower
+,(38961, 1, 1, 300000) -- Scroll of Enchant Boots - Greater Spirit
+,(44815, 1, 1, 300000) -- Scroll of Enchant Bracers - Greater Assault
+,(38912, 1, 1, 300000) -- Scroll of Enchant Chest - Exceptional Mana
+,(38954, 1, 1, 300000) -- Scroll of Enchant Shield - Defense
+,(38971, 1, 1, 300000) -- Scroll of Enchant Bracers - Striking
+,(39001, 1, 1, 300000) -- Scroll of Enchant Cloak - Mighty Armor
+,(44449, 1, 1, 300000) -- Scroll of Enchant Boots - Assault
 
 ,(22459, 1, 1, 50000) -- (Level 70) Void Sphere
 ,(38921, 1, 1, 150000) -- Scroll of Enchant Weapon - Major Spellpower
