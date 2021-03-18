@@ -1,0 +1,13 @@
+✅Write sql script for schema
+Initialize + Keep item counts up to date    
+    ✅LoadValues: Init item counts from auction entry map
+    ✅Update map on increment + decrement
+    ✅Update seller to use item counts
+✅Add support for items without sell prices
+✅Add support for custom stack sizes
+
+Add command to add new item to auction house
+    Requires:
+        Add write support for adding rows to items table via code
+Cleanup: Run through + switch off redundant code when simple mode is on
+Add command to reload item config from DB

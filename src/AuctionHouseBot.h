@@ -51,6 +51,21 @@ class WorldSession;
 #define AHB_ORANGE_I    12
 #define AHB_YELLOW_I    13
 
+struct SimpleItemConfigEntry
+{
+    uint32 itemID;
+    uint32 numStacks;
+    uint32 stackSize;
+    uint32 sellPrice;
+};
+
+struct SimpleItemAuctionTemplate
+{
+    uint32 itemID;
+    uint32 stackSize;
+    uint32 sellPrice;
+};
+
 class AHBConfig
 {
 private:
@@ -132,6 +147,8 @@ private:
     uint32 purpleip;
     uint32 orangeip;
     uint32 yellowip;
+
+    std::unordered_map<uint32, uint32> simpleItemID_stackCount;
 
     uint32 greyTGoods;
     uint32 whiteTGoods;
@@ -1084,6 +1101,42 @@ public:
         yellowItems);
     }
 
+    void DecSimpleItemCount(uint32 itemID)
+    {
+        uint32 count = GetSimpleItemCount(itemID);
+        count -= 1;
+        simpleItemID_stackCount[itemID] = count;
+    }
+
+    void IncSimpleItemCount(uint32 itemID)
+    {
+        uint32 count = GetSimpleItemCount(itemID);
+        count += 1;
+        simpleItemID_stackCount[itemID] = count;
+    }
+
+    void ResetSimpleItemCounts() 
+    {
+        simpleItemID_stackCount.clear();
+    }
+
+    uint32 GetSimpleItemCount(uint32 itemID)
+    {
+        std::unordered_map<uint32, uint32>::const_iterator itemCountIterator = simpleItemID_stackCount.find(itemID);
+        uint32 itemCount = 0;
+        if(itemCountIterator == simpleItemID_stackCount.end()) {
+            itemCount = 0;
+        } else {
+            itemCount = itemCountIterator->second;
+        }
+        return itemCount;
+    }
+
+    uint32 DebugGetSimpleItemNumEntries()
+    {
+        return simpleItemID_stackCount.size();
+    }
+
     uint32 GetItemCounts(uint32 color)
     {
         switch(color)
@@ -1155,6 +1208,7 @@ private:
     bool debug_Out_Filters;
 
     bool AHBSeller;
+    bool SimpleSellerMode;
     bool AHBBuyer;
     bool BuyMethod;
     bool SellMethod;
@@ -1246,8 +1300,13 @@ public:
     ~AuctionHouseBot();
     void Update();
     void Initialize();
+    void InitializeSellerSimpleMode();
+    void InitializeSellerAdvancedMode();
     void InitializeConfiguration();
+    void LoadSimpleItemConfig();
     void LoadValues(AHBConfig*);
+    void LoadItemCountsSimpleMode(AHBConfig *config);
+    void LoadItemCountsAdvancedMode(AHBConfig *config);
     void DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry);
     void IncrementItemCounts(AuctionEntry* ah);
     void Commands(uint32, uint32, uint32, char*);

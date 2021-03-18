@@ -366,3 +366,12 @@ VALUES
 (53890), (54069), (54860), (50840), (53891), (53924), (51997), (51998), (54847), (54857), (56806), (54212), (54452), (54810), (50093), (54822),
 (50289), (50301), (50307), (52189), (52202), (52272), (52275), (52276), (52345), (52562), (52563), (52565), (52729), (53510), (54218), (54455),
 (54467), (50248), (50431), (52011), (52062), (54291), (54470);
+
+DROP TABLE IF EXISTS `mod_auctionhousebot_simpleitemconfig`;
+CREATE TABLE `mod_auctionhousebot_simpleitemconfig` (
+  `itemID` int(11) DEFAULT '0' COMMENT 'The id of the item to insert. Must be a valid item id in the world.item_template table.',
+  `numStacks` int(11) DEFAULT '0' COMMENT 'The number of stacks of this item that should be on the auction house.',
+  `stackSize` int(11) DEFAULT '0' COMMENT 'Optional. The number of items to include in each stack. If this is set to null or 0, stack size will be chosen automatically based on rarity and max item stack size',
+  `sellPrice` int(11) DEFAULT '0' COMMENT 'Optional. The price, *in copper*, *per item* to sell the item for. If this is set to null or 0, sell prices will be chosen automatically based on vendor prices.',
+  PRIMARY KEY (`itemID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
