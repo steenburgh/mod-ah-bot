@@ -4,12 +4,13 @@ VALUES
 
 /* Commonly sold drops */
 (30183, 3, 0) -- Nether Vortex
-,(33470, 3, 0) -- Frostweave Cloth
 ,(43102, 3, 1) -- Frozen Orb
 ,(2589, 3, 0) -- Linen Cloth
 ,(2592, 3, 0) -- Wool Cloth
-,(4338, 1, 0) -- Mageweave Cloth
-,(14047, 1, 0) -- Runecloth
+,(4306, 3, 0) -- Silk Cloth
+,(4338, 3, 0) -- Mageweave Cloth
+,(14047, 3, 0) -- Runecloth
+,(33470, 3, 0) -- Frostweave Cloth
 
 
 /* Herbalism: Gathered (0-80) */
@@ -243,10 +244,10 @@ VALUES
 ,(42542, 1, 0) -- Stoic Mammoth Hide
 
 /* Alchemy */
-,(46377, 1, 0) -- Flask of Endless Rage
-,(46379, 1, 0) -- Flask of Stoneblood
-,(46378, 1, 0) -- Flask of Pure Mojo
-,(46376, 1, 0) -- Flask of the Frost Wyrm
+,(46377, 1, 3) -- Flask of Endless Rage
+,(46379, 1, 3) -- Flask of Stoneblood
+,(46378, 1, 3) -- Flask of Pure Mojo
+,(46376, 1, 3) -- Flask of the Frost Wyrm
 
 ,(41334, 1, 0) -- Earthsiege Diamond
 ,(41266, 1, 0) -- Skyflare Diamond
@@ -254,34 +255,34 @@ VALUES
 ,(41163, 1, 0) -- Titanium Bar
 ,(40081, 1, 0) -- Potion of Nightmares
 ,(40215, 1, 0) -- Mighty Frost Protection Potion
-,(44331, 1, 0) -- Elixir of Lightning Speed
-,(40070, 1, 0) -- Spellpower Elixir
-,(40097, 1, 0) -- Elixir of Protection
-,(44327, 1, 0) -- Elixir of Deadly Strikes
+,(44331, 1, 3) -- Elixir of Lightning Speed
+,(40070, 1, 3) -- Spellpower Elixir
+,(40097, 1, 3) -- Elixir of Protection
+,(44327, 1, 3) -- Elixir of Deadly Strikes
 ,(40216, 1, 0) -- Mighty Nature Protection Potion
-,(40078, 1, 0) -- Elixir of Mighty Fortitude
-,(40109, 1, 0) -- Elixir of Mighty Mageblood
+,(40078, 1, 3) -- Elixir of Mighty Fortitude
+,(40109, 1, 3) -- Elixir of Mighty Mageblood
 ,(40213, 1, 0) -- Mighty Arcane Protection Potion
-,(44330, 1, 0) -- Elixir of Armor Piercing
-,(40068, 1, 0) -- Wrath Elixir
-,(40073, 1, 0) -- Elixir of Mighty Strength
-,(44325, 1, 0) -- Elixir of Accuracy
+,(44330, 1, 3) -- Elixir of Armor Piercing
+,(40068, 1, 3) -- Wrath Elixir
+,(40073, 1, 3) -- Elixir of Mighty Strength
+,(44325, 1, 3) -- Elixir of Accuracy
 ,(33448, 3, 0) -- Runic Mana Potion
 ,(40214, 1, 0) -- Mighty Fire Protection Potion
-,(44939, 1, 0) -- Lesser Flask of Resistance
-,(40076, 1, 0) -- Guru's Elixir
+,(44939, 1, 3) -- Lesser Flask of Resistance
+,(40076, 1, 3) -- Guru's Elixir
 ,(40212, 1, 0) -- Potion of Wild Magic
 ,(40093, 1, 0) -- Indestructible Potion
-,(44329, 1, 0) -- Elixir of Expertise
-,(39666, 1, 0) -- Elixir of Mighty Agility
+,(44329, 1, 3) -- Elixir of Expertise
+,(39666, 1, 3) -- Elixir of Mighty Agility
 ,(33447, 3, 0) -- Runic Healing Potion
 ,(40217, 1, 0) -- Mighty Shadow Protection Potion
-,(44332, 1, 0) -- Elixir of Mighty Thoughts
-,(40072, 1, 0) -- Elixir of Spirit
+,(44332, 1, 3) -- Elixir of Mighty Thoughts
+,(40072, 1, 3) -- Elixir of Spirit
 ,(40211, 1, 0) -- Potion of Speed
 ,(40087, 1, 0) -- Powerful Rejuvenation Potion
-,(44328, 1, 0) -- Elixir of Mighty Defense
-,(40079, 1, 0) -- Lesser Flask of Toughness
+,(44328, 1, 3) -- Elixir of Mighty Defense
+,(40079, 1, 3) -- Lesser Flask of Toughness
 
 ,(39671, 1, 0) -- Resurgent Healing Potion
 ,(44958, 1, 0) -- Ethereal Oil
@@ -291,36 +292,36 @@ VALUES
 ,(25867, 3, 0) -- Earthstorm Diamond
 
 ,(22841, 1, 0) -- Major Fire Protection Potion
-,(33208, 1, 0) -- Flask of Chromatic Wonder
-,(22854, 1, 0) -- Flask of Relentless Assault
+,(33208, 1, 3) -- Flask of Chromatic Wonder
+,(22854, 1, 3) -- Flask of Relentless Assault
 ,(32839, 1, 0) -- Cauldron of Major Arcane Protection
 ,(22845, 1, 0) -- Major Arcane Protection Potion
 ,(22836, 1, 0) -- Major Dreamless Sleep Potion
 ,(32851, 1, 0) -- Cauldron of Major Nature Protection
-,(22848, 1, 0) -- Elixir of Empowerment
+,(22848, 1, 3) -- Elixir of Empowerment
 ,(22839, 1, 0) -- Destruction Potion
-,(22853, 1, 0) -- Flask of Mighty Restoration
+,(22853, 1, 3) -- Flask of Mighty Restoration
 ,(22844, 1, 0) -- Major Nature Protection Potion
-,(22835, 1, 0) -- Elixir of Major Shadow Power
-,(22866, 1, 0) -- Flask of Pure Death
+,(22835, 1, 3) -- Elixir of Major Shadow Power
+,(22866, 1, 3) -- Flask of Pure Death
 ,(32850, 1, 0) -- Cauldron of Major Frost Protection
 ,(22847, 1, 0) -- Major Holy Protection Potion
 ,(22838, 1, 0) -- Haste Potion
-,(22851, 1, 0) -- Flask of Fortification
+,(22851, 1, 3) -- Flask of Fortification
 ,(22842, 1, 0) -- Major Frost Protection Potion
-,(22861, 1, 0) -- Flask of Blinding Light
+,(22861, 1, 3) -- Flask of Blinding Light
 ,(32849, 1, 0) -- Cauldron of Major Fire Protection
 ,(22846, 1, 0) -- Major Shadow Protection Potion
 ,(22837, 1, 0) -- Heroic Potion
-,(22840, 1, 0) -- Elixir of Major Mageblood
+,(22840, 1, 3) -- Elixir of Major Mageblood
 ,(32852, 1, 0) -- Cauldron of Major Shadow Protection
 ,(31676, 1, 0) -- Fel Regeneration Potion
-,(22834, 1, 0) -- Elixir of Major Defense
+,(22834, 1, 3) -- Elixir of Major Defense
 ,(22832, 1, 0) -- Super Mana Potion
-,(31679, 1, 0) -- Fel Strength Elixir
+,(31679, 1, 3) -- Fel Strength Elixir
 ,(22871, 1, 0) -- Shrouding Potion
-,(32068, 1, 0) -- Elixir of Ironskin
-,(22831, 1, 0) -- Elixir of Major Agility
+,(32068, 1, 3) -- Elixir of Ironskin
+,(22831, 1, 3) -- Elixir of Major Agility
 ,(23571, 1, 0) -- Primal Might
 ,(21884, 1, 0) -- Primal Fire
 ,(21886, 1, 0) -- Primal Life
@@ -329,43 +330,43 @@ VALUES
 ,(22452, 1, 0) -- Primal Earth
 ,(22456, 1, 0) -- Primal Shadow
 ,(21885, 1, 0) -- Primal Water
-,(22830, 1, 0) -- Elixir of the Searching Eye
+,(22830, 1, 3) -- Elixir of the Searching Eye
 
 ,(22829, 1, 0) -- Super Healing Potion
-,(22827, 1, 0) -- Elixir of Major Frost Power
-,(22833, 1, 0) -- Elixir of Major Firepower
-,(32067, 1, 0) -- Elixir of Draenic Wisdom
+,(22827, 1, 3) -- Elixir of Major Frost Power
+,(22833, 1, 3) -- Elixir of Major Firepower
+,(32067, 1, 3) -- Elixir of Draenic Wisdom
 ,(22828, 1, 0) -- Insane Strength Potion
-,(28104, 1, 0) -- Elixir of Mastery
-,(32063, 1, 0) -- Earthen Elixir
+,(28104, 1, 3) -- Elixir of Mastery
+,(32063, 1, 3) -- Earthen Elixir
 ,(22826, 1, 0) -- Sneaking Potion
 ,(28101, 1, 0) -- Unstable Mana Potion
-,(32062, 1, 0) -- Elixir of Major Fortitude
-,(22825, 1, 0) -- Elixir of Healing Power
-,(22824, 1, 0) -- Elixir of Major Strength
-,(22823, 1, 0) -- Elixir of Camouflage
+,(32062, 1, 3) -- Elixir of Major Fortitude
+,(22825, 1, 3) -- Elixir of Healing Power
+,(22824, 1, 3) -- Elixir of Major Strength
+,(22823, 1, 3) -- Elixir of Camouflage
 ,(13506, 1, 0) -- Potion of Petrification
-,(28102, 1, 0) -- Onslaught Elixir
-,(13512, 1, 0) -- Flask of Supreme Power
+,(28102, 1, 3) -- Onslaught Elixir
+,(13512, 1, 3) -- Flask of Supreme Power
 ,(20002, 1, 0) -- Greater Dreamless Sleep Potion
 ,(18253, 1, 0) -- Major Rejuvenation Potion
-,(13511, 1, 0) -- Flask of Distilled Wisdom
+,(13511, 1, 3) -- Flask of Distilled Wisdom
 ,(28100, 1, 0) -- Volatile Healing Potion
-,(13510, 1, 0) -- Flask of the Titans
-,(28103, 1, 0) -- Adept's Elixir
-,(13513, 1, 0) -- Flask of Chromatic Resistance
+,(13510, 1, 3) -- Flask of the Titans
+,(28103, 1, 3) -- Adept's Elixir
+,(13513, 1, 3) -- Flask of Chromatic Resistance
 ,(13444, 1, 0) -- Major Mana Potion
 ,(13458, 1, 0) -- Greater Nature Protection Potion
 ,(13460, 1, 0) -- Greater Holy Protection Potion
 ,(13456, 1, 0) -- Greater Frost Protection Potion
 ,(13459, 1, 0) -- Greater Shadow Protection Potion
 ,(13457, 1, 0) -- Greater Fire Protection Potion
-,(20004, 1, 0) -- Mighty Troll's Blood Elixir
+,(20004, 1, 3) -- Mighty Troll's Blood Elixir
 ,(13461, 1, 0) -- Greater Arcane Protection Potion
 ,(13462, 1, 0) -- Purification Potion
-,(13454, 1, 0) -- Greater Arcane Elixir
+,(13454, 1, 3) -- Greater Arcane Elixir
 ,(20008, 1, 0) -- Living Action Potion
-,(13452, 1, 0) -- Elixir of the Mongoose
+,(13452, 1, 3) -- Elixir of the Mongoose
 ,(13455, 1, 0) -- Greater Stoneshield Potion
 ,(12803, 1, 0) -- Living Essence
 ,(12808, 1, 0) -- Essence of Undeath
@@ -375,30 +376,30 @@ VALUES
 ,(7080, 1, 0) -- Essence of Water
 ,(13446, 1, 0) -- Major Healing Potion
 ,(3386, 1, 0) -- Potion of Curing
-,(13453, 1, 0) -- Elixir of Brute Force
-,(13447, 1, 0) -- Elixir of the Sages
-,(13445, 1, 0) -- Elixir of Superior Defense
+,(13453, 1, 3) -- Elixir of Brute Force
+,(13447, 1, 3) -- Elixir of the Sages
+,(13445, 1, 3) -- Elixir of Superior Defense
 ,(13443, 1, 0) -- Superior Mana Potion
 ,(13442, 1, 0) -- Mighty Rage Potion
 
 ,(6037, 1, 0) -- Truesilver Bar
-,(9224, 1, 0) -- Elixir of Demonslaying
+,(9224, 1, 3) -- Elixir of Demonslaying
 ,(13423, 1, 0) -- Stonescale Oil
 ,(3387, 1, 0) -- Limited Invulnerability Potion
-,(21546, 1, 0) -- Elixir of Greater Firepower
-,(9264, 1, 0) -- Elixir of Shadow Power
-,(20007, 1, 0) -- Mageblood Elixir
-,(9233, 1, 0) -- Elixir of Detect Demon
-,(8827, 1, 0) -- Elixir of Water Walking
-,(9197, 1, 0) -- Elixir of Dream Vision
-,(9187, 1, 0) -- Elixir of Greater Agility
+,(21546, 1, 3) -- Elixir of Greater Firepower
+,(9264, 1, 3) -- Elixir of Shadow Power
+,(20007, 1, 3) -- Mageblood Elixir
+,(9233, 1, 3) -- Elixir of Detect Demon
+,(8827, 1, 3) -- Elixir of Water Walking
+,(9197, 1, 3) -- Elixir of Dream Vision
+,(9187, 1, 3) -- Elixir of Greater Agility
 ,(9088, 1, 0) -- Gift of Arthas
-,(9206, 1, 0) -- Elixir of Giants
-,(9179, 1, 0) -- Elixir of Greater Intellect
-,(9155, 1, 0) -- Arcane Elixir
+,(9206, 1, 3) -- Elixir of Giants
+,(9179, 1, 3) -- Elixir of Greater Intellect
+,(9155, 1, 3) -- Arcane Elixir
 ,(9172, 1, 0) -- Invisibility Potion
-,(9154, 1, 0) -- Elixir of Detect Undead
-,(18294, 1, 0) -- Elixir of Greater Water Breathing
+,(9154, 1, 3) -- Elixir of Detect Undead
+,(18294, 1, 3) -- Elixir of Greater Water Breathing
 ,(3928, 1, 0) -- Superior Healing Potion
 ,(12190, 1, 0) -- Dreamless Sleep Potion
 ,(9144, 1, 0) -- Wildvine Potion
@@ -409,15 +410,15 @@ VALUES
 ,(6149, 1, 0) -- Greater Mana Potion
 ,(8956, 1, 0) -- Oil of Immolation
 ,(3829, 1, 0) -- Frost Oil
-,(10592, 1, 0) -- Catseye Elixir
-,(3828, 1, 0) -- Elixir of Detect Lesser Invisibility
-,(8951, 1, 0) -- Elixir of Greater Defense
+,(10592, 1, 3) -- Catseye Elixir
+,(3828, 1, 3) -- Elixir of Detect Lesser Invisibility
+,(8951, 1, 3) -- Elixir of Greater Defense
 ,(6050, 1, 0) -- Frost Protection Potion
-,(17708, 1, 0) -- Elixir of Frost Power
+,(17708, 1, 3) -- Elixir of Frost Power
 ,(6052, 1, 0) -- Nature Protection Potion
-,(8949, 1, 0) -- Elixir of Agility
-,(3826, 1, 0) -- Major Troll's Blood Elixir
-,(3825, 1, 0) -- Elixir of Fortitude
+,(8949, 1, 3) -- Elixir of Agility
+,(3826, 1, 3) -- Major Troll's Blood Elixir
+,(3825, 1, 3) -- Elixir of Fortitude
 ,(5633, 1, 0) -- Great Rage Potion
 ,(3824, 1, 0) -- Shadow Oil
 ,(3823, 1, 0) -- Lesser Invisibility Potion
@@ -425,10 +426,10 @@ VALUES
 ,(3827, 1, 0) -- Mana Potion
 ,(1710, 1, 0) -- Greater Healing Potion
 ,(3577, 1, 0) -- Gold Bar
-,(3391, 1, 0) -- Elixir of Ogre's Strength
+,(3391, 1, 3) -- Elixir of Ogre's Strength
 ,(5634, 1, 0) -- Free Action Potion
-,(6373, 1, 0) -- Elixir of Firepower
-,(3390, 1, 0) -- Elixir of Lesser Agility
+,(6373, 1, 3) -- Elixir of Firepower
+,(3390, 1, 3) -- Elixir of Lesser Agility
 ,(6048, 1, 0) -- Shadow Protection Potion
 ,(2840, 3, 0) -- Copper Bar
 ,(2842, 1, 0) -- Silver Bar
@@ -442,20 +443,20 @@ VALUES
 ,(36916, 3, 0) -- Cobalt Bar
 ,(36913, 3, 0) -- Saronite Bar
 
-,(3389, 1, 0) -- Elixir of Defense
+,(3389, 1, 3) -- Elixir of Defense
 ,(6371, 1, 0) -- Fire Oil
 ,(7068, 1, 0) -- Elemental Fire
-,(3388, 1, 0) -- Strong Troll's Blood Elixir
+,(3388, 1, 3) -- Strong Troll's Blood Elixir
 ,(3385, 1, 0) -- Lesser Mana Potion
 ,(929, 1, 0) -- Healing Potion
 ,(3384, 1, 0) -- Minor Magic Resistance Potion
-,(3383, 1, 0) -- Elixir of Wisdom
+,(3383, 1, 3) -- Elixir of Wisdom
 ,(6051, 1, 0) -- Holy Protection Potion
-,(45621, 1, 0) -- Elixir of Minor Accuracy
+,(45621, 1, 3) -- Elixir of Minor Accuracy
 ,(6372, 1, 0) -- Swim Speed Potion
-,(6662, 1, 0) -- Elixir of Giant Growth
-,(5996, 1, 0) -- Elixir of Water Breathing
-,(2460, 1, 0) -- Elixir of Tongues (NYI)
+,(6662, 1, 3) -- Elixir of Giant Growth
+,(5996, 1, 3) -- Elixir of Water Breathing
+,(2460, 1, 3) -- Elixir of Tongues (NYI)
 ,(2456, 1, 0) -- Minor Rejuvenation Potion
 ,(2459, 1, 0) -- Swiftness Potion
 ,(2455, 1, 0) -- Minor Mana Potion
@@ -463,13 +464,14 @@ VALUES
 ,(4596, 1, 0) -- Discolored Healing Potion
 ,(5631, 1, 0) -- Rage Potion
 ,(858, 1, 0) -- Lesser Healing Potion
-,(2458, 1, 0) -- Elixir of Minor Fortitude
-,(2457, 1, 0) -- Elixir of Minor Agility
-,(3382, 1, 0) -- Weak Troll's Blood Elixir
-,(2454, 1, 0) -- Elixir of Lion's Strength
+,(2458, 1, 3) -- Elixir of Minor Fortitude
+,(2457, 1, 3) -- Elixir of Minor Agility
+,(3382, 1, 3) -- Weak Troll's Blood Elixir
+,(2454, 1, 3) -- Elixir of Lion's Strength
 ,(118, 1, 0) -- Minor Healing Potion
-,(5997, 1, 0) -- Elixir of Minor Defense
+,(5997, 1, 3) -- Elixir of Minor Defense
 ,(19931, 1, 0) -- Gurubashi Mojo Madness
+
 /* Jewelcrafting: Gems (Blue) */
 ,(40119, 1, 0) -- Solid Majestic Zircon
 ,(40120, 1, 0) -- Sparkling Majestic Zircon
