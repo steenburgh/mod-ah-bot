@@ -21,6 +21,7 @@
 #define AUCTION_HOUSE_BOT_H
 
 #include "Common.h"
+#include "ObjectGuid.h"
 
 struct AuctionEntry;
 class Player;
@@ -1214,7 +1215,7 @@ private:
     bool SellMethod;
 
     uint32 AHBplayerAccount;
-    uint32 AHBplayerGUID;
+    ObjectGuid::LowType AHBplayerGUID;
     uint32 ItemsPerCycle;
 
     //Begin Filters
@@ -1310,7 +1311,7 @@ public:
     void DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry);
     void IncrementItemCounts(AuctionEntry* ah);
     void Commands(uint32, uint32, uint32, char*);
-    uint32 GetAHBplayerGUID() { return AHBplayerGUID; };
+    ObjectGuid::LowType GetAHBplayerGUID() { return AHBplayerGUID; };
 };
 
 #define auctionbot AuctionHouseBot::instance()

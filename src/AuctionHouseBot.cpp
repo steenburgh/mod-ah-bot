@@ -155,13 +155,13 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
 
     if (auctions >= minItems)
     {
-        //if (debug_Out) sLog->outError( "AHSeller: Auctions above minimum");
+        if (debug_Out) sLog->outError( "AHSeller: Auctions above minimum");
         return;
     }
 
     if (auctions >= maxItems)
     {
-        //if (debug_Out) sLog->outError( "AHSeller: Auctions at or above maximum");
+        if (debug_Out) sLog->outError( "AHSeller: Auctions at or above maximum");
         return;
     }
 
@@ -172,26 +172,7 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
 
     if (debug_Out) sLog->outString("AHSeller: Can add %u Auctions this cycle", items);
 
-    uint32 AuctioneerGUID = 0;
-
-    switch (config->GetAHID())
-    {
-    case 2:
-        AuctioneerGUID = 79707; //Human in stormwind.
-        break;
-    case 6:
-        AuctioneerGUID = 4656; //orc in Orgrimmar
-        break;
-    case 7:
-        AuctioneerGUID = 23442; //goblin in GZ
-        break;
-    default:
-        if (debug_Out) sLog->outError( "AHSeller: GetAHID() - Default switch reached");
-        AuctioneerGUID = 23442; //default to neutral 7
-        break;
-    }
-
-    if (debug_Out) sLog->outError( "AHSeller: Current Auctineer GUID is %u", AuctioneerGUID);
+    if (debug_Out) sLog->outError( "AHSeller: Current house id is %u", config->GetAHID());
 
     uint32 greyTGcount = config->GetPercents(AHB_GREY_TG);
     uint32 whiteTGcount = config->GetPercents(AHB_WHITE_TG);
@@ -499,17 +480,16 @@ void AuctionHouseBot::addNewAuctions(Player *AHBplayer, AHBConfig *config)
 
             uint32 dep =  sAuctionMgr->GetAuctionDeposit(ahEntry, etime, item, stackCount);
 
-            SQLTransaction trans = CharacterDatabase.BeginTransaction();
+            auto trans = CharacterDatabase.BeginTransaction();
             AuctionEntry* auctionEntry = new AuctionEntry();
             auctionEntry->Id = sObjectMgr->GenerateAuctionID();
-            auctionEntry->auctioneer = AuctioneerGUID;
-			auctionEntry->item_guidlow = item->GetGUIDLow();
+            auctionEntry->houseId = config->GetAHID();
+			auctionEntry->item_guid = item->GetGUID();
             auctionEntry->item_template = item->GetEntry();
             auctionEntry->itemCount = item->GetCount();
-            auctionEntry->owner = AHBplayer->GetGUIDLow();
+            auctionEntry->owner = AHBplayer->GetGUID();
             auctionEntry->startbid = bidPrice * stackCount;
             auctionEntry->buyout = buyoutPrice * stackCount;
-            auctionEntry->bidder = 0;
             auctionEntry->bid = 0;
             auctionEntry->deposit = dep;
             auctionEntry->expire_time = (time_t) etime + time(NULL);
@@ -625,10 +605,10 @@ void AuctionHouseBot::addNewAuctionBuyerBotBid(Player *AHBplayer, AHBConfig *con
             continue;
 
         // get exact item information
-		Item *pItem = sAuctionMgr->GetAItem(auction->item_guidlow);
+		Item *pItem = sAuctionMgr->GetAItem(auction->item_guid);
         if (!pItem)
         {
-			if (debug_Out) sLog->outError( "AHBuyer: Item %u doesn't exist, perhaps bought already?", auction->item_guidlow);
+			if (debug_Out) sLog->outError( "AHBuyer: Item %s doesn't exist, perhaps bought already?", auction->item_guid.ToString().c_str());
             continue;
         }
 
@@ -707,9 +687,8 @@ void AuctionHouseBot::addNewAuctionBuyerBotBid(Player *AHBplayer, AHBConfig *con
             sLog->outString("-------------------------------------------------");
             sLog->outString("AHBuyer: Info for Auction #%u:", auction->Id);
             sLog->outString("AHBuyer: AuctionHouse: %u", auction->GetHouseId());
-            sLog->outString("AHBuyer: Auctioneer: %u", auction->auctioneer);
-            sLog->outString("AHBuyer: Owner: %u", auction->owner);
-            sLog->outString("AHBuyer: Bidder: %u", auction->bidder);
+            sLog->outString("AHBuyer: Owner: %s", auction->owner.ToString().c_str());
+            sLog->outString("AHBuyer: Bidder: %s", auction->bidder.ToString().c_str());
             sLog->outString("AHBuyer: Starting Bid: %u", auction->startbid);
             sLog->outString("AHBuyer: Current Bid: %u", currentprice);
             sLog->outString("AHBuyer: Buyout: %u", auction->buyout);
@@ -719,7 +698,7 @@ void AuctionHouseBot::addNewAuctionBuyerBotBid(Player *AHBplayer, AHBConfig *con
             sLog->outString("AHBuyer: Bid Max: %Lf", bidMax);
             sLog->outString("AHBuyer: Bid Value: %Lf", bidvalue);
             sLog->outString("AHBuyer: Bid Price: %u", bidprice);
-            sLog->outString("AHBuyer: Item GUID: %u", auction->item_guidlow);
+            sLog->outString("AHBuyer: Item GUID: %s", auction->item_guid.ToString().c_str());
             sLog->outString("AHBuyer: Item Template: %u", auction->item_template);
             sLog->outString("AHBuyer: Item Info:");
             sLog->outString("AHBuyer: Item ID: %u", prototype->ItemId);
@@ -735,47 +714,46 @@ void AuctionHouseBot::addNewAuctionBuyerBotBid(Player *AHBplayer, AHBConfig *con
         // Check whether we do normal bid, or buyout
         if ((bidprice < auction->buyout) || (auction->buyout == 0))
         {
-
-            if (auction->bidder > 0)
+            if (auction->bidder)
             {
-                if (auction->bidder == AHBplayer->GetGUIDLow())
+                if (auction->bidder == AHBplayer->GetGUID())
                 {
                     //pl->ModifyMoney(-int32(price - auction->bid));
                 }
                 else
                 {
                     // mail to last bidder and return money
-                    SQLTransaction trans = CharacterDatabase.BeginTransaction();
-                    sAuctionMgr->SendAuctionOutbiddedMail(auction , bidprice, session->GetPlayer(), trans);
+                    auto trans = CharacterDatabase.BeginTransaction();
+                    sAuctionMgr->SendAuctionOutbiddedMail(auction, bidprice, session->GetPlayer(), trans);
                     CharacterDatabase.CommitTransaction(trans);
                     //pl->ModifyMoney(-int32(price));
                 }
            }
 
-            auction->bidder = AHBplayer->GetGUIDLow();
+            auction->bidder = AHBplayer->GetGUID();
             auction->bid = bidprice;
 
             // Saving auction into database
-            CharacterDatabase.PExecute("UPDATE auctionhouse SET buyguid = '%u',lastbid = '%u' WHERE id = '%u'", auction->bidder, auction->bid, auction->Id);
+            CharacterDatabase.PExecute("UPDATE auctionhouse SET buyguid = '%u',lastbid = '%u' WHERE id = '%u'", auction->bidder.GetCounter(), auction->bid, auction->Id);
         }
         else
         {
-            SQLTransaction trans = CharacterDatabase.BeginTransaction();
+            auto trans = CharacterDatabase.BeginTransaction();
             //buyout
-            if ((auction->bidder) && (AHBplayer->GetGUIDLow() != auction->bidder))
+            if ((auction->bidder) && (AHBplayer->GetGUID() != auction->bidder))
             {
                 sAuctionMgr->SendAuctionOutbiddedMail(auction, auction->buyout, session->GetPlayer(), trans);
             }
-            auction->bidder = AHBplayer->GetGUIDLow();
+            auction->bidder = AHBplayer->GetGUID();
             auction->bid = auction->buyout;
 
             // Send mails to buyer & seller
             //sAuctionMgr->SendAuctionSalePendingMail(auction, trans);
             sAuctionMgr->SendAuctionSuccessfulMail(auction, trans);
             sAuctionMgr->SendAuctionWonMail(auction, trans);
-            auction->DeleteFromDB( trans);
+            auction->DeleteFromDB(trans);
 
-			sAuctionMgr->RemoveAItem(auction->item_guidlow);
+			sAuctionMgr->RemoveAItem(auction->item_guid);
             auctionHouse->RemoveAuction(auction);
             CharacterDatabase.CommitTransaction(trans);
         }
@@ -791,7 +769,7 @@ void AuctionHouseBot::Update()
     WorldSession _session(AHBplayerAccount, NULL, SEC_PLAYER, sWorld->getIntConfig(CONFIG_EXPANSION), 0, LOCALE_zhCN,0,false,false,0);
     Player _AHBplayer(&_session);
     _AHBplayer.Initialize(AHBplayerGUID);
-    sObjectAccessor->AddObject(&_AHBplayer);
+    ObjectAccessor::AddObject(&_AHBplayer);
 
     // Add New Bids
     if (!sWorld->getBoolConfig(CONFIG_ALLOW_TWO_SIDE_INTERACTION_AUCTION))
@@ -823,7 +801,7 @@ void AuctionHouseBot::Update()
         addNewAuctionBuyerBotBid(&_AHBplayer, &NeutralConfig, &_session);
         _lastrun_n = _newrun;
     }
-    sObjectAccessor->RemoveObject(&_AHBplayer);
+    ObjectAccessor::RemoveObject(&_AHBplayer);
 }
 
 void AuctionHouseBot::Initialize()
@@ -1299,32 +1277,31 @@ void AuctionHouseBot::InitializeSellerAdvancedMode()
         }
 
         // Disable Items that require skill lower than X
-        // if ((DisableItemsBelowReqSkillRank) && (itr->second.RequiredSkillRank < DisableItemsBelowReqSkillRank))
-        // {
-        //    if (debug_Out_Filters) sLog->outError( "AuctionHouseBot: Item %u disabled (RequiredSkillRank = %u)", itr->second.ItemId, itr->second.RequiredSkillRank);
-        //    continue;
-        // }
+        if ((DisableItemsBelowReqSkillRank) && (itr->second.RequiredSkillRank < DisableItemsBelowReqSkillRank))
+        {
+            if (debug_Out_Filters) sLog->outError( "AuctionHouseBot: Item %u disabled (RequiredSkillRank = %u)", itr->second.ItemId, itr->second.RequiredSkillRank);
+            continue;
+        }
 
         // Disable Items that require skill higher than X
-        // if ((DisableItemsAboveReqSkillRank) && (itr->second.RequiredSkillRank > DisableItemsAboveReqSkillRank))
-        // {
-        //    if (debug_Out_Filters) sLog->outError( "AuctionHouseBot: Item %u disabled (RequiredSkillRank = %u)", itr->second.ItemId, itr->second.RequiredSkillRank);
-        //    continue;
-        // }
-
+        if ((DisableItemsAboveReqSkillRank) && (itr->second.RequiredSkillRank > DisableItemsAboveReqSkillRank))
+        {
+            if (debug_Out_Filters) sLog->outError( "AuctionHouseBot: Item %u disabled (RequiredSkillRank = %u)", itr->second.ItemId, itr->second.RequiredSkillRank);
+            continue;
+        }
         // Disable Trade Goods that require skill lower than X
-        // if ((DisableTGsBelowReqSkillRank) && (itr->second.RequiredSkillRank < DisableTGsBelowReqSkillRank))
-        // {
-        //    if (debug_Out_Filters) sLog->outError( "AuctionHouseBot: Item %u disabled (RequiredSkillRank = %u)", itr->second.ItemId, itr->second.RequiredSkillRank);
-        //    continue;
-        // }
+        if ((DisableTGsBelowReqSkillRank) && (itr->second.RequiredSkillRank < DisableTGsBelowReqSkillRank))
+        {
+            if (debug_Out_Filters) sLog->outError( "AuctionHouseBot: Item %u disabled (RequiredSkillRank = %u)", itr->second.ItemId, itr->second.RequiredSkillRank);
+            continue;
+        }
 
         // Disable Trade Goods that require skill higher than X
-        // if ((DisableTGsAboveReqSkillRank) && (itr->second.?RequiredSkillRank > DisableTGsAboveReqSkillRank))
-        // {
-        //    if (debug_Out_Filters) sLog->outError( "AuctionHouseBot: Item %u disabled (RequiredSkillRank = %u)", itr->second.ItemId, itr->second.RequiredSkillRank);
-        //    continue;
-        // }
+        if ((DisableTGsAboveReqSkillRank) && (itr->second.RequiredSkillRank > DisableTGsAboveReqSkillRank))
+        {
+            if (debug_Out_Filters) sLog->outError( "AuctionHouseBot: Item %u disabled (RequiredSkillRank = %u)", itr->second.ItemId, itr->second.RequiredSkillRank);
+            continue;
+        }
 
         switch (itr->second.Quality)
         {
@@ -1491,10 +1468,10 @@ void AuctionHouseBot::IncrementItemCounts(AuctionEntry* ah)
     // from auctionhousehandler.cpp, creates auction pointer & player pointer
 
     // get exact item information
-    Item *pItem =  sAuctionMgr->GetAItem(ah->item_guidlow);
+    Item *pItem =  sAuctionMgr->GetAItem(ah->item_guid);
     if (!pItem)
     {
-		if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts Item %u doesn't exist, perhaps bought already?", ah->item_guidlow);
+		if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts Item %s doesn't exist, perhaps bought already?", ah->item_guid.ToString().c_str());
         return;
     }
 
@@ -1503,25 +1480,25 @@ void AuctionHouseBot::IncrementItemCounts(AuctionEntry* ah)
 
     AHBConfig *config;
 
-    FactionTemplateEntry const* u_entry = sFactionTemplateStore.LookupEntry(ah->GetHouseFaction());
-    if (!u_entry)
+    AuctionHouseEntry const* ahEntry = sAuctionHouseStore.LookupEntry(ah->GetHouseId());
+    if (!ahEntry)
     {
-        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseId());
         config = &NeutralConfig;
     }
-    else if (u_entry->ourMask & FACTION_MASK_ALLIANCE)
+    else if (ahEntry->houseId == AUCTIONHOUSE_ALLIANCE)
     {
-        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Alliance", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Alliance", ah->GetHouseId());
         config = &AllianceConfig;
     }
-    else if (u_entry->ourMask & FACTION_MASK_HORDE)
+    else if (ahEntry->houseId == AUCTIONHOUSE_HORDE)
     {
-        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Horde", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Horde", ah->GetHouseId());
         config = &HordeConfig;
     }
     else
     {
-        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:IncrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseId());
         config = &NeutralConfig;
     }
 
@@ -1543,25 +1520,25 @@ void AuctionHouseBot::DecrementItemCounts(AuctionEntry* ah, uint32 itemEntry)
 
     AHBConfig *config;
 
-    FactionTemplateEntry const* u_entry = sFactionTemplateStore.LookupEntry(ah->GetHouseFaction());
-    if (!u_entry)
+    AuctionHouseEntry const* ahEntry = sAuctionHouseStore.LookupEntry(ah->GetHouseId());
+    if (!ahEntry)
     {
-        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseId());
         config = &NeutralConfig;
     }
-    else if (u_entry->ourMask & FACTION_MASK_ALLIANCE)
+    else if (ahEntry->houseId == AUCTIONHOUSE_ALLIANCE)
     {
-        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Alliance", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Alliance", ah->GetHouseId());
         config = &AllianceConfig;
     }
-    else if (u_entry->ourMask & FACTION_MASK_HORDE)
+    else if (ahEntry->houseId == AUCTIONHOUSE_HORDE)
     {
-        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Horde", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Horde", ah->GetHouseId());
         config = &HordeConfig;
     }
     else
     {
-        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseFaction());
+        if (debug_Out) sLog->outError( "AHBot:DecrementItemCounts %u returned as House Faction. Neutral", ah->GetHouseId());
         config = &NeutralConfig;
     }
 
@@ -1629,7 +1606,7 @@ void AuctionHouseBot::Commands(uint32 command, uint32 ahMapID, uint32 col, char*
 
             while (itr != auctionHouse->GetAuctionsEnd())
             {
-                if (itr->second->owner == AHBplayerGUID)
+                if (itr->second->owner.GetCounter() == AHBplayerGUID)
                 {
                     itr->second->expire_time = sWorld->GetGameTime();
                     uint32 id = itr->second->Id;
@@ -1692,7 +1669,7 @@ void AuctionHouseBot::Commands(uint32 command, uint32 ahMapID, uint32 col, char*
             uint32 orangei = (uint32) strtoul(param13, NULL, 0);
             uint32 yellowi = (uint32) strtoul(param14, NULL, 0);
 
-			SQLTransaction trans = WorldDatabase.BeginTransaction();
+			auto trans = WorldDatabase.BeginTransaction();
             trans->PAppend("UPDATE mod_auctionhousebot SET percentgreytradegoods = '%u' WHERE auctionhouse = '%u'", greytg, ahMapID);
             trans->PAppend("UPDATE mod_auctionhousebot SET percentwhitetradegoods = '%u' WHERE auctionhouse = '%u'", whitetg, ahMapID);
             trans->PAppend("UPDATE mod_auctionhousebot SET percentgreentradegoods = '%u' WHERE auctionhouse = '%u'", greentg, ahMapID);
@@ -1998,7 +1975,7 @@ void AuctionHouseBot::LoadItemCountsSimpleMode(AHBConfig *config)
         for (AuctionHouseObject::AuctionEntryMap::const_iterator itr = auctionHouse->GetAuctionsBegin(); itr != auctionHouse->GetAuctionsEnd(); ++itr)
         {
             AuctionEntry *Aentry = itr->second;
-            Item *item = sAuctionMgr->GetAItem(Aentry->item_guidlow);
+            Item *item = sAuctionMgr->GetAItem(Aentry->item_guid);
             if (item)
             {
                 ItemTemplate const *prototype = item->GetTemplate();
@@ -2030,7 +2007,7 @@ void AuctionHouseBot::LoadItemCountsAdvancedMode(AHBConfig *config)
         for (AuctionHouseObject::AuctionEntryMap::const_iterator itr = auctionHouse->GetAuctionsBegin(); itr != auctionHouse->GetAuctionsEnd(); ++itr)
         {
             AuctionEntry *Aentry = itr->second;
-            Item *item = sAuctionMgr->GetAItem(Aentry->item_guidlow);
+            Item *item = sAuctionMgr->GetAItem(Aentry->item_guid);
             if (item)
             {
                 ItemTemplate const *prototype = item->GetTemplate();
